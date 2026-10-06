@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consulting — Mars Sigma Solutions</title>
+  <title>Consulting â€” Mars Sigma Solutions</title>
   <meta name="description"
     content="Certification services, result-oriented engagements, and supplier development delivered by experienced practitioners and auditors." />
   <link rel="canonical" href="https://marssigmasolutions.com/consulting.html" />
@@ -19,10 +19,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 
-  <link rel="stylesheet" href="assets/css/mars-sigma.css" />
+  <link rel="stylesheet" href="assets/css/mars-sigma-v2.css" />
 
   <!-- ============================================================
-       CONSULTING PAGE — INLINE OVERRIDES
+       CONSULTING PAGE â€” INLINE OVERRIDES
        These rules intentionally override the shared stylesheet
        for the navbar logo and certification section.
        ============================================================ -->
@@ -424,6 +424,7 @@
       </a>
 
       <nav class="nav__links" aria-label="Primary navigation">
+        <a href="/" class="nav__link">HOME</a>
         <a href="business-transformation.html" class="nav__link">BUSINESS TRANSFORMATION</a>
         <a href="consulting.html" class="nav__link">CONSULTING</a>
         <a href="third-party-inspection.html" class="nav__link">THIRD PARTY INSPECTION</a>
@@ -442,6 +443,7 @@
     <div class="mobile-menu__inner">
 
       <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+        <a href="/" class="mobile-menu__link">HOME</a>
         <a href="business-transformation.html" class="mobile-menu__link">BUSINESS TRANSFORMATION</a>
         <a href="consulting.html" class="mobile-menu__link">CONSULTING</a>
         <a href="third-party-inspection.html" class="mobile-menu__link">THIRD PARTY INSPECTION</a>
@@ -459,19 +461,70 @@
   <!-- PAGE HERO -->
   <section class="hero hero--interior" id="hero" aria-label="Hero">
 
-    <div class="hero__bg">
-
-      <div class="hero__img-wrap" id="heroImgWrap">
-        <img src="assets/images/consulting.jpg" alt="Consulting" class="hero__img" id="heroImg" width="1920"
-          height="1080" fetchpriority="high" style="filter: grayscale(40%) brightness(0.45);" />
-      </div>
-
-      <div class="hero__grain" aria-hidden="true"></div>
-      <div class="hero__gradient" aria-hidden="true"></div>
-
+    <div class="hero__bg" style="position: absolute; inset: 0; background: #641B25; overflow: hidden;">
+      <video autoplay loop muted playsinline
+             src="assets/videos/gemini_generated_video_b3740d8d.mp4"
+             style="width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); object-fit: cover; opacity: 0.9; mix-blend-mode: normal; filter: brightness(1.15);">
+      </video>
+      <div class="hero__grain" aria-hidden="true" style="position: absolute; inset: 0; z-index: 2; pointer-events: none;"></div>
+      <div class="hero__gradient" aria-hidden="true" style="position: absolute; inset: 0; z-index: 3; pointer-events: none; opacity: 0.65; background: linear-gradient(to right, #641B25 0%, rgba(100,27,37,0.2) 100%);"></div>
     </div>
 
     <div class="hero__content">
+      <style>
+        @keyframes consulting-shimmer {
+          0%   { background-position: 200% center; }
+          100% { background-position: -200% center; }
+        }
+        /* Pull text out of the background */
+        .hero--interior .hero__content {
+          position: relative !important;
+          z-index: 10 !important;
+        }
+        
+        /* Make the non-accent word (ISO) bright, bold, and shimmering white */
+        .hero--interior .hero__headline span:not(.hero__line--accent) span {
+          background: linear-gradient(110deg, #ffffff 0%, #b0c4de 30%, #ffffff 50%, #b0c4de 70%, #ffffff 100%) !important;
+          background-size: 200% auto !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          font-weight: 900 !important;
+          animation: shimmer-text 8s linear infinite !important;
+          filter: drop-shadow(0px 4px 15px rgba(0,0,0,0.9));
+          transform: translateY(0) !important;
+          display: block !important;
+        }
+
+        /* EXACT copy of .hero__line--accent > span from mars-sigma.css */
+        .hero--interior .hero__headline .hero__line--accent > span {
+          background: linear-gradient(110deg,
+            var(--maroon) 0%, var(--red) 30%, #fff 55%, var(--red) 75%, var(--maroon) 100%) !important;
+          background-size: 250% auto !important;
+          -webkit-background-clip: text !important;
+          -webkit-text-fill-color: transparent !important;
+          background-clip: text !important;
+          animation: shimmer-text 6s linear infinite !important;
+          filter: drop-shadow(0 0 18px rgba(196,40,64,.4)) !important;
+          transform: translateY(0) !important;
+          display: block !important;
+        }
+        /* Body paragraph */
+        .hero--interior .hero__body {
+          color: #ffffff !important;
+          text-shadow: 0px 2px 15px rgba(0,0,0,1) !important;
+          font-weight: 600 !important;
+          font-size: 1.15rem !important;
+        }
+        
+        /* Eyebrow tag */
+        .hero--interior .hero__eyebrow span {
+          background: none !important;
+          -webkit-text-fill-color: #ffffff !important;
+          color: #ffffff !important;
+          font-weight: 900 !important;
+          filter: drop-shadow(0px 2px 8px rgba(0,0,0,0.9));
+        }
+      </style>
 
       <div class="hero__eyebrow" id="heroEyebrow">
         <span>SERVICE 02</span>
@@ -491,7 +544,7 @@
 
     <div class="hero__scroll" id="heroScroll" aria-label="Scroll down">
       <span class="hero__scroll-label">SCROLL</span>
-      <span class="hero__scroll-arrow">↓</span>
+      <span class="hero__scroll-arrow">&darr;</span>
     </div>
 
   </section>
@@ -654,7 +707,7 @@
       <div class="final-cta__actions">
         <a href="mailto:info@marssigma.com" class="btn btn--light btn--large">
           START A CONVERSATION
-          <span class="btn__arrow">→</span>
+          <span class="btn__arrow">&rarr;</span>
         </a>
       </div>
 
@@ -742,7 +795,7 @@
 
       <div class="footer__bottom">
         <span class="footer__copy">
-          © 2026 Mars Sigma Solutions Pvt Ltd. All rights reserved.
+          Â© 2026 Mars Sigma Solutions Pvt Ltd. All rights reserved.
         </span>
       </div>
 
@@ -752,6 +805,38 @@
 
   <script src="assets/js/mars-sigma.js" defer></script>
 
+  <script>
+    // Manually animate the shimmer using rAF â€” cannot be overridden by GSAP or CSS
+    window.addEventListener('load', function() {
+      var el = document.getElementById('consultingWord');
+      if (!el) return;
+
+      // Set base styles
+      el.style.background = 'linear-gradient(110deg, #cc0015 0%, #e3001b 30%, #ff8090 55%, #e3001b 75%, #cc0015 100%)';
+      el.style.backgroundSize = '300% auto';
+      el.style.webkitBackgroundClip = 'text';
+      el.style.backgroundClip = 'text';
+      el.style.webkitTextFillColor = 'transparent';
+      el.style.color = 'transparent';
+      el.style.fontWeight = '900';
+      el.style.display = 'inline-block';
+      el.style.transform = 'translateY(0)';
+      el.style.filter = 'drop-shadow(0 0 18px rgba(227,0,27,.7))';
+
+      // Animate background-position in a loop
+      var pos = 200;
+      var speed = 0.3; // lower = slower shimmer
+      function animate() {
+        pos -= speed;
+        if (pos < -200) pos = 200;
+        el.style.backgroundPosition = pos + '% center';
+        requestAnimationFrame(animate);
+      }
+      animate();
+    });
+  </script>
+
 </body>
 
 </html>
+

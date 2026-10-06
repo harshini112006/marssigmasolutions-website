@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mars Sigma Solutions — Industrial Quality Consulting | ISO Certification | India & Bahrain</title>
+  <title>Mars Sigma Solutions â€” Industrial Quality Consulting | ISO Certification | India & Bahrain</title>
   <meta name="description"
     content="Mars Sigma Solutions guides manufacturers across India and the Gulf through ISO certification, business transformation, supplier development, and third-party inspection. 30+ years lead-auditor experience." />
   <meta name="keywords"
@@ -13,7 +13,7 @@
   <link rel="canonical" href="https://marssigmasolutions.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Mars Sigma Solutions — Quality That Holds Up Under Audit, and Under Pressure." />
+  <meta property="og:title" content="Mars Sigma Solutions â€” Quality That Holds Up Under Audit, and Under Pressure." />
   <meta property="og:description"
     content="Industrial quality consulting, ISO certification, business transformation, and third-party inspection across India and Bahrain." />
   <meta property="og:type" content="website" />
@@ -23,61 +23,13 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet" />
-
   <!-- GSAP & ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
   <!-- Lenis -->
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/css/mars-sigma.css" />
-
-  <!-- Navbar logo image styling -->
-  <style>
-    .nav__logo {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      flex-shrink: 0;
-      width: auto;
-    }
-
-    .nav__logo-image {
-      display: block;
-      width: 120px;
-      height: auto;
-      max-height: 52px;
-      object-fit: contain;
-      object-position: left center;
-    }
-
-    @media (max-width: 768px) {
-      .nav__logo-image {
-        width: 105px;
-        max-height: 46px;
-      }
-    }
-  </style>
-
-  <!-- Service image filter override -->
-  <style>
-    /* Keep the WHAT WE DO / services images in their original colors */
-    .service-panel__img,
-    .service-panel__img-wrap .service-panel__img {
-      filter: none !important;
-      -webkit-filter: none !important;
-      mix-blend-mode: normal !important;
-    }
-  </style>
-
+  <!-- Stylesheet â€” zero !important overrides, single source of truth -->
+  <link rel="stylesheet" href="assets/css/mars-sigma-v2.css" />
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -91,24 +43,16 @@
     "email": "info@marssigma.com",
     "areaServed": ["India", "Bahrain"],
     "address": [
-      {
-        "@type": "PostalAddress",
-        "addressLocality": "Chennai",
-        "addressCountry": "IN"
-      },
-      {
-        "@type": "PostalAddress",
-        "addressLocality": "Manama",
-        "addressCountry": "BH"
-      }
+      {"@type": "PostalAddress", "addressLocality": "Chennai", "addressCountry": "IN"},
+      {"@type": "PostalAddress", "addressLocality": "Manama", "addressCountry": "BH"}
     ],
-    "founder": {
-      "@type": "Person",
-      "name": "Subramanian Srinivasan",
-      "jobTitle": "Lead Auditor & Founder"
-    }
+    "founder": {"@type": "Person", "name": "Subramanian Srinivasan", "jobTitle": "Lead Auditor & Founder"}
   }
   </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -132,10 +76,11 @@
         <img src="assets/images/MARS_logo-scaled%20(1).jpg" alt="Mars Sigma Solutions" class="nav__logo-image" />
       </a>
       <nav class="nav__links" aria-label="Primary navigation">
-        <a href="business-transformation.html" class="nav__link">BUSINESS TRANSFORMATION</a>
-        <a href="consulting.html" class="nav__link">CONSULTING</a>
-        <a href="third-party-inspection.html" class="nav__link">THIRD PARTY INSPECTION</a>
-        <a href="training.html" class="nav__link">TRAINING</a>
+        <a href="/" class="nav__link">Home</a>
+        <a href="business-transformation.html" class="nav__link">Business Transformation</a>
+        <a href="consulting.html" class="nav__link">Consulting</a>
+        <a href="third-party-inspection.html" class="nav__link">Third Party Inspection</a>
+        <a href="training.html" class="nav__link">Training</a>
       </nav>
       <button class="nav__hamburger" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span>
@@ -147,10 +92,11 @@
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__inner">
       <nav class="mobile-menu__nav" aria-label="Mobile navigation">
-        <a href="business-transformation.html" class="mobile-menu__link">BUSINESS TRANSFORMATION</a>
-        <a href="consulting.html" class="mobile-menu__link">CONSULTING</a>
-        <a href="third-party-inspection.html" class="mobile-menu__link">THIRD PARTY INSPECTION</a>
-        <a href="training.html" class="mobile-menu__link">TRAINING</a>
+        <a href="/" class="mobile-menu__link">Home</a>
+        <a href="business-transformation.html" class="mobile-menu__link">Business Transformation</a>
+        <a href="consulting.html" class="mobile-menu__link">Consulting</a>
+        <a href="third-party-inspection.html" class="mobile-menu__link">Third Party Inspection</a>
+        <a href="training.html" class="mobile-menu__link">Training</a>
       </nav>
       <div class="mobile-menu__footer">
         <span>INDIA / BAHRAIN</span>
@@ -162,14 +108,21 @@
   <!-- HERO -->
   <section class="hero" id="hero" aria-label="Hero">
     <div class="hero__bg">
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
       <div class="hero__img-wrap" id="heroImgWrap">
-        <img src="assets/images/herobackground.png" alt="Mars Sigma Solutions" class="hero__img" id="heroImg"
-          width="1920" height="1080" fetchpriority="high" />
+        <img src="assets/images/hero-suits-right-hd.png" alt="Mars Sigma Solutions â€” Corporate Professionals" class="hero__img" id="heroImg"
+          width="1920" height="1080" fetchpriority="high" style="object-position: right center;" />
       </div>
-      <div class="hero__grain" aria-hidden="true"></div>
       <div class="hero__gradient" aria-hidden="true"></div>
+      <div class="hero__gradient-solid" aria-hidden="true"></div>
+      <div class="hero__noise" aria-hidden="true"></div>
     </div>
     <div class="hero__content">
+      <div class="hero__eyebrow" id="heroEyebrow">
+        <div class="hero__eyebrow-line"></div>
+        <div class="hero__eyebrow-text">GLOBAL ISO EXPERTS</div>
+      </div>
       <h1 class="hero__headline" id="heroHeadline">
         <span class="hero__line"><span>QUALITY THAT</span></span>
         <span class="hero__line"><span>HOLDS UP</span></span>
@@ -180,8 +133,8 @@
         India and the Gulf through ISO certification, business transformation, structural process improvement, supplier
         development, and independent third-party inspection.</p>
       <div class="hero__ctas" id="heroCtas">
-        <a href="#services" class="btn btn--light">EXPLORE OUR SERVICES <span class="btn__arrow">→</span></a>
-        <a href="/contact" class="btn btn--ghost">START A CONVERSATION <span class="btn__arrow">→</span></a>
+        <a href="#services" class="btn btn--light">EXPLORE OUR SERVICES <span class="btn__arrow">&rarr;</span></a>
+        <a href="/contact" class="btn btn--ghost">START A CONVERSATION <span class="btn__arrow">&rarr;</span></a>
       </div>
     </div>
     <div class="hero__meta" id="heroMeta">
@@ -193,7 +146,7 @@
     </div>
     <div class="hero__scroll" id="heroScroll" aria-label="Scroll down">
       <span class="hero__scroll-label">SCROLL</span>
-      <span class="hero__scroll-arrow">↓</span>
+      <span class="hero__scroll-line"></span>
     </div>
   </section>
 
@@ -201,14 +154,14 @@
   <section class="intro" id="intro" aria-labelledby="introHeadline">
     <div class="intro__inner">
       <div class="intro__left">
-        <div class="eyebrow">01 / WHO WE ARE</div>
-        <h2 class="intro__headline" id="introHeadline">BUILT FOR THE<br>PROBLEMS THAT<br>DON'T HAVE<br>EASY ANSWERS.
+        <div class="eyebrow" data-reveal>01 / WHO WE ARE</div>
+        <h2 class="intro__headline" id="introHeadline" data-reveal data-delay="1">BUILT FOR THE<br>PROBLEMS THAT<br>DON'T HAVE<br>EASY ANSWERS.
         </h2>
       </div>
       <div class="intro__right">
-        <p class="intro__body">Mars Sigma Solutions works at the intersection of certification, operational excellence,
+        <p class="intro__body" data-reveal data-delay="2">Mars Sigma Solutions works at the intersection of certification, operational excellence,
           business transformation, and industrial quality.</p>
-        <p class="intro__body">We help organisations build systems that perform under scrutiny — not merely systems that
+        <p class="intro__body" data-reveal data-delay="3">We help organisations build systems that perform under scrutiny â€” not merely systems that
           look compliant on paper.</p>
         <div class="stats">
           <div class="stat" data-count="30" data-suffix="+">
@@ -228,17 +181,173 @@
             <span class="stat__label">COUNTRIES</span>
           </div>
         </div>
+        </div>
+      </div>
+      
+      <!-- New dynamic animated visual block added per request -->
+      <div class="intro__visual" data-reveal="scale" data-delay="4" id="introVisual">
+        <div class="intro__visual-parallax" id="introVisualParallax">
+          <img src="assets/images/tpi-blue.png" alt="Industrial quality inspection" class="intro__img" loading="lazy" width="1400" height="700" />
+        </div>
+        <div class="intro__visual-overlay">
+          <div class="intro__visual-text">PRECISION AT EVERY LAYER</div>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- SHOWCASE (Pro Floating Cards) -->
+  <section class="showcase" id="showcase">
+    <div class="showcase__bg">
+      <div class="showcase__gradient-bg"></div>
+      <div class="showcase__overlay"></div>
+      <div class="showcase__massive-text" data-speed="0.9">CAPABILITY</div>
+    </div>
+    
+    <div class="showcase__slider" id="showcaseSlider">
+      <div class="showcase__track" id="showcaseTrack">
+        <!-- Card 1 -->
+        <div class="showcase__slide">
+          <div class="showcase__card">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-1-new.png" alt="Business Transformation" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">CORE COMPETENCE</div>
+              <h3 class="showcase__card-title">BUSINESS<br>TRANSFORMATION</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-down">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-2-new.png" alt="Systems Certification" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">CORE COMPETENCE</div>
+              <h3 class="showcase__card-title">SYSTEMS<br>CERTIFICATION</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-up">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-3-new.png" alt="Process Inspection" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">CORE COMPETENCE</div>
+              <h3 class="showcase__card-title">PROCESS<br>INSPECTION</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="showcase__slide">
+          <div class="showcase__card">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-4-new.png" alt="Supplier Development" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">CAPABILITY</div>
+              <h3 class="showcase__card-title">SUPPLIER<br>DEVELOPMENT</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-down">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-5-hd.png" alt="QMS Upgradation" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">CAPABILITY</div>
+              <h3 class="showcase__card-title">QMS<br>UPGRADATION</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-up">
+            <div class="showcase__card-img-wrap"><img src="assets/images/tpi.png" alt="Sustainability" loading="lazy" class="theme-blue-filter" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">CAPABILITY</div>
+              <h3 class="showcase__card-title">SUSTAINABILITY<br>& ESG</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="showcase__slide">
+          <div class="showcase__card">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-7-hd.png" alt="Digital Transformation" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">INNOVATION</div>
+              <h3 class="showcase__card-title">DIGITAL<br>TRANSFORMATION</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-down">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-4-blue.png" alt="Supply Chain" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">INNOVATION</div>
+              <h3 class="showcase__card-title">SUPPLY CHAIN<br>OPTIMIZATION</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-up">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-9-hd.png" alt="Lean Six Sigma" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">INNOVATION</div>
+              <h3 class="showcase__card-title">LEAN SIX<br>SIGMA</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="showcase__slide">
+          <div class="showcase__card">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-10-hd.png" alt="Compliance" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">EXCELLENCE</div>
+              <h3 class="showcase__card-title">REGULATORY<br>COMPLIANCE</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-down">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-11-hd.png" alt="Workforce Training" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">EXCELLENCE</div>
+              <h3 class="showcase__card-title">WORKFORCE<br>TRAINING</h3>
+            </div>
+          </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="showcase__slide">
+          <div class="showcase__card showcase__card--stagger-up">
+            <div class="showcase__card-img-wrap"><img src="assets/images/showcase-12-hd.png" alt="Operational Excellence" loading="lazy" /></div>
+            <div class="showcase__card-content">
+              <div class="showcase__card-label">EXCELLENCE</div>
+              <h3 class="showcase__card-title">OPERATIONAL<br>EXCELLENCE</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Progress -->
+    <div class="showcase__timeline">
+      <div class="showcase__timeline-track">
+        <div class="showcase__timeline-progress" id="showcaseTimelineProgress">
+          <div class="showcase__timeline-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#services" class="showcase__next" aria-label="Next section">Next</a>
   </section>
 
   <!-- SERVICES -->
   <section class="services" id="services" aria-labelledby="servicesHeadline">
     <div class="services__header">
-      <div class="eyebrow eyebrow--light">WHAT WE DO</div>
-      <h2 class="services__headline" id="servicesHeadline">THREE WAYS<br>WE CREATE<br>CERTAINTY.</h2>
+      <div class="eyebrow" data-reveal>WHAT WE DO</div>
+      <h2 class="services__headline" id="servicesHeadline" data-reveal data-delay="1">THREE WAYS<br>WE CREATE<br>CERTAINTY.</h2>
     </div>
-    <article class="service-panel" id="service01" aria-labelledby="service01Title">
+    <article class="service-panel" id="service01" aria-labelledby="service01Title" data-reveal>
       <div class="service-panel__inner">
         <div class="service-panel__meta">
           <span class="service-panel__num">01</span>
@@ -253,16 +362,16 @@
               <li>LEAN</li>
               <li>SIX SIGMA</li>
             </ul>
-            <a href="/business-transformation" class="service-panel__cta">EXPLORE TRANSFORMATION <span>→</span></a>
+            <a href="/business-transformation" class="service-panel__cta">EXPLORE TRANSFORMATION <span>â†’</span></a>
           </div>
         </div>
         <div class="service-panel__img-wrap">
-          <img src="assets\images\lean.png" alt="Lean manufacturing transformation — industrial process improvement"
+          <img src="assets/images/lean-blue-indian.png" alt="Lean manufacturing transformation â€” industrial process improvement"
             class="service-panel__img" loading="lazy" width="800" height="600" />
         </div>
       </div>
     </article>
-    <article class="service-panel service-panel--alt" id="service02" aria-labelledby="service02Title">
+    <article class="service-panel service-panel--alt" id="service02" aria-labelledby="service02Title" data-reveal>
       <div class="service-panel__inner">
         <div class="service-panel__meta">
           <span class="service-panel__num">02</span>
@@ -282,22 +391,22 @@
               <li>ISO 17025</li>
               <li>NABL</li>
             </ul>
-            <a href="/consulting" class="service-panel__cta">EXPLORE CONSULTING <span>→</span></a>
+            <a href="/consulting" class="service-panel__cta">EXPLORE CONSULTING <span>â†’</span></a>
           </div>
         </div>
         <div class="service-panel__img-wrap">
-          <img src="assets\images\iso.png" alt="ISO consulting and certification audit — quality management system"
+          <img src="assets\images\iso-blue.png" alt="ISO consulting and certification audit â€” quality management system"
             class="service-panel__img" loading="lazy" width="800" height="600" />
         </div>
       </div>
     </article>
-    <article class="service-panel" id="service03" aria-labelledby="service03Title">
+    <article class="service-panel" id="service03" aria-labelledby="service03Title" data-reveal>
       <div class="service-panel__inner">
         <div class="service-panel__meta">
           <span class="service-panel__num">03</span>
           <div class="service-panel__content">
             <h3 class="service-panel__title" id="service03Title">THIRD-PARTY<br>INSPECTION</h3>
-            <p class="service-panel__body">Independent verification of products, processes, vendors, and facilities —
+            <p class="service-panel__body">Independent verification of products, processes, vendors, and facilities â€”
               free from client influence, grounded in technical rigor.</p>
             <ul class="service-panel__tags" aria-label="Inspection types">
               <li>PRE-SHIPMENT INSPECTION</li>
@@ -306,64 +415,72 @@
               <li>FACILITY AUDITS</li>
               <li>COMPLIANCE REPORTING</li>
             </ul>
-            <a href="/third-party-inspection" class="service-panel__cta">EXPLORE INSPECTION <span>→</span></a>
+            <a href="/third-party-inspection" class="service-panel__cta">EXPLORE INSPECTION <span>â†’</span></a>
           </div>
         </div>
         <div class="service-panel__img-wrap">
-          <img src="assets\images\tpi.png" alt="Third-party inspection — independent industrial quality verification"
+          <img src="assets\images\tpi-blue.png" alt="Third-party inspection â€” independent industrial quality verification"
             class="service-panel__img" loading="lazy" width="800" height="600" />
         </div>
       </div>
     </article>
   </section>
 
+  <!-- STANDARDS HERO -->
+  <section class="standards-hero" id="standardsHero">
+    <div class="standards-hero__inner">
+      <div class="standards-hero__left">
+        <div class="eyebrow eyebrow--light">STANDARDS WE WORK WITH</div>
+        <h2 class="standards-hero__title">WHERE CERTIFIED<br>QUALITY MEETS<br>MISSION-CRITICAL<br>PERFORMANCE.</h2>
+      </div>
+      <div class="standards-hero__right">
+        <div class="pattern-box">
+          <!-- Animated Grid Pattern -->
+          <div class="pattern-box__grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ISO FEATURE -->
   <section class="iso-feature" id="isoFeature" aria-labelledby="isoHeadline">
     <div class="iso-feature__inner">
       <div class="iso-feature__header">
-        <div class="eyebrow eyebrow--light">ISO 9001:2026</div>
-        <h2 class="iso-feature__headline" id="isoHeadline">THE STANDARD<br>CHANGED.<br>NOW YOUR<br>SYSTEMS HAVE<br>TO
+        <div class="eyebrow eyebrow--light" data-reveal>ISO 9001:2026</div>
+        <h2 class="iso-feature__headline" id="isoHeadline" data-reveal data-delay="1">THE STANDARD<br>CHANGED.<br>NOW YOUR<br>SYSTEMS HAVE<br>TO
           CHANGE<br>WITH IT.</h2>
       </div>
       <div class="iso-feature__body-col">
-        <p class="iso-feature__body">ISO 9001:2026 is the sixth edition of the world's most-used quality management
+        <p class="iso-feature__body" data-reveal data-delay="2">ISO 9001:2026 is the sixth edition of the world's most-used quality management
           standard and replaces ISO 9001:2015.</p>
-        <p class="iso-feature__body">Mars Sigma Solutions helps organisations understand the changes, identify gaps, and
+        <p class="iso-feature__body" data-reveal data-delay="3">Mars Sigma Solutions helps organisations understand the changes, identify gaps, and
           transition their management systems without disrupting ongoing operations.</p>
       </div>
     </div>
     <div class="iso-timeline" aria-label="ISO 9001:2026 transition process">
-      <div class="iso-timeline__track">
-        <div class="iso-timeline__line" aria-hidden="true"></div>
-        <div class="iso-step" data-step="01">
-          <div class="iso-step__num">01</div>
-          <div class="iso-step__label">UNDERSTAND</div>
-          <div class="iso-step__desc">Gap analysis of your current system against the new standard requirements.</div>
-        </div>
-        <div class="iso-step" data-step="02">
-          <div class="iso-step__num">02</div>
-          <div class="iso-step__label">ASSESS</div>
-          <div class="iso-step__desc">Structured assessment of documentation, processes, and risk management.</div>
-        </div>
-        <div class="iso-step" data-step="03">
-          <div class="iso-step__num">03</div>
-          <div class="iso-step__label">TRANSFORM</div>
-          <div class="iso-step__desc">Redesign quality systems and documentation to meet 2026 requirements.</div>
-        </div>
-        <div class="iso-step" data-step="04">
-          <div class="iso-step__num">04</div>
-          <div class="iso-step__label">IMPLEMENT</div>
-          <div class="iso-step__desc">Controlled rollout with training and change management across all functions.</div>
-        </div>
-        <div class="iso-step" data-step="05">
-          <div class="iso-step__num">05</div>
-          <div class="iso-step__label">AUDIT</div>
-          <div class="iso-step__desc">Internal audit readiness and pre-certification assessment.</div>
-        </div>
-        <div class="iso-step" data-step="06">
-          <div class="iso-step__num">06</div>
-          <div class="iso-step__label">CERTIFY</div>
-          <div class="iso-step__desc">Certification body audit support and post-certification sustenance.</div>
+      <div class="iso-timeline__scroller" id="isoScroller">
+        <div class="iso-timeline__track">
+          <div class="iso-timeline__line" aria-hidden="true"></div>
+          <div class="iso-step" data-step="01">
+            <div class="iso-step__num">01</div>
+            <div class="iso-step__label">UNDERSTAND</div>
+            <div class="iso-step__desc">Gap analysis of your current system against the new standard requirements.</div>
+          </div>
+          <div class="iso-step" data-step="02">
+            <div class="iso-step__num">02</div>
+            <div class="iso-step__label">ASSESS</div>
+            <div class="iso-step__desc">Structured assessment of documentation, processes, and risk management.</div>
+          </div>
+          <div class="iso-step" data-step="03">
+            <div class="iso-step__num">03</div>
+            <div class="iso-step__label">TRANSFORM</div>
+            <div class="iso-step__desc">Redesign quality systems and documentation to meet 2026 requirements.</div>
+          </div>
+          <div class="iso-step" data-step="04">
+            <div class="iso-step__num">04</div>
+            <div class="iso-step__label">IMPLEMENT</div>
+            <div class="iso-step__desc">Controlled rollout with training and change management across all functions.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -373,9 +490,9 @@
   <section class="why" id="why" aria-labelledby="whyHeadline">
     <div class="why__inner">
       <div class="why__header">
-        <div class="eyebrow">WHY MARS SIGMA</div>
-        <h2 class="why__headline" id="whyHeadline">WE DON'T<br>CONSULT<br>FROM THE<br>SIDELINES.</h2>
-        <p class="why__sub">Our work is led by practitioners with decades of audit, manufacturing, quality, and
+        <div class="eyebrow" data-reveal>WHY MARS SIGMA</div>
+        <h2 class="why__headline" id="whyHeadline" data-reveal data-delay="1">WE DON'T<br>CONSULT<br>FROM THE<br>SIDELINES.</h2>
+        <p class="why__sub" data-reveal data-delay="2">Our work is led by practitioners with decades of audit, manufacturing, quality, and
           transformation experience.</p>
       </div>
       <div class="why__pillars">
@@ -417,10 +534,10 @@
   <!-- INDUSTRIES -->
   <section class="industries" id="industries" aria-labelledby="industriesHeadline">
     <div class="industries__header">
-      <div class="eyebrow eyebrow--light">SECTORS WE SERVE</div>
-      <h2 class="industries__headline" id="industriesHeadline">BUILT FOR<br>MISSION-CRITICAL<br>INDUSTRIES.</h2>
+      <div class="eyebrow eyebrow--light" data-reveal>SECTORS WE SERVE</div>
+      <h2 class="industries__headline" id="industriesHeadline" data-reveal data-delay="1">BUILT FOR<br>MISSION-CRITICAL<br>INDUSTRIES.</h2>
     </div>
-    <div class="industries__grid" role="list">
+    <div class="industries__grid" role="list" data-reveal data-delay="2">
       <div class="industry-card" role="listitem" tabindex="0">
         <div class="industry-card__num">01</div>
         <div class="industry-card__content">
@@ -480,20 +597,20 @@
   <!-- FOUNDER -->
   <section class="founder" id="founder" aria-labelledby="founderHeadline">
     <div class="founder__inner">
-      <div class="founder__portrait-col">
+      <div class="founder__portrait-col" data-reveal="left">
         <div class="founder__img-wrap">
-          <img src="assets/images/founder.jpg" alt="Mr. Subramanian Srinivasan — Founder, Mars Sigma Solutions"
+          <img src="assets/images/founder.png" alt="Mr. Subramanian Srinivasan â€” Founder, Mars Sigma Solutions"
             class="founder__img" loading="lazy" width="600" height="750" />
           <div class="founder__img-caption">MR. SUBRAMANIAN SRINIVASAN<br><span>Founder &amp; Principal
               Consultant</span></div>
         </div>
       </div>
       <div class="founder__content-col">
-        <div class="eyebrow">EXPERTISE</div>
-        <h2 class="founder__headline" id="founderHeadline">30 YEARS<br>INSIDE THE<br>AUDIT ROOM.</h2>
-        <p class="founder__body">Mr. Subramanian Srinivasan brings 30 years of industry consulting and audit experience
+        <div class="eyebrow" data-reveal>EXPERTISE</div>
+        <h2 class="founder__headline" id="founderHeadline" data-reveal data-delay="1">30 YEARS<br>INSIDE THE<br>AUDIT ROOM.</h2>
+        <p class="founder__body" data-reveal data-delay="2">Mr. Subramanian Srinivasan brings 30 years of industry consulting and audit experience
           across manufacturing, automotive, aerospace, and process industries in India and the Gulf.</p>
-        <div class="credentials" aria-label="Professional credentials">
+        <div class="credentials" aria-label="Professional credentials" data-reveal data-delay="3">
           <div class="credential"><span class="credential__label">LEAD AUDITOR</span><span class="credential__value">ISO
               9001</span></div>
           <div class="credential"><span class="credential__label">LEAD AUDITOR</span><span
@@ -521,143 +638,94 @@
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="process" id="process" aria-labelledby="processHeadline">
-    <div class="process__header">
-      <div class="eyebrow eyebrow--light">HOW WE WORK</div>
-      <h2 class="process__headline" id="processHeadline">FROM<br>ASSESSMENT<br>TO<br>OUTCOME.</h2>
-    </div>
-    <div class="process__scroller" id="processScroller">
-      <div class="process__track" id="processTrack">
-        <div class="process__connector" aria-hidden="true"></div>
-        <div class="process__step active" data-index="0">
-          <div class="process__step-num">01</div>
-          <div class="process__step-label">ASSESS</div>
-          <div class="process__step-desc">Understand your current state — systems, documentation, gap areas, and risk
-            exposure.</div>
-        </div>
-        <div class="process__step" data-index="1">
-          <div class="process__step-num">02</div>
-          <div class="process__step-label">IDENTIFY</div>
-          <div class="process__step-desc">Pinpoint critical gaps, non-conformances, and structural weaknesses requiring
-            immediate attention.</div>
-        </div>
-        <div class="process__step" data-index="2">
-          <div class="process__step-num">03</div>
-          <div class="process__step-label">DESIGN</div>
-          <div class="process__step-desc">Co-create a transition plan, redesigned processes, and documentation tailored
-            to your operations.</div>
-        </div>
-        <div class="process__step" data-index="3">
-          <div class="process__step-num">04</div>
-          <div class="process__step-label">IMPLEMENT</div>
-          <div class="process__step-desc">Structured rollout with training, change management, and on-site support
-            across all functions.</div>
-        </div>
-        <div class="process__step" data-index="4">
-          <div class="process__step-num">05</div>
-          <div class="process__step-label">VERIFY</div>
-          <div class="process__step-desc">Internal audits, pre-certification readiness reviews, and corrective action
-            closure.</div>
-        </div>
-        <div class="process__step" data-index="5">
-          <div class="process__step-num">06</div>
-          <div class="process__step-label">SUSTAIN</div>
-          <div class="process__step-desc">Post-certification support, surveillance readiness, and continuous improvement
-            programmes.</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- CLIENT PERSPECTIVES -->
   <section class="testimonials" id="testimonials" aria-labelledby="testimonialsHeadline">
-    <div class="testimonials__inner">
+    <div class="testimonials__header-row">
       <div class="testimonials__header">
-        <div class="eyebrow">CLIENT PERSPECTIVES</div>
-        <h2 class="testimonials__headline" id="testimonialsHeadline">TRUST IS<br>EARNED IN<br>THE DETAILS.</h2>
+        <div class="eyebrow" data-reveal>CLIENT PERSPECTIVES</div>
+        <h2 class="testimonials__headline" id="testimonialsHeadline" data-reveal data-delay="1">WHAT OUR<br>CLIENTS SAY.</h2>
       </div>
-      <div class="testimonials__stage" aria-live="polite" aria-atomic="true">
-        <div class="testimonial active" id="testimonial-0" role="article">
-          <div class="testimonial__quote-mark" aria-hidden="true">"</div>
-          <blockquote class="testimonial__text">Mars Sigma's approach to our IATF 16949 transition was methodical and
-            thorough. They didn't just help us pass the audit — they rebuilt how we think about quality documentation.
-            The difference in our first surveillance audit outcome was significant.</blockquote>
-          <footer class="testimonial__footer"><span class="testimonial__name">General Manager — Quality</span><span
-              class="testimonial__company">Tier-1 Automotive Components Manufacturer, Chennai</span></footer>
-        </div>
-        <div class="testimonial" id="testimonial-1" role="article" aria-hidden="true">
-          <div class="testimonial__quote-mark" aria-hidden="true">"</div>
-          <blockquote class="testimonial__text">We had worked with two consultants before Mars Sigma who gave us
-            documentation without understanding our processes. Mr. Srinivasan's team spent time on the shop floor before
-            writing a single procedure. That's the difference.</blockquote>
-          <footer class="testimonial__footer"><span class="testimonial__name">Director — Operations</span><span
-              class="testimonial__company">Precision Engineering Manufacturer, Coimbatore</span></footer>
-        </div>
-        <div class="testimonial" id="testimonial-2" role="article" aria-hidden="true">
-          <div class="testimonial__quote-mark" aria-hidden="true">"</div>
-          <blockquote class="testimonial__text">Our ISO 45001 implementation was handled with clarity and speed. Mars
-            Sigma understood our sector's constraints from day one and delivered a system our workforce actually uses.
-          </blockquote>
-          <footer class="testimonial__footer"><span class="testimonial__name">VP — Health, Safety &amp;
-              Environment</span><span class="testimonial__company">Process Industry, Bahrain</span></footer>
-        </div>
-        <div class="testimonial" id="testimonial-3" role="article" aria-hidden="true">
-          <div class="testimonial__quote-mark" aria-hidden="true">"</div>
-          <blockquote class="testimonial__text">The Six Sigma Black Belt training transformed how our engineering team
-            approaches defect resolution. Measurable outcomes within three months of implementation.</blockquote>
-          <footer class="testimonial__footer"><span class="testimonial__name">Head of Manufacturing
-              Excellence</span><span class="testimonial__company">FMCG Manufacturing Group, India</span></footer>
+      <p class="testimonials__subtitle">Real outcomes from real engagements â€” across automotive, process, and FMCG industries in India and Bahrain.</p>
+    </div>
+    <div class="testimonials__grid">
+      <!-- Card 1 â€” Featured -->
+      <div class="tcard tcard--featured">
+        <span class="tcard__quote-icon">"</span>
+        <p class="tcard__text">Mars Sigma's approach to our IATF 16949 transition was methodical and thorough. They didn't just help us pass the audit â€” they rebuilt how we think about quality documentation. The difference in our first surveillance audit outcome was significant.</p>
+        <div class="tcard__footer">
+          <div class="tcard__avatar">GM</div>
+          <div class="tcard__meta">
+            <span class="tcard__name">General Manager â€” Quality</span>
+            <span class="tcard__company">Tier-1 Automotive Components Manufacturer, Chennai</span>
+          </div>
+          <span class="tcard__tag">IATF 16949</span>
         </div>
       </div>
-      <div class="testimonials__nav" aria-label="Testimonial navigation">
-        <span class="testimonials__counter" id="testimonialCounter" aria-live="polite">01 / 04</span>
-        <div class="testimonials__controls">
-          <button class="testimonials__btn" id="testimonialPrev" aria-label="Previous testimonial" disabled>←
-            PREV</button>
-          <button class="testimonials__btn" id="testimonialNext" aria-label="Next testimonial">NEXT →</button>
+      <!-- Card 2 -->
+      <div class="tcard">
+        <span class="tcard__quote-icon">"</span>
+        <p class="tcard__text">We had worked with two consultants before Mars Sigma who gave us documentation without understanding our processes. Mr. Srinivasan's team spent time on the shop floor before writing a single procedure. That's the difference.</p>
+        <div class="tcard__footer">
+          <div class="tcard__avatar">DO</div>
+          <div class="tcard__meta">
+            <span class="tcard__name">Director â€” Operations</span>
+            <span class="tcard__company">Precision Engineering Manufacturer, Coimbatore</span>
+          </div>
+          <span class="tcard__tag">ISO 9001</span>
         </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="tcard">
+        <span class="tcard__quote-icon">"</span>
+        <p class="tcard__text">Our ISO 45001 implementation was handled with clarity and speed. Mars Sigma understood our sector's constraints from day one and delivered a system our workforce actually uses â€” not just a paper exercise.</p>
+        <div class="tcard__footer">
+          <div class="tcard__avatar">VP</div>
+          <div class="tcard__meta">
+            <span class="tcard__name">VP â€” Health, Safety & Environment</span>
+            <span class="tcard__company">Process Industry, Manama, Bahrain</span>
+          </div>
+          <span class="tcard__tag">ISO 45001</span>
+        </div>
+      </div>
+      <!-- Card 4 â€” Featured -->
+      <div class="tcard tcard--featured">
+        <span class="tcard__quote-icon">"</span>
+        <p class="tcard__text">The Six Sigma Black Belt training transformed how our engineering team approaches defect resolution. We tracked measurable outcomes within three months of implementation â€” a 34% reduction in repeat defects.</p>
+        <div class="tcard__footer">
+          <div class="tcard__avatar">HM</div>
+          <div class="tcard__meta">
+            <span class="tcard__name">Head of Manufacturing Excellence</span>
+            <span class="tcard__company">FMCG Manufacturing Group, India</span>
+          </div>
+          <span class="tcard__tag">Six Sigma</span>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials__cta-row">
+      <div class="testimonials__rating">
+        <span class="testimonials__stars">â˜…â˜…â˜…â˜…â˜…</span>
+        <span class="testimonials__rating-text"><strong>100%</strong> client retention rate across all long-term engagements</span>
       </div>
     </div>
   </section>
 
-  <!-- CERT STRIP -->
-  <section class="cert-strip" id="certStrip" aria-labelledby="certStripHeadline">
-    <div class="cert-strip__inner">
-      <div class="cert-strip__left">
-        <div class="eyebrow eyebrow--light">STANDARDS WE WORK WITH</div>
-        <h2 class="cert-strip__headline" id="certStripHeadline">WHERE CERTIFIED<br>QUALITY
-          MEETS<br>MISSION-CRITICAL<br>PERFORMANCE.</h2>
-      </div>
-      <div class="cert-strip__right">
-        <div class="cert-marks" aria-label="Certification standards">
-          <div class="cert-mark">ISO 9001</div>
-          <div class="cert-mark">IATF 16949</div>
-          <div class="cert-mark">ISO 14001</div>
-          <div class="cert-mark">ISO 45001</div>
-          <div class="cert-mark cert-mark--accent">AS 9100</div>
-          <div class="cert-mark">ISO 27001</div>
-          <div class="cert-mark">ISO 22001</div>
-          <div class="cert-mark">VDA 6.3</div>
-          <div class="cert-mark">ISO 17025</div>
-          <div class="cert-mark">NABL</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- FINAL CTA -->
+
   <section class="final-cta" id="finalCta" aria-labelledby="finalCtaHeadline">
+    <div class="final-cta__bg" id="finalCtaBg" aria-hidden="true">
+      <img src="assets/images/cta-bg-blue.png" alt="" class="final-cta__img" />
+    </div>
+    <div class="final-cta__gradient" aria-hidden="true"></div>
     <div class="final-cta__texture" aria-hidden="true"></div>
     <div class="final-cta__inner">
-      <div class="eyebrow eyebrow--light">READY TO MOVE FORWARD?</div>
-      <h2 class="final-cta__headline" id="finalCtaHeadline">LET'S BUILD A<br>SYSTEM THAT<br>HOLDS UP.</h2>
-      <p class="final-cta__body">Whether you're preparing for certification, restructuring your organisation, improving
-        operational performance, or looking for independent inspection — let's map the next step.</p>
-      <div class="final-cta__actions">
-        <a href="/contact" class="btn btn--light btn--large" id="finalCtaBtn">START A CONVERSATION <span
-            class="btn__arrow">→</span></a>
-        <a href="#services" class="btn btn--ghost">VIEW SERVICES <span class="btn__arrow">→</span></a>
+      <div class="eyebrow eyebrow--light" data-reveal>READY TO MOVE FORWARD?</div>
+      <h2 class="final-cta__headline" id="finalCtaHeadline" data-reveal data-delay="1">LET'S BUILD A<br>SYSTEM THAT<br>HOLDS UP.</h2>
+      <p class="final-cta__body" data-reveal data-delay="2">Whether you're preparing for certification, restructuring your organisation, improving
+        operational performance, or looking for independent inspection â€” let's map the next step.</p>
+      <div class="final-cta__actions" data-reveal data-delay="3">
+        <a href="/contact" class="btn btn--light btn--large" id="finalCtaBtn">START A CONVERSATION <span class="btn__arrow">&rarr;</span></a>
+        <a href="#services" class="btn btn--ghost">VIEW SERVICES <span class="btn__arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -666,7 +734,7 @@
   <footer class="footer" id="footer" role="contentinfo">
     <div class="footer__inner">
       <div class="footer__top">
-        <div class="footer__brand">
+        <div class="footer__brand" data-reveal>
           <div class="footer__wordmark" aria-label="Mars Sigma Solutions">MARS SIGMA<br>SOLUTIONS</div>
           <p class="footer__tagline">Industrial consulting, certification,<br>and quality systems built to last.</p>
         </div>
@@ -703,7 +771,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span class="footer__copy">© 2026 Mars Sigma Solutions Pvt Ltd. All rights reserved.</span>
+        <span class="footer__copy">Â© 2026 Mars Sigma Solutions Pvt Ltd. All rights reserved.</span>
         <div class="footer__legal">
           <a href="/privacy" class="footer__legal-link">Privacy</a>
           <a href="/terms" class="footer__legal-link">Terms</a>
@@ -718,3 +786,5 @@
 </body>
 
 </html>
+
+
