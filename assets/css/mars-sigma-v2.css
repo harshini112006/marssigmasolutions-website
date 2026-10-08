@@ -508,8 +508,9 @@ body.cursor--text .cursor__label {
    ============================================================ */
 .hero {
   position: relative;
-  height: auto;
-  min-height: max(700px, 100svh);
+  height: 100svh;
+  min-height: 680px;
+  max-height: 1100px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -524,14 +525,16 @@ body.cursor--text .cursor__label {
   position: absolute;
   inset: 0;
   transform-origin: center;
+  overflow: hidden;
 }
 
 .hero__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: right center;
   filter: grayscale(20%) brightness(0.55);
+  display: block;
 }
 
 .hero__grain {
@@ -555,15 +558,13 @@ body.cursor--text .cursor__label {
 .hero__content {
   position: relative;
   z-index: 2;
-  padding: calc(var(--nav-h) + 6vh) var(--pad-x) clamp(5rem, 10vh, 8rem);
-  /* Never shrink the content area; the hero grows instead of clipping copy. */
-  flex: 1 0 auto;
+  padding: calc(var(--nav-h) + 6vh) var(--pad-x) clamp(6rem, 12vh, 9rem);
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* Let display headlines use the full reading area instead of a narrow column. */
+  justify-content: flex-end;
   width: 100%;
-  max-width: min(100%, 1320px);
+  max-width: min(65%, 860px);
 }
 
 .hero__eyebrow {
@@ -933,12 +934,16 @@ body.cursor--text .cursor__label {
 .service-panel__img-wrap {
   position: relative;
   overflow: hidden;
+  min-height: 400px;
 }
 
 .service-panel__img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   filter: grayscale(15%) brightness(0.75);
   transition: filter 0.6s var(--ease-out), transform 0.8s var(--ease-expo);
 }
@@ -1318,21 +1323,24 @@ body.cursor--text .cursor__label {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 480px 1fr;
-  gap: 8rem;
+  grid-template-columns: 400px 1fr;
+  gap: 6rem;
   align-items: center;
 }
 
 .founder__img-wrap {
   position: relative;
+  overflow: hidden;
+  border-radius: 4px;
 }
 
 .founder__img {
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/4;
   object-fit: cover;
   object-position: top center;
   filter: grayscale(8%) contrast(1.05);
+  display: block;
 }
 
 .founder__img-caption {
@@ -2054,8 +2062,8 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   }
 
   .founder__inner {
-    grid-template-columns: 360px 1fr;
-    gap: 4rem;
+    grid-template-columns: 320px 1fr;
+    gap: 3.5rem;
   }
 
   .testimonials__inner {
@@ -2114,6 +2122,8 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
 
   .hero__content {
     padding-top: calc(var(--nav-h) + 3rem);
+    max-width: 100%;
+    justify-content: flex-end;
   }
 
   .hero__headline {
@@ -2136,7 +2146,12 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   }
 
   .service-panel__img-wrap {
-    min-height: 260px;
+    min-height: 300px;
+    aspect-ratio: 16/9;
+  }
+
+  .service-panel__img {
+    position: absolute;
   }
 
   .service-panel__meta {
@@ -2198,7 +2213,8 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   }
 
   .founder__img {
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/5;
+    max-height: 480px;
   }
 
   .process__step {
@@ -2542,14 +2558,14 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-  max-height: 480px;
+  aspect-ratio: 16/6;
 }
-.intro__visual-parallax { width: 100%; height: 100%; }
+.intro__visual-parallax { position: absolute; inset: 0; width: 100%; height: 100%; }
 .intro__visual-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 40%, rgba(4,16,30,0.85) 100%);
 }
-.intro__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.intro__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .intro__visual-text {
   position: absolute; bottom: 2rem; left: 2rem; right: 2rem;
   color: #fff; font-size: clamp(1.1rem,2vw,1.4rem); font-weight: 700;
@@ -2918,13 +2934,13 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   box-shadow: 0 20px 60px rgba(0,0,0,0.12);
   height: 420px;
 }
-.intro__visual-parallax { width: 100%; height: 100%; }
+.intro__visual-parallax { position: absolute; inset: 0; width: 100%; height: 100%; }
 .intro__visual-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(180deg, transparent 40%, rgba(4,10,20,0.85) 100%);
   pointer-events: none;
 }
-.intro__img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.intro__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .intro__visual-text {
   position: absolute; bottom: 2rem; left: 2.5rem; right: 2.5rem;
   color: #fff;
