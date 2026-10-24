@@ -193,7 +193,7 @@
         linear-gradient(135deg, #030f22 0%, #051c40 52%, #030f22 100%) !important;
     }
     .iso-feature .eyebrow { color: rgba(100,170,255,0.7) !important; }
-    .iso-feature__headline { color: #d5eeff !important; }
+    .iso-feature__headline { color: transparent !important; -webkit-text-fill-color: transparent !important; }
     .iso-feature__body { color: rgba(130,200,255,0.68) !important; }
     .iso-timeline {
       background: rgba(2,12,30,0.4) !important;
@@ -204,7 +204,7 @@
     .iso-timeline__line::after { background: linear-gradient(90deg, #1466d4, #64aaff) !important; box-shadow: 0 0 18px rgba(100,170,255,0.6) !important; }
     .iso-step { border-right-color: rgba(100,170,255,0.12) !important; }
     .iso-step__num { color: rgba(100,170,255,0.6) !important; }
-    .iso-step__label { color: #d5eeff !important; }
+    .iso-step__label { color: transparent !important; -webkit-text-fill-color: transparent !important; }
     .iso-step__desc { color: rgba(130,200,255,0.65) !important; }
     .iso-step::before { background: #1466d4 !important; border-color: #64aaff !important; box-shadow: 0 0 0 5px rgba(20,102,212,0.2) !important; }
     .iso-step.active::before,
@@ -651,7 +651,7 @@
     }
 
     .services__header .eyebrow {
-      font-size: 10px !important;
+      font-size: 16px !important;
       letter-spacing: 0.3em !important;
       color: rgba(100,170,255,0.75) !important;
       position: relative !important;
@@ -688,13 +688,24 @@
       -webkit-background-clip: text !important;
       background-clip: text !important;
       -webkit-text-fill-color: transparent !important;
-      animation: shimmerHeadline 6s linear infinite !important;
+      animation: shimmerHeadline 4s linear infinite, headlineFloat 4s ease-in-out infinite !important;
       position: relative !important;
     }
 
     @keyframes shimmerHeadline {
       0%   { background-position: 0% center; }
       100% { background-position: 200% center; }
+    }
+
+    @keyframes headlineFloat {
+      0%, 100% {
+        transform: translateY(0px);
+        filter: drop-shadow(0 0 0px rgba(100, 170, 255, 0));
+      }
+      50% {
+        transform: translateY(-6px);
+        filter: drop-shadow(0 0 25px rgba(100, 170, 255, 0.5));
+      }
     }
 
     /* Decorative number counter strip above services */
@@ -705,7 +716,7 @@
       left: 50% !important;
       transform: translateX(-50%) !important;
       font-family: 'Inter', sans-serif !important;
-      font-size: 9px !important;
+      font-size: 14px !important;
       font-weight: 700 !important;
       letter-spacing: 0.35em !important;
       color: rgba(100,170,255,0.3) !important;
@@ -738,13 +749,13 @@
       height: 100% !important;
       object-fit: cover !important;
       object-position: center !important;
-      filter: brightness(0.65) saturate(0.85) !important;
+      filter: brightness(0.88) saturate(1.0) !important;
       transition: transform 0.8s cubic-bezier(0.16,1,0.3,1), filter 0.5s ease !important;
     }
 
     .service-panel:hover .service-panel__img {
       transform: scale(1.05) !important;
-      filter: brightness(0.78) saturate(1) !important;
+      filter: brightness(1.0) saturate(1.1) !important;
     }
 
     /* Blue gradient overlay on image */
@@ -753,14 +764,14 @@
       position: absolute !important;
       inset: 0 !important;
       background: linear-gradient(90deg,
-        rgba(2,12,30,0.85) 0%, rgba(2,12,30,0.3) 60%, transparent 100%) !important;
+        rgba(2,12,30,0.55) 0%, rgba(2,12,30,0.15) 60%, transparent 100%) !important;
       pointer-events: none !important;
       z-index: 1 !important;
     }
 
     .service-panel--alt .service-panel__img-wrap::after {
       background: linear-gradient(270deg,
-        rgba(2,12,30,0.85) 0%, rgba(2,12,30,0.3) 60%, transparent 100%) !important;
+        rgba(2,12,30,0.55) 0%, rgba(2,12,30,0.15) 60%, transparent 100%) !important;
     }
 
     /* Panel typography overhaul */
@@ -1181,20 +1192,17 @@
             <span class="stat__label">COUNTRIES</span>
           </div>
         </div>
-        </div>
-      </div>
-      
-      <!-- New dynamic animated visual block added per request -->
-      <div class="intro__visual" data-reveal="scale" data-delay="4" id="introVisual">
-        <div class="intro__visual-parallax" id="introVisualParallax">
-          <img src="assets/images/tpi-blue.png" alt="Industrial quality inspection" class="intro__img" loading="lazy" width="1400" height="700" />
-        </div>
-        <div class="intro__visual-overlay">
-          <div class="intro__visual-text">PRECISION AT EVERY LAYER</div>
-        </div>
       </div>
     </div>
   </section>
+
+  <!-- Full-bleed image banner — standalone, no parent constraints -->
+  <div class="intro__visual" id="introVisual">
+    <img src="assets/images/tpi-blue.png" alt="Industrial quality inspection" class="intro__img" loading="lazy" />
+    <div class="intro__visual-overlay">
+      <div class="intro__visual-text">PRECISION AT EVERY LAYER</div>
+    </div>
+  </div>
 
   <!-- SHOWCASE (Pro Floating Cards) -->
   <section class="showcase" id="showcase">
@@ -1228,7 +1236,7 @@
         </div>
         <!-- Card 3 -->
         <div class="showcase__slide">
-          <div class="showcase__card showcase__card--stagger-up">
+          <div class="showcase__card showcase__card--stagger-down">
             <div class="showcase__card-img-wrap"><img src="assets/images/showcase-3-new.png" alt="Process Inspection" loading="lazy" /></div>
             <div class="showcase__card-content">
               <div class="showcase__card-label">CORE COMPETENCE</div>
@@ -1539,15 +1547,20 @@
     </div>
     <div class="industries__grid" role="list" data-reveal data-delay="2">
       <div class="industry-card" role="listitem" tabindex="0">
+        <div class="industry-card__img-wrap">
+          <img src="assets/images/industry-manufacturing.png" alt="Manufacturing" loading="lazy" />
+        </div>
         <div class="industry-card__num">01</div>
         <div class="industry-card__content">
           <h3 class="industry-card__title">MANUFACTURING</h3>
-          <p class="industry-card__desc">Quality systems for discrete, batch, and process manufacturing environments.
-          </p>
+          <p class="industry-card__desc">Quality systems for discrete, batch, and process manufacturing environments.</p>
         </div>
         <div class="industry-card__bar" aria-hidden="true"></div>
       </div>
       <div class="industry-card" role="listitem" tabindex="0">
+        <div class="industry-card__img-wrap">
+          <img src="assets/images/industry-automotive.png" alt="Automotive" loading="lazy" />
+        </div>
         <div class="industry-card__num">02</div>
         <div class="industry-card__content">
           <h3 class="industry-card__title">AUTOMOTIVE</h3>
@@ -1556,40 +1569,49 @@
         <div class="industry-card__bar" aria-hidden="true"></div>
       </div>
       <div class="industry-card" role="listitem" tabindex="0">
+        <div class="industry-card__img-wrap">
+          <img src="assets/images/industry-aerospace.png" alt="Aerospace" loading="lazy" />
+        </div>
         <div class="industry-card__num">03</div>
         <div class="industry-card__content">
           <h3 class="industry-card__title">AEROSPACE</h3>
-          <p class="industry-card__desc">AS 9100 certification support and quality systems for aerospace manufacturers.
-          </p>
+          <p class="industry-card__desc">AS 9100 certification support and quality systems for aerospace manufacturers.</p>
         </div>
         <div class="industry-card__bar" aria-hidden="true"></div>
       </div>
       <div class="industry-card" role="listitem" tabindex="0">
+        <div class="industry-card__img-wrap">
+          <img src="assets/images/industry-fmcg.png" alt="FMCG" loading="lazy" />
+        </div>
         <div class="industry-card__num">04</div>
         <div class="industry-card__content">
           <h3 class="industry-card__title">FMCG</h3>
-          <p class="industry-card__desc">Food safety, ISO 22001, and operational excellence for consumer goods
-            manufacturers.</p>
+          <p class="industry-card__desc">Food safety, ISO 22001, and operational excellence for consumer goods manufacturers.</p>
         </div>
         <div class="industry-card__bar" aria-hidden="true"></div>
       </div>
       <div class="industry-card" role="listitem" tabindex="0">
+        <div class="industry-card__img-wrap">
+          <img src="assets/images/industry-it.png" alt="Information Technology" loading="lazy" />
+        </div>
         <div class="industry-card__num">05</div>
         <div class="industry-card__content">
           <h3 class="industry-card__title">INFORMATION TECHNOLOGY</h3>
-          <p class="industry-card__desc">ISO 27001 information security and ISO 9001 quality management for IT firms.
-          </p>
+          <p class="industry-card__desc">ISO 27001 information security and ISO 9001 quality management for IT firms.</p>
         </div>
         <div class="industry-card__bar" aria-hidden="true"></div>
       </div>
       <div class="industry-card" role="listitem" tabindex="0">
+        <div class="industry-card__img-wrap">
+          <img src="assets/images/industry-process.png" alt="Process Industries" loading="lazy" />
+        </div>
         <div class="industry-card__num">06</div>
         <div class="industry-card__content">
           <h3 class="industry-card__title">PROCESS INDUSTRIES</h3>
-          <p class="industry-card__desc">Chemical, pharmaceutical, and energy sector quality and environmental
-            management.</p>
+          <p class="industry-card__desc">Chemical, pharmaceutical, and energy sector quality and environmental management.</p>
         </div>
         <div class="industry-card__bar" aria-hidden="true"></div>
+      </div>
       </div>
     </div>
   </section>
