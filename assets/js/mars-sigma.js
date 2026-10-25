@@ -422,7 +422,11 @@ function initScrollAnimations() {
     .from('.why__headline', { y: 60, opacity: 0, duration: 1.3, ease: 'expo.out' })
     .from('.why__sub',      { y: 30, opacity: 0, duration: 1.0, ease: 'power2.out' }, '-=0.8');
 
-  slideLeft('.why__pillar', { x: -40, stagger: 0.12, dur: 1.0, trigger: '.why__pillars' });
+  gsap.from('.why__pillar', {
+    x: -40, opacity: 0, duration: 1.0, stagger: 0.12, ease: 'power3.out',
+    scrollTrigger: { trigger: '.why', start: 'top 70%', once: true },
+    onComplete: () => gsap.set('.why__pillar', { opacity: 1, x: 0, clearProps: 'all' }),
+  });
 
   /* ── BUSINESS TRANSFORMATION METHODOLOGIES ── */
   fadeUp('.bt-methodologies__headline', { y: 60, dur: 1.3, st: { trigger: '.bt-methodologies__header' } });

@@ -1194,8 +1194,8 @@ body.cursor--text .cursor__label {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 480px 1fr;
-  gap: 8rem;
+  grid-template-columns: 380px 1fr;
+  gap: 6rem;
   align-items: start;
 }
 
@@ -1269,10 +1269,7 @@ body.cursor--text .cursor__label {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
   font-weight: 800;
   letter-spacing: -0.05em;
-  background: linear-gradient(135deg, rgba(100,170,255,0.15) 0%, rgba(100,170,255,0.08) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgba(100,170,255,0.45);
   flex-shrink: 0;
   line-height: 1;
   padding-top: 0.2rem;
@@ -1280,10 +1277,7 @@ body.cursor--text .cursor__label {
 }
 
 .why__pillar:hover .why__pillar-num {
-  background: linear-gradient(135deg, #64aaff 0%, #b8d4ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #64aaff;
   filter: drop-shadow(0 0 8px rgba(100,170,255,0.5));
 }
 
@@ -1294,11 +1288,7 @@ body.cursor--text .cursor__label {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #ffffff 0%, #b8d4ff 50%, #64aaff 100%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #d5eeff;
   animation: pillarTitleShimmer 5s linear infinite;
 }
 @keyframes pillarTitleShimmer {
@@ -2917,14 +2907,14 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   color: #d5eeff;
 }
 .why .eyebrow { color: rgba(100,170,255,0.7); }
-.why__headline { -webkit-text-fill-color: transparent !important; }
-.why__sub { color: rgba(130,200,255,0.65); }
+.why__headline { color: #d5eeff; }
+.why__sub { color: rgba(160,210,255,0.8); }
 .why__pillar { border-color: rgba(60,100,180,0.2); }
 .why__pillar:first-child { border-top-color: rgba(60,100,180,0.2); }
-.why__pillar-num { -webkit-text-fill-color: transparent !important; }
-.why__pillar:hover .why__pillar-num { -webkit-text-fill-color: transparent !important; }
-.why__pillar-title { -webkit-text-fill-color: transparent !important; }
-.why__pillar-text { color: rgba(130,200,255,0.6); }
+.why__pillar-num { color: rgba(100,170,255,0.5); }
+.why__pillar:hover .why__pillar-num { color: #64aaff; }
+.why__pillar-title { color: #d5eeff; }
+.why__pillar-text { color: rgba(160,210,255,0.8); }
 
 .industries {
   background: linear-gradient(160deg, #04101e 0%, #081828 55%, #04101e 100%);
