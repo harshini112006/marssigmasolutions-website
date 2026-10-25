@@ -423,8 +423,8 @@ function initScrollAnimations() {
     .from('.why__sub',      { y: 30, opacity: 0, duration: 1.0, ease: 'power2.out' }, '-=0.8');
 
   gsap.from('.why__pillar', {
-    x: -40, opacity: 0, duration: 1.0, stagger: 0.12, ease: 'power3.out',
-    scrollTrigger: { trigger: '.why', start: 'top 70%', once: true },
+    x: -24, opacity: 0, duration: 0.55, stagger: 0.06, ease: 'power3.out',
+    scrollTrigger: { trigger: '.why__pillars', start: 'top 92%', once: true },
     onComplete: () => gsap.set('.why__pillar', { opacity: 1, x: 0, clearProps: 'all' }),
   });
 
