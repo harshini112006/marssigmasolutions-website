@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Training â€” Mars Sigma Solutions</title>
+  <title>Training – Mars Sigma Solutions</title>
   <meta name="description"
     content="Industrial training and professional development led by experienced practitioners and auditors." />
   <link rel="canonical" href="https://marssigmasolutions.com/training.html" />
@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="assets/css/mars-sigma-v2.css" />
 </head>
 
-<body>
+<body class="page-training">
 
   <div class="cursor" id="cursor" aria-hidden="true">
     <div class="cursor__dot" id="cursorDot"></div>
@@ -34,18 +34,18 @@
     <div class="page-transition__bar"></div>
   </div>
 
+  <!-- NAVBAR -->
   <header class="nav" id="nav" role="banner">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo" aria-label="Mars Sigma Solutions Home">
-        <span class="nav__logo-line1">MARS SIGMA</span>
-        <span class="nav__logo-line2">SOLUTIONS</span>
+        <img src="assets/images/MARS_logo-scaled%20(1).jpg" alt="Mars Sigma Solutions" class="nav__logo-image" />
       </a>
       <nav class="nav__links" aria-label="Primary navigation">
         <a href="/" class="nav__link">HOME</a>
         <a href="business-transformation.html" class="nav__link">BUSINESS TRANSFORMATION</a>
         <a href="consulting.html" class="nav__link">CONSULTING</a>
         <a href="third-party-inspection.html" class="nav__link">THIRD PARTY INSPECTION</a>
-        <a href="training.html" class="nav__link">TRAINING</a>
+        <a href="training.html" class="nav__link" aria-current="page">TRAINING</a>
       </nav>
       <button class="nav__hamburger" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span>
@@ -53,6 +53,7 @@
     </div>
   </header>
 
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__inner">
       <nav class="mobile-menu__nav" aria-label="Mobile navigation">
@@ -72,14 +73,11 @@
   <!-- PAGE HERO -->
   <section class="hero hero--interior" id="hero" aria-label="Hero">
     <div class="hero__bg">
-      <div class="hero__img-wrap" id="heroImgWrap">
-        <!-- Re-using consulting image for training for now -->
-        <img src="assets/images/consulting.jpg" alt="Training" class="hero__img" id="heroImg" width="1920" height="1080"
-          fetchpriority="high" style="filter: grayscale(40%) brightness(0.45);" />
-      </div>
+      <img src="assets/images/training-hero.png" alt="Industrial Training" fetchpriority="high" />
       <div class="hero__grain" aria-hidden="true"></div>
       <div class="hero__gradient" aria-hidden="true"></div>
     </div>
+
     <div class="hero__content">
       <div class="hero__eyebrow" id="heroEyebrow"><span>SERVICE 04</span></div>
       <h1 class="hero__headline" id="heroHeadline">
@@ -89,52 +87,173 @@
       <p class="hero__body" id="heroBody">Empower your workforce with the skills needed to sustain operational
         excellence and maintain critical management systems.</p>
     </div>
+
     <div class="hero__scroll" id="heroScroll" aria-label="Scroll down">
       <span class="hero__scroll-label">SCROLL</span>
       <span class="hero__scroll-arrow">&darr;</span>
     </div>
   </section>
 
-  <!-- MODULES (using why pillars style) -->
-  <section class="why" id="modules">
-    <div class="why__inner">
-      <div class="why__header">
+  <!-- INTRO -->
+  <section class="intro" id="intro">
+    <div class="intro__inner">
+      <div class="intro__left">
         <div class="eyebrow">OUR CAPABILITIES</div>
-        <h2 class="why__headline">5,000+ <br>PROFESSIONALS <br>TRAINED.</h2>
+        <h2 class="intro__headline">5,000+ professionals<br><em>trained.</em></h2>
       </div>
-      <div class="why__pillars">
-        <div class="why__pillar">
-          <span class="why__pillar-num">01</span>
-          <div class="why__pillar-body">
-            <h3 class="why__pillar-title">LEAD AUDITOR TRAINING</h3>
-            <p class="why__pillar-text">Comprehensive training for ISO 9001, ISO 14001, ISO 45001, and IATF 16949
+      <div class="intro__right">
+        <p class="intro__body">Our work is led by practitioners with decades of audit, manufacturing, quality, and
+          transformation experience. We help organisations build systems that perform under scrutiny — not merely
+          systems that look compliant on paper.</p>
+        <p class="intro__body">Our training programmes give your people the same capability: lead and process
+          auditors, Six Sigma problem-solvers, and Lean practitioners who can sustain operational excellence long
+          after the certificate is on the wall.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BANNER -->
+  <section class="trn-stats" id="trnStats">
+    <div class="trn-stats__inner">
+      <div class="trn-stat" data-reveal data-delay="1">
+        <span class="trn-stat__num">5,000+</span>
+        <span class="trn-stat__label">PROFESSIONALS TRAINED</span>
+      </div>
+      <div class="trn-stat" data-reveal data-delay="2">
+        <span class="trn-stat__num">30+</span>
+        <span class="trn-stat__label">YEARS LEAD-AUDITOR EXPERIENCE</span>
+      </div>
+      <div class="trn-stat" data-reveal data-delay="3">
+        <span class="trn-stat__num">3,000+</span>
+        <span class="trn-stat__label">COMPANIES AUDITED</span>
+      </div>
+      <div class="trn-stat" data-reveal data-delay="4">
+        <span class="trn-stat__num">2</span>
+        <span class="trn-stat__label">COUNTRIES</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMMES -->
+  <section class="trn-programmes" id="modules">
+    <div class="trn-programmes__inner">
+      <div class="trn-programmes__header">
+        <div class="eyebrow">TRAINING PROGRAMMES</div>
+        <h2 class="trn-programmes__headline">Skills that<br><em>hold up.</em></h2>
+      </div>
+
+      <div class="trn-programmes__grid">
+        <!-- 01 -->
+        <div class="trn-card" data-reveal data-delay="1">
+          <div class="trn-card__img-wrap">
+            <img src="assets/images/iso-blue.png" alt="Lead Auditor Training" class="trn-card__img" loading="lazy" />
+            <div class="trn-card__overlay"></div>
+          </div>
+          <div class="trn-card__content">
+            <div class="trn-card__top">
+              <span class="trn-card__num">01</span>
+              <span class="trn-card__label">MANAGEMENT SYSTEMS</span>
+            </div>
+            <h3 class="trn-card__title">LEAD AUDITOR TRAINING</h3>
+            <p class="trn-card__text">Comprehensive training for ISO 9001, ISO 14001, ISO 45001, and IATF 16949
               standards.</p>
+            <div class="trn-card__footer">
+              <span class="trn-card__stat-label">STANDARDS</span>
+              <span class="trn-card__stat-val">ISO 9001 · ISO 14001 · ISO 45001 · IATF 16949</span>
+            </div>
           </div>
         </div>
-        <div class="why__pillar">
-          <span class="why__pillar-num">02</span>
-          <div class="why__pillar-body">
-            <h3 class="why__pillar-title">PROCESS AUDITOR (VDA 6.3)</h3>
-            <p class="why__pillar-text">Specialized training for the German automotive industry's rigorous process audit
+
+        <!-- 02 -->
+        <div class="trn-card" data-reveal data-delay="2">
+          <div class="trn-card__img-wrap">
+            <img src="assets/images/industry-automotive.png" alt="Process Auditor (VDA 6.3) Training" class="trn-card__img" loading="lazy" />
+            <div class="trn-card__overlay"></div>
+          </div>
+          <div class="trn-card__content">
+            <div class="trn-card__top">
+              <span class="trn-card__num">02</span>
+              <span class="trn-card__label">AUTOMOTIVE</span>
+            </div>
+            <h3 class="trn-card__title">PROCESS AUDITOR (VDA 6.3)</h3>
+            <p class="trn-card__text">Specialized training for the German automotive industry's rigorous process audit
               standard.</p>
+            <div class="trn-card__footer">
+              <span class="trn-card__stat-label">STANDARD</span>
+              <span class="trn-card__stat-val">VDA 6.3 Process Audit</span>
+            </div>
           </div>
         </div>
-        <div class="why__pillar">
-          <span class="why__pillar-num">03</span>
-          <div class="why__pillar-body">
-            <h3 class="why__pillar-title">SIX SIGMA CERTIFICATION</h3>
-            <p class="why__pillar-text">Green Belt and Black Belt training programs to build an internal task force of
+
+        <!-- 03 -->
+        <div class="trn-card" data-reveal data-delay="3">
+          <div class="trn-card__img-wrap">
+            <img src="assets/images/showcase-9-hd.png" alt="Six Sigma Certification" class="trn-card__img" loading="lazy" />
+            <div class="trn-card__overlay"></div>
+          </div>
+          <div class="trn-card__content">
+            <div class="trn-card__top">
+              <span class="trn-card__num">03</span>
+              <span class="trn-card__label">PROBLEM SOLVING</span>
+            </div>
+            <h3 class="trn-card__title">SIX SIGMA CERTIFICATION</h3>
+            <p class="trn-card__text">Green Belt and Black Belt training programs to build an internal task force of
               problem-solvers.</p>
+            <div class="trn-card__footer">
+              <span class="trn-card__stat-label">LEVELS</span>
+              <span class="trn-card__stat-val">Green Belt · Black Belt</span>
+            </div>
           </div>
         </div>
-        <div class="why__pillar">
-          <span class="why__pillar-num">04</span>
-          <div class="why__pillar-body">
-            <h3 class="why__pillar-title">LEAN MANUFACTURING</h3>
-            <p class="why__pillar-text">Practical, hands-on training to implement 5S, TPM, and continuous improvement
+
+        <!-- 04 -->
+        <div class="trn-card" data-reveal data-delay="4">
+          <div class="trn-card__img-wrap">
+            <img src="assets/images/lean-blue-v2.png" alt="Lean Manufacturing Training" class="trn-card__img" loading="lazy" />
+            <div class="trn-card__overlay"></div>
+          </div>
+          <div class="trn-card__content">
+            <div class="trn-card__top">
+              <span class="trn-card__num">04</span>
+              <span class="trn-card__label">SHOP FLOOR</span>
+            </div>
+            <h3 class="trn-card__title">LEAN MANUFACTURING</h3>
+            <p class="trn-card__text">Practical, hands-on training to implement 5S, TPM, and continuous improvement
               across the shop floor.</p>
+            <div class="trn-card__footer">
+              <span class="trn-card__stat-label">COVERS</span>
+              <span class="trn-card__stat-val">5S · TPM · Continuous Improvement</span>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAINER -->
+  <section class="trn-trainer" id="trainer">
+    <div class="trn-trainer__inner">
+      <div class="trn-trainer__left">
+        <div class="eyebrow" data-reveal>WHO LEADS THE TRAINING</div>
+        <h2 class="trn-trainer__headline" data-reveal data-delay="1">30 years inside<br>the <em>audit room.</em></h2>
+        <p class="trn-trainer__body" data-reveal data-delay="2">Mr. Subramanian Srinivasan brings 30 years of industry
+          consulting and audit experience across manufacturing, automotive, aerospace, and process industries in
+          India and the Gulf.</p>
+        <blockquote class="trn-trainer__quote" data-reveal data-delay="3">
+          <p>"The Six Sigma Black Belt training transformed how our engineering team approaches defect resolution.
+            Measurable outcomes within three months of implementation."</p>
+          <cite>Head of Manufacturing Excellence, FMCG Manufacturing Group, India</cite>
+        </blockquote>
+      </div>
+      <div class="credentials" aria-label="Trainer credentials" data-reveal data-delay="2">
+        <div class="credential"><span class="credential__label">LEAD AUDITOR</span><span class="credential__value">ISO 9001</span></div>
+        <div class="credential"><span class="credential__label">LEAD AUDITOR</span><span class="credential__value">IATF 16949</span></div>
+        <div class="credential"><span class="credential__label">LEAD AUDITOR</span><span class="credential__value">ISO 14001</span></div>
+        <div class="credential"><span class="credential__label">LEAD AUDITOR</span><span class="credential__value">ISO 45001</span></div>
+        <div class="credential"><span class="credential__label">CERTIFIED</span><span class="credential__value">VDA 6.3 PROCESS AUDITOR</span></div>
+        <div class="credential"><span class="credential__label">CERTIFIED</span><span class="credential__value">SIX SIGMA BLACK BELT</span></div>
+        <div class="credential"><span class="credential__label">CERTIFIED</span><span class="credential__value">LEAN MANUFACTURING TRAINER</span></div>
+        <div class="credential"><span class="credential__label">ILO</span><span class="credential__value">SCORE PROGRAMME</span></div>
       </div>
     </div>
   </section>
@@ -144,9 +263,10 @@
     <div class="final-cta__texture" aria-hidden="true"></div>
     <div class="final-cta__inner">
       <div class="eyebrow eyebrow--light">READY TO MOVE FORWARD?</div>
-      <h2 class="final-cta__headline">LET'S BUILD A<br>SYSTEM THAT<br>HOLDS UP.</h2>
+      <h2 class="final-cta__headline">Let's build a system<br><em>that holds up.</em></h2>
       <div class="final-cta__actions">
-        <a href="mailto:info@marssigma.com" class="btn btn--light btn--large">START A CONVERSATION <span class="btn__arrow">&rarr;</span></a>
+        <a href="mailto:info@marssigma.com" class="btn btn--light btn--large">START A CONVERSATION <span
+            class="btn__arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -184,7 +304,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <span class="footer__copy">Â© 2026 Mars Sigma Solutions Pvt Ltd. All rights reserved.</span>
+        <span class="footer__copy">© 2026 Mars Sigma Solutions Pvt Ltd. All rights reserved.</span>
       </div>
     </div>
   </footer>
