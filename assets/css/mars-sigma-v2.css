@@ -4647,8 +4647,12 @@ body footer.footer .footer__cols {
   animation: heroSheen 7s ease-in-out infinite;
   padding-right: 0.08em;
   /* Instrument Serif ships one weight; synthetic bold plus a fine stroke makes it read very bold */
-  font-weight: 400;
-  -webkit-text-stroke: 0.5px rgba(170,210,255,0.7); /* just a touch heavier than regular */
+  /* professional italic with a real semibold weight */
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: -0.01em;
+  -webkit-text-stroke: 0;
 }
 @keyframes heroSheen {
   0%, 100% { background-position: 100% 0; }
