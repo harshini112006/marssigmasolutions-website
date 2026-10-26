@@ -1,0 +1,68 @@
+/* ============================================================
+   ISO CONSULTING PAGE - WINE THEME
+   Every section uses the footer's deep maroon to dusk-blue blend; no black.
+   Loaded after consulting.css (which supplies the light-on-dark type and cards).
+   ============================================================ */
+.cs-page {
+  --cs-ink: #3f0d1a;
+  --cs-wine: linear-gradient(160deg, #5a1422 0%, #3f0d1a 55%, #2c3e6e 100%);
+  --cs-wine-rev: linear-gradient(200deg, #5a1422 0%, #3f0d1a 50%, #2c3e6e 100%);
+  --cs-accent: linear-gradient(100deg, #ffd9de 0%, #ffffff 50%, #cfe0ff 100%);
+  background: #3f0d1a;
+}
+
+/* navbar: transparent over the hero, wine glass once scrolled */
+.cs-page .nav.nav--scrolled { background: rgba(74,16,32,0.88) !important; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid rgba(255,217,222,0.14) !important; }
+
+/* text tones tuned for the wine background */
+.cs-body, .cs-hero__lede { color: rgba(255,240,242,0.82); }
+.cs-eyebrow { color: #ffc9d0; }
+.cs-eyebrow::before { background: linear-gradient(90deg, rgba(255,201,208,0), #ffc9d0); }
+.cs-hero__stds { color: rgba(225,235,255,0.78); }
+.cs-hero__stds i { color: #ffc9d0; }
+
+/* every section: the same maroon to dusk-blue blend, alternating direction so the joins stay soft */
+.cs-hero { background: var(--cs-wine); }
+.cs-hero::after { opacity: .25; }
+.cs-hero__bg img { opacity: 0.5; filter: saturate(0.85); }
+.cs-hero__tint {
+  background:
+    linear-gradient(90deg, rgba(90,20,34,0.96) 0%, rgba(74,16,30,0.8) 34%, rgba(63,13,26,0.38) 62%, rgba(44,62,110,0.6) 100%),
+    linear-gradient(180deg, rgba(90,20,34,0.5) 0%, transparent 28%, transparent 78%, rgba(63,13,26,0.85) 100%);
+}
+.cs-marquee { background: linear-gradient(90deg, #4a1020, #33467a 50%, #4a1020); border-block-color: rgba(255,217,222,0.16); }
+.cs-philosophy { background: var(--cs-wine-rev); }
+.cs-standards { background: var(--cs-wine); }
+.cs-transition { background: var(--cs-wine-rev); }
+.cs-approach { background: var(--cs-wine); }
+.cs-sustain { background: var(--cs-wine-rev); padding-top: clamp(50px, 6vw, 80px); }
+.cs-cta { background: var(--cs-wine); }
+body.cs-page footer.footer { background: var(--cs-wine-rev) !important; border-top: 1px solid rgba(255,217,222,0.12); }
+
+/* glass cards on the wine background */
+.cs-std { background: rgba(255,255,255,0.06); border-color: rgba(255,217,222,0.18); }
+.cs-std:hover { background: rgba(255,255,255,0.1); border-color: rgba(207,224,255,0.45); }
+.cs-std__tag { color: #cfe0ff; }
+.cs-std__code small { color: #ffc9d0; }
+.cs-std__text { color: rgba(255,240,242,0.75); }
+.cs-callout { background: rgba(255,255,255,0.07); border-color: rgba(255,217,222,0.2); }
+.cs-step::before { background: #4a1020; }
+.cs-phase::before { background: #4a1020; }
+.cs-sustain__card { background: rgba(255,255,255,0.06); border-color: rgba(255,217,222,0.2); box-shadow: 0 30px 70px rgba(30,6,14,0.35); }
+.cs-photo { border-color: rgba(255,217,222,0.2); box-shadow: 0 30px 70px rgba(30,6,14,0.4); }
+.cs-photo::after { background: linear-gradient(160deg, rgba(90,20,34,0.45) 0%, transparent 50%, rgba(44,62,110,0.5) 100%); }
+.cs-photo__chip { background: rgba(63,13,26,0.6); }
+
+/* seal: light rings on the wine background */
+.cs-seal__glow { background: radial-gradient(circle, rgba(255,217,222,0.22) 0%, rgba(207,224,255,0.12) 45%, transparent 70%); }
+.cs-seal .cs-seal__pulse circle { fill: rgba(63,13,26,0.55); }
+
+/* footer copy */
+body.cs-page footer.footer .footer__wordmark em,
+body.cs-page footer.footer .footer__col-title { background: var(--cs-accent) !important; -webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important; }
+body.cs-page footer.footer :is(.footer__link, .footer__contact-link, .footer__address, .footer__copy, .footer__legal-link) { color: rgba(255,244,246,0.82) !important; }
+
+@media (max-width: 920px) {
+  .cs-hero__bg img { opacity: 0.3; }
+  .cs-hero__tint { background: linear-gradient(180deg, rgba(90,20,34,0.85) 0%, rgba(63,13,26,0.7) 55%, rgba(44,62,110,0.75) 100%); }
+}
