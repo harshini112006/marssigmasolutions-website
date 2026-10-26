@@ -25,7 +25,7 @@ function initLenis() {
   if (typeof Lenis === 'undefined') return;
 
   lenis = new Lenis({
-    duration: 1.4,
+    duration: 0.9, // shorter glide so the page follows the wheel promptly
     easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smooth: true,
     smoothTouch: false,
@@ -612,7 +612,7 @@ function initTestimonials() {
 function initMagneticButtons() {
   if (window.matchMedia('(pointer: coarse)').matches) return;
 
-  document.querySelectorAll('.btn').forEach(btn => {
+  document.querySelectorAll('.btn, .bt-btn').forEach(btn => {
     btn.addEventListener('mousemove', e => {
       const rect  = btn.getBoundingClientRect();
       const dx    = e.clientX - (rect.left + rect.width  / 2);

@@ -6,27 +6,6 @@
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  // Hero "under audit,": tiny twinkling sparkles that appear and fade across the letters.
-  const accent = document.querySelector('#hero .hero__line--accent > span');
-  if (accent) {
-    accent.classList.add('has-sparkles');
-    const place = s => {
-      s.style.left = (4 + Math.random() * 92) + '%';
-      s.style.top = (10 + Math.random() * 80) + '%';
-      s.style.setProperty('--s', (0.5 + Math.random() * 0.9).toFixed(2));
-    };
-    for (let i = 0; i < 9; i++) {
-      const s = document.createElement('i');
-      s.className = 'hero-sparkle';
-      s.setAttribute('aria-hidden', 'true');
-      place(s);
-      s.style.animationDelay = (Math.random() * 3.2).toFixed(2) + 's';
-      s.style.animationDuration = (2.2 + Math.random() * 1.6).toFixed(2) + 's';
-      s.addEventListener('animationiteration', () => place(s)); // twinkle somewhere new each time
-      accent.appendChild(s);
-    }
-  }
-
   // Footer headings: arm the CSS reveal, then trigger it once the footer is in view.
   const footer = document.querySelector('footer.footer');
   if (footer && 'IntersectionObserver' in window) {
