@@ -298,7 +298,8 @@ body.tp-page footer.footer .footer__tagline { color: rgba(255,240,242,0.72) !imp
   .tp-stage__node { width: 52px; height: 52px; }
   .tp-chips { grid-template-columns: 1fr; }
   .tp-page .tp-hero__lede { font-size: 16px; }
-  .tp-report { width: 220px; bottom: 18px; }
+  .tp-report { width: 196px; bottom: 16px; padding: 14px 14px 10px; }
+  .tp-report li { font-size: 12px; padding: 5px 0 5px 24px; }
   .tp-cta__actions { flex-direction: column; }
 }
 @media (max-width: 420px) {
