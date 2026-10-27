@@ -5,6 +5,7 @@
 
 /* ΓöÇΓöÇΓöÇ GOOGLE FONTS IMPORT ΓöÇΓöÇΓöÇ */
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
 
 /* ΓöÇΓöÇΓöÇ DESIGN TOKENS ΓöÇΓöÇΓöÇ */
 :root {
@@ -5791,77 +5792,141 @@ html body .nav__hamburger { min-width: 44px; min-height: 44px; align-items: cent
 }
 
 /* ============================================================
-   NAVBAR TEXT BRAND — replaces the logo image on every page
+   NAVBAR TEXT BRAND — glass crest card, tinted per page theme
    ============================================================ */
+body { --brand-accent: #9cc8ff; --brand-accent-rgb: 156, 200, 255; }
+body.bt-page { --brand-accent: #d6e2f2; --brand-accent-rgb: 214, 226, 242; }
+body.cs-page { --brand-accent: #e7a3ab; --brand-accent-rgb: 231, 163, 171; }
+body.tr-page { --brand-accent: #cfe0ff; --brand-accent-rgb: 207, 224, 255; }
+body.tp-page { --brand-accent: #e6c15f; --brand-accent-rgb: 230, 193, 95; }
+
 html body .nav .nav__logo.nav__brand {
+  position: relative;
   display: inline-flex !important;
   flex-direction: row !important;
-  align-items: baseline;
-  gap: 0.6em;
+  align-items: center;
+  gap: 12px;
   flex-shrink: 1;
   min-width: 0;
-  padding: 0 !important;
-  background: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  padding: 6px 20px 6px 7px !important;
+  border-radius: 999px !important;
+  border: 0 !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.015)) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
   color: #ffffff !important;
   text-decoration: none;
   white-space: nowrap;
-  text-shadow: 0 1px 14px rgba(2, 12, 30, 0.35);
-  transition: opacity .3s var(--ease-out) !important;
-  transform: none !important;
+  overflow: hidden;
+  isolation: isolate;
+  transform: none;
+  transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out) !important;
 }
-html body .nav .nav__logo.nav__brand:hover { opacity: .85; }
-.nav__brand-name {
-  font-family: 'Manrope', sans-serif;
-  font-size: 19px;
-  font-weight: 300;
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-.nav__brand-name em {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-style: italic;
-  font-size: 1.12em;
-  letter-spacing: 0;
-  color: #9cc8ff;
-}
-.nav__brand-suffix {
-  position: relative;
-  padding-left: 0.85em;
-  font-family: 'Manrope', sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  line-height: 1;
-  color: rgba(225, 238, 255, 0.72);
-}
-.nav__brand-suffix::before {
+/* Hairline gradient border in the page accent. */
+html body .nav .nav__logo.nav__brand::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 50%;
-  width: 1px;
-  height: 1.3em;
-  transform: translateY(-50%);
-  background: linear-gradient(180deg, transparent, rgba(156, 200, 255, 0.7), transparent);
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(var(--brand-accent-rgb), 0.85), rgba(255,255,255,0.10) 45%, rgba(var(--brand-accent-rgb), 0.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
 }
+/* Light sweep across the card: once on load, again on hover. */
+html body .nav .nav__logo.nav__brand::after {
+  content: "";
+  position: absolute;
+  inset: -2px auto -2px 0;
+  width: 45%;
+  z-index: -1;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.22), rgba(var(--brand-accent-rgb), 0.18), transparent);
+  transform: translateX(-130%) skewX(-18deg);
+  animation: navBrandSweep 1.6s .9s var(--ease-out) both;
+  pointer-events: none;
+}
+html body .nav .nav__logo.nav__brand:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.34), 0 0 0 4px rgba(var(--brand-accent-rgb), 0.08), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+}
+html body .nav .nav__logo.nav__brand:hover::after { animation: navBrandSweep 1.1s var(--ease-out) both; }
+@keyframes navBrandSweep {
+  from { transform: translateX(-130%) skewX(-18deg); }
+  to { transform: translateX(330%) skewX(-18deg); }
+}
+
+.nav__brand-crest {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.28), transparent 60%),
+    linear-gradient(145deg, rgba(var(--brand-accent-rgb), 0.55), rgba(var(--brand-accent-rgb), 0.12));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.28), 0 0 18px rgba(var(--brand-accent-rgb), 0.25);
+  transition: transform .6s var(--ease-out);
+}
+html body .nav .nav__logo.nav__brand:hover .nav__brand-crest { transform: rotate(-12deg) scale(1.05); }
+
+.nav__brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+html body .nav .nav__brand-name {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  line-height: 1;
+  color: #ffffff;
+}
+html body .nav .nav__brand-suffix {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: var(--brand-accent);
+}
+.nav__brand-suffix::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  min-width: 18px;
+  background: linear-gradient(90deg, rgba(var(--brand-accent-rgb), 0.7), transparent);
+}
+
 @media (max-width: 1240px) and (min-width: 769px) {
-  .nav__brand-name { font-size: 17px; }
-  .nav__brand-suffix { font-size: 9px; }
+  html body .nav .nav__brand-name { font-size: 20px; }
+  .nav__brand-crest { width: 32px; height: 32px; font-size: 19px; }
 }
 @media (max-width: 768px) {
-  html body .nav .nav__inner { gap: 1rem; }
-  .nav__brand-name { font-size: 17px; }
+  html body .nav .nav__inner { gap: 0.75rem; }
+  html body .nav .nav__logo.nav__brand { gap: 10px; padding: 5px 16px 5px 5px !important; }
+  html body .nav .nav__brand-name { font-size: 20px; }
+  .nav__brand-crest { width: 32px; height: 32px; font-size: 19px; }
 }
-@media (max-width: 420px) {
-  html body .nav .nav__logo.nav__brand {
-    flex-direction: column !important;
-    align-items: flex-start;
-    gap: 5px;
-  }
-  .nav__brand-name { font-size: 16px; }
-  .nav__brand-suffix { padding-left: 0; font-size: 8.5px; letter-spacing: 0.3em; }
-  .nav__brand-suffix::before { display: none; }
+@media (max-width: 360px) {
+  html body .nav .nav__brand-name { font-size: 18px; }
+  html body .nav .nav__brand-suffix { font-size: 8.5px; letter-spacing: 0.28em; }
+  .nav__brand-crest { width: 28px; height: 28px; font-size: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .nav .nav__logo.nav__brand::after { animation: none; }
 }
