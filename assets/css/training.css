@@ -1,0 +1,159 @@
+/* ============================================================
+   TRAINING PAGE (body.cs-page.tr-page)
+   Builds on consulting.css + consulting-wine.css: wine sections alternate
+   with light (white / warm ivory) ones, same footer as ISO Consulting.
+   ============================================================ */
+.tr-page {
+  --tr-maroon: #7d1b2c;
+  --tr-head: #3f0d1a;
+  --tr-text: #5b3f46;
+  --tr-blue: #2a4f9e;
+  --tr-ivory: #fbf7f3;
+  --tr-ink-accent: linear-gradient(100deg, #7d1b2c 0%, #a3364a 45%, #2a4f9e 100%);
+}
+
+/* ---------- HERO: self-drawn canvas loop, no photo ---------- */
+.tr-hero { background: var(--cs-wine); }
+.tr-hero__bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.tr-hero__video {
+  position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0;
+  transition: opacity 1.2s ease;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 36%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 36%, #000 100%);
+}
+.tr-hero__bg.is-live .tr-hero__video { opacity: 1; }
+.tr-hero .cs-hero__tint {
+  background:
+    linear-gradient(90deg, rgba(90,20,34,0.92) 0%, rgba(74,16,30,0.62) 36%, rgba(63,13,26,0.2) 64%, rgba(44,62,110,0.35) 100%),
+    linear-gradient(180deg, rgba(90,20,34,0.45) 0%, transparent 26%, transparent 80%, rgba(63,13,26,0.8) 100%);
+}
+
+/* hero wheel: six programme segments lighting in turn around the core */
+.tr-wheel { position: relative; width: min(100%, 440px); aspect-ratio: 1; margin-left: auto; }
+.tr-wheel svg { width: 100%; height: 100%; overflow: visible; }
+.tr-wheel__spin { transform-origin: 300px 300px; animation: csSpin 70s linear infinite; }
+.tr-wheel__segs path { stroke: rgba(255,255,255,0.08); animation: trSeg 9s ease-in-out infinite; }
+.tr-wheel__segs path:nth-child(2) { animation-delay: 1.5s; }
+.tr-wheel__segs path:nth-child(3) { animation-delay: 3s; }
+.tr-wheel__segs path:nth-child(4) { animation-delay: 4.5s; }
+.tr-wheel__segs path:nth-child(5) { animation-delay: 6s; }
+.tr-wheel__segs path:nth-child(6) { animation-delay: 7.5s; }
+@keyframes trSeg {
+  0%, 30%, 100% { stroke: rgba(255,255,255,0.08); }
+  8%, 20% { stroke: rgba(160,48,70,0.9); }
+  24% { stroke: rgba(70,110,190,0.75); }
+}
+.tr-wheel__labels text { font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 3px; fill: rgba(255,240,242,0.88); }
+.tr-wheel .cs-seal__core-v { font-size: 52px; }
+
+/* ---------- LIGHT SECTIONS ---------- */
+.tr-light { background: #ffffff; color: var(--tr-text); }
+.tr-light .cs-eyebrow { color: var(--tr-maroon); }
+.tr-light .cs-eyebrow::before { background: linear-gradient(90deg, rgba(125,27,44,0), var(--tr-maroon)); }
+.tr-light .cs-h2 { color: var(--tr-head); }
+.cs-page .tr-light .cs-h2 em { background: var(--tr-ink-accent); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: var(--tr-maroon); }
+.tr-light .cs-body { color: var(--tr-text); }
+.tr-light .cs-quote { color: var(--tr-maroon); border-top-color: rgba(125,27,44,0.18); }
+
+/* why train with us */
+.tr-why { background: linear-gradient(180deg, #ffffff 0%, var(--tr-ivory) 100%); }
+.tr-photo { border-color: rgba(125,27,44,0.14) !important; box-shadow: 0 30px 60px rgba(63,13,26,0.18) !important; aspect-ratio: 4 / 3.9; }
+.tr-photo img { object-position: 52% 45%; filter: saturate(0.92) contrast(1.03); }
+.cs-page .tr-photo::after { background: linear-gradient(170deg, transparent 45%, rgba(63,13,26,0.55) 100%); mix-blend-mode: normal; }
+.tr-creds { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.tr-creds li {
+  position: relative; padding: 8px 14px 8px 30px; border-radius: 999px;
+  background: #fff; border: 1px solid rgba(125,27,44,0.2); box-shadow: 0 6px 16px rgba(63,13,26,0.06);
+  font-family: 'Manrope', sans-serif; font-size: 12.5px; font-weight: 600; color: var(--tr-head);
+}
+.tr-creds li::before {
+  content: ""; position: absolute; left: 11px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%;
+  background: var(--tr-ink-accent);
+  -webkit-mask: radial-gradient(circle, transparent 2px, #000 2.5px); mask: radial-gradient(circle, transparent 2px, #000 2.5px);
+}
+
+/* ---------- PROGRAMMES (wine) ---------- */
+.tr-programmes { background: var(--cs-wine); }
+.tr-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.tr-grid .cs-std { min-height: 0; padding: 26px 24px 24px; }
+.tr-grid .cs-std__code { font-size: clamp(19px, 1.5vw, 23px); }
+.tr-tags { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tr-tags li {
+  padding: 4px 10px; border-radius: 999px; background: rgba(207,224,255,0.08); border: 1px solid rgba(207,224,255,0.2);
+  font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; color: #e6eeff;
+}
+
+/* ---------- JOURNEY TIMELINE (light) ---------- */
+.tr-journey { background: var(--tr-ivory); }
+.tr-journey__head { max-width: 720px; margin-bottom: 54px; }
+.tr-path { position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px; }
+.tr-path__rail { position: absolute; left: 26px; right: calc(100% / 6 - 26px); top: 26px; height: 2px; background: rgba(125,27,44,0.12); border-radius: 2px; }
+.tr-path__rail i { position: absolute; inset: 0 auto 0 0; width: calc(var(--p, 1) * 100%); background: linear-gradient(90deg, #a3364a, #2a4f9e); border-radius: 2px; box-shadow: 0 0 10px rgba(163,54,74,0.35); }
+.tr-node { position: relative; }
+.tr-node__ic {
+  position: relative; z-index: 1; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%;
+  background: #fff; border: 1px solid rgba(125,27,44,0.25); color: var(--tr-maroon);
+  transition: background .5s ease, color .5s ease, border-color .5s ease, box-shadow .5s ease, transform .5s ease;
+}
+.tr-node__ic svg { width: 46%; height: 46%; }
+.tr-node.is-on .tr-node__ic, html:not(.tr-js) .tr-node__ic {
+  background: linear-gradient(140deg, #7d1b2c, #2a4f9e); border-color: transparent; color: #fff;
+  box-shadow: 0 0 0 6px rgba(125,27,44,0.08), 0 12px 24px rgba(63,13,26,0.2);
+}
+.tr-node:hover .tr-node__ic { transform: translateY(-3px); }
+.tr-node__n { display: block; margin-top: 18px; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 24px; line-height: 1; color: #a3364a; }
+.tr-page .tr-node h3 { margin: 8px 0 6px; font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 600; color: var(--tr-head); }
+.tr-page .tr-node p { margin: 0; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.65; color: var(--tr-text) !important; }
+
+/* ---------- LEARNING LOOP (wine) ---------- */
+.tr-loop { background: var(--cs-wine-rev); }
+.tr-loop__inner { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(36px, 5vw, 80px); align-items: center; }
+.tr-cycle { margin: 0; width: min(100%, 440px); justify-self: center; }
+.tr-cycle svg { width: 100%; height: auto; display: block; overflow: visible; }
+.tr-cycle__dash { transform-origin: 220px 220px; animation: csSpin 40s linear infinite; }
+.tr-cycle__orbit { transform-origin: 220px 220px; animation: csSpin 12s linear infinite; }
+.tr-cycle__orbit circle { filter: drop-shadow(0 0 6px rgba(255,201,208,0.9)); }
+.tr-cycle__node circle { fill: #4a1020; stroke: rgba(207,224,255,0.4); stroke-width: 1.2; animation: trNode 12s ease-in-out infinite; animation-delay: calc(var(--i) * 3s); }
+.tr-cycle__node text { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 17px; fill: #fff; }
+@keyframes trNode {
+  0%, 30%, 100% { fill: #4a1020; stroke: rgba(207,224,255,0.4); }
+  5%, 22% { fill: #7d1b2c; stroke: #cfe0ff; }
+}
+.tr-cycle__k { font-family: 'Manrope', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 4px; fill: #ffc9d0; }
+.tr-cycle__v { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 26px; fill: #fff; }
+.tr-outcomes { margin-top: 30px; }
+
+/* CTA + footer pick up the wine blend from consulting-wine.css */
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1180px) {
+  .tr-path { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 34px; }
+  .tr-path__rail { display: none; }
+}
+@media (max-width: 920px) {
+  .tr-hero__video { -webkit-mask-image: none; mask-image: none; }
+  .tr-hero__bg.is-live .tr-hero__video { opacity: 0.5; }
+  .tr-hero .cs-hero__tint { background: linear-gradient(180deg, rgba(90,20,34,0.85) 0%, rgba(63,13,26,0.62) 55%, rgba(44,62,110,0.7) 100%); }
+  .tr-wheel { width: min(78vw, 400px); margin: 10px auto 0; }
+  .tr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tr-loop__inner { grid-template-columns: 1fr; }
+  .tr-loop__inner > div { order: -1; }
+  .tr-photo { aspect-ratio: 16 / 12; }
+
+  /* timeline turns vertical */
+  .tr-path { grid-template-columns: 1fr; gap: 0; padding-left: 70px; }
+  .tr-path__rail { display: block; left: 25px; right: auto; top: 26px; bottom: 26px; width: 2px; height: auto; }
+  .tr-path__rail i { inset: 0 0 auto 0; width: auto; height: calc(var(--p, 1) * 100%); }
+  .tr-node { padding-bottom: 28px; }
+  .tr-node:last-child { padding-bottom: 0; }
+  .tr-node__ic { position: absolute; left: -70px; top: 0; }
+  .tr-node__n { margin-top: 0; font-size: 20px; }
+}
+@media (max-width: 640px) {
+  .tr-grid { grid-template-columns: 1fr; }
+  .tr-photo { aspect-ratio: 4 / 4.2; }
+  .tr-wheel__labels text { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tr-wheel__spin, .tr-wheel__segs path, .tr-cycle__dash, .tr-cycle__orbit, .tr-cycle__node circle { animation: none !important; }
+}
