@@ -5757,3 +5757,35 @@ body.bt-page footer.footer .footer__col-title { animation: none !important; }
 .services__header.has-particles .services__headline {
   opacity: var(--headline-reveal, 0) !important;
 }
+
+/* -- Mobile responsive pass ----------------------------------------- */
+/* Comfortable tap target for the menu button on every page */
+html body .nav__hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+
+/* Home: ISO 9001:2026 steps stack instead of scrolling sideways */
+@media (max-width: 900px) {
+  html body .iso-timeline__scroller { overflow: visible; }
+  html body .iso-timeline__track { min-width: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.75rem; }
+  html body .iso-timeline__line, html body .iso-step::before { display: none; }
+  html body .iso-step { padding: 0 1.25rem 0 0; border-right: none; opacity: 1; }
+}
+@media (max-width: 560px) {
+  html body .iso-timeline { padding: 1.25rem 1.25rem 1.5rem !important; }
+  html body .iso-timeline__track { grid-template-columns: minmax(0, 1fr); row-gap: 0; }
+  html body .iso-step { padding: 1.1rem 0; border-bottom: 1px solid rgba(100,170,255,0.14); }
+  html body .iso-step:last-child { border-bottom: none; }
+}
+
+/* Home: founder block no longer pushes the page wider than the phone */
+@media (max-width: 768px) {
+  html body .founder__inner { grid-template-columns: minmax(0, 1fr); }
+  html body .founder__portrait-col, html body .founder__content-col { min-width: 0; }
+  html body .founder__creds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html body .founder__stats { flex-wrap: wrap; gap: 1.25rem 2.25rem; }
+  html body .service-panel__cta, html body .showcase__cta { padding-block: 10px; }
+}
+@media (max-width: 480px) {
+  html body .tcard__footer { flex-wrap: wrap; }
+  html body .tcard__meta { flex: 1 1 0; min-width: 0; }
+  html body .tcard__tag { margin-left: 52px; }
+}
