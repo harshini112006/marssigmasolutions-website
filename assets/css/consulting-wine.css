@@ -66,3 +66,141 @@ body.cs-page footer.footer :is(.footer__link, .footer__contact-link, .footer__ad
   .cs-hero__bg img { opacity: 0.3; }
   .cs-hero__tint { background: linear-gradient(180deg, rgba(90,20,34,0.85) 0%, rgba(63,13,26,0.7) 55%, rgba(44,62,110,0.75) 100%); }
 }
+
+/* ============================================================
+   VISUAL LAYER: self-drawn hero loop, icon cards, illustrated timeline,
+   ISO 9001:2015 -> 2026 diagram. Same maroon / dusk-blue palette, no black.
+   ============================================================ */
+
+/* hero: canvas loop sits where the photo was; the photo stays as the poster fallback */
+.cs-hero__video {
+  position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0;
+  transition: opacity 1.2s ease;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 34%, #000 100%);
+}
+.cs-hero__bg.is-live .cs-hero__video { opacity: 1; }
+.cs-hero__bg.is-live img { opacity: 0.16; filter: saturate(0.6) blur(1px); }
+@media (max-width: 920px) {
+  .cs-hero__video { -webkit-mask-image: none; mask-image: none; opacity: 0; }
+  .cs-hero__bg.is-live .cs-hero__video { opacity: 0.55; }
+  .cs-hero__bg.is-live img { opacity: 0.12; }
+}
+
+/* shared icon tile */
+.cs-std__ic, .cs-step__ic, .cs-phase__ic, .cs-chip__ic { display: grid; place-items: center; flex: none; color: #ffe3e7; }
+.cs-std__ic svg, .cs-step__ic svg, .cs-phase__ic svg, .cs-chip__ic svg { width: 55%; height: 55%; }
+
+/* standards: icon badge on each card */
+.cs-std__ic {
+  width: 44px; height: 44px; border-radius: 12px; margin-bottom: 16px;
+  background: linear-gradient(140deg, rgba(125,27,44,0.85), rgba(42,79,158,0.7));
+  border: 1px solid rgba(255,217,222,0.28); box-shadow: 0 10px 24px rgba(30,6,14,0.35);
+  transition: transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.cs-std:hover .cs-std__ic { transform: rotate(-6deg) scale(1.08); }
+.cs-std__code { margin-top: 8px; }
+
+/* ISO 9001:2026 transition: from / to diagram above the steps */
+.cs-transition__flow { min-width: 0; }
+.cs-shift {
+  margin: 0 0 34px; padding: 24px 24px 20px; border-radius: 18px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(207,224,255,0.2);
+}
+.cs-shift__row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 12px; }
+.cs-shift__badge {
+  width: 104px; height: 104px; border-radius: 50%; display: grid; place-content: center; text-align: center;
+  background: rgba(63,13,26,0.55); border: 1px dashed rgba(255,217,222,0.4);
+  font-family: 'Manrope', sans-serif; color: rgba(255,240,242,0.8);
+}
+.cs-shift__badge small { font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,217,222,0.7); }
+.cs-shift__badge b { font-size: 15px; font-weight: 700; color: #fff; margin-top: 2px; }
+.cs-shift__badge span { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.1; }
+.cs-shift__badge--new {
+  background: linear-gradient(140deg, #7d1b2c, #2a4f9e); border: 1px solid rgba(207,224,255,0.5);
+  box-shadow: 0 0 0 8px rgba(207,224,255,0.06), 0 0 34px rgba(108,151,216,0.45);
+}
+.cs-shift__badge--new small { color: #cfe0ff; }
+.cs-shift__badge--new span { color: #cfe0ff; }
+.cs-shift__arrow { width: 100%; height: 40px; overflow: visible; }
+.cs-shift__arrow text { font-family: 'Manrope', sans-serif; font-size: 8.5px; font-weight: 600; letter-spacing: .18em; fill: rgba(255,217,222,0.75); }
+.cs-shift__dash { animation: csDash 1.4s linear infinite; }
+@keyframes csDash { to { stroke-dashoffset: -28; } }
+.cs-shift__focus { list-style: none; margin: 20px 0 0; padding: 16px 0 0; border-top: 1px solid rgba(207,224,255,0.14); display: flex; flex-wrap: wrap; gap: 8px; }
+.cs-shift__focus li {
+  padding: 7px 12px 7px 26px; border-radius: 999px; position: relative;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,217,222,0.2);
+  font-family: 'Manrope', sans-serif; font-size: 12.5px; font-weight: 500; color: #fff;
+}
+.cs-shift__focus li::before { content: ""; position: absolute; left: 11px; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: linear-gradient(140deg, #ffc9d0, #cfe0ff); }
+
+/* transition steps: illustrated timeline, the icon node replaces the number dot */
+.cs-steps { padding-left: 62px; }
+.cs-steps__rail { left: 20px; top: 20px; bottom: 20px; }
+.cs-step { padding-bottom: 28px; }
+.cs-step::before {
+  content: "Step " attr(data-n); position: static; display: block; width: auto; height: auto; border: 0; border-radius: 0;
+  background: none !important; color: #ffc9d0 !important; font-size: 10px; letter-spacing: .2em; text-transform: uppercase; place-items: initial;
+}
+.cs-step__ic {
+  position: absolute; left: -62px; top: 0; width: 42px; height: 42px; border-radius: 50%;
+  background: #4a1020; border: 1px solid rgba(207,224,255,0.3); color: #cfe0ff;
+  transition: background .5s ease, border-color .5s ease, color .5s ease, box-shadow .5s ease;
+}
+.cs-step.is-on .cs-step__ic { background: linear-gradient(140deg, #7d1b2c, #2a4f9e); border-color: transparent; color: #fff; box-shadow: 0 0 0 6px rgba(207,224,255,0.07), 0 0 20px rgba(231,163,171,0.4); }
+html:not(.cs-js) .cs-step__ic { background: linear-gradient(140deg, #7d1b2c, #2a4f9e); color: #fff; }
+.cs-step h3 { margin-top: 4px; }
+
+/* how we work: icon tiles on a connected line */
+.cs-cycle { border-top: 0; position: relative; }
+.cs-cycle::before { content: ""; position: absolute; left: 0; right: 0; top: 49px; border-top: 1px dashed rgba(255,217,222,0.3); }
+.cs-phase { padding-top: 26px; }
+.cs-phase::before { top: 44px; left: 62px; }
+.cs-phase__ic {
+  position: relative; width: 48px; height: 48px; border-radius: 14px; margin-bottom: 18px;
+  background: linear-gradient(140deg, rgba(125,27,44,0.9), rgba(42,79,158,0.75));
+  border: 1px solid rgba(255,217,222,0.3); box-shadow: 0 12px 26px rgba(30,6,14,0.35);
+  transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease;
+}
+.cs-phase:hover .cs-phase__ic { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(30,6,14,0.45), 0 0 20px rgba(207,224,255,0.25); }
+.cs-phase__n { font-size: 24px; }
+
+/* sustenance chips: icon in place of the dot */
+.cs-chip--ic::before { display: none; }
+.cs-chip__ic { width: 30px; height: 30px; border-radius: 9px; background: linear-gradient(140deg, rgba(125,27,44,0.85), rgba(42,79,158,0.7)); }
+.cs-chip__ic svg { width: 62%; height: 62%; }
+
+@media (max-width: 1180px) {
+  .cs-cycle::before { display: none; }
+  .cs-phase::before { display: none; }
+}
+@media (max-width: 640px) {
+  .cs-shift { padding: 18px 16px; }
+  .cs-shift__badge { width: 84px; height: 84px; }
+  .cs-shift__badge span { font-size: 18px; }
+  .cs-shift__arrow text { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .cs-shift__dash { animation: none; } }
+
+/* Philosophy photo: frame the suited team, keep colour natural under the wine fade */
+.cs-philosophy .cs-photo img { object-position: 56% 40%; filter: saturate(0.85) contrast(1.04) brightness(0.88); }
+@media (max-width: 920px) { .cs-philosophy .cs-photo img { object-position: 50% 30%; } }
+@media (max-width: 640px) {
+  .cs-philosophy .cs-photo { aspect-ratio: 4 / 4.4; }
+  .cs-philosophy .cs-photo__chip { left: 12px; right: 12px; bottom: 12px; padding: 12px 14px; font-size: 12px; line-height: 1.5; }
+  .cs-philosophy .cs-photo__chip b { font-size: 10px; letter-spacing: .2em; margin-bottom: 4px; }
+}
+
+/* CTA rings: slow staggered breathing pulse */
+.cs-cta__rings { opacity: 1; }
+.cs-cta__rings g { stroke: rgba(247,218,221,.24); }
+.cs-cta__rings circle:nth-child(4) { stroke: rgba(207,224,255,.2); }
+.cs-cta__rings circle { transform-box: view-box; transform-origin: 450px 450px; animation: cs-breathe 6s ease-in-out infinite; }
+.cs-cta__rings circle:nth-child(2) { animation-delay: .6s; }
+.cs-cta__rings circle:nth-child(3) { animation-delay: 1.2s; }
+.cs-cta__rings circle:nth-child(4) { animation-delay: 1.8s; }
+@keyframes cs-breathe {
+  0%, 100% { transform: scale(.92); opacity: .35; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .cs-cta__rings circle { animation: none; } }
