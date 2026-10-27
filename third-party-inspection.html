@@ -96,19 +96,10 @@
         </div>
 
         <figure class="tp-hero__media tp-reveal" style="--d:.18s">
-          <div class="tp-hero__photo">
-            <img src="assets/images/tpi-blue.png" alt="Quality inspectors reviewing inspection records on a textile production floor" fetchpriority="high" />
+          <div class="tp-hero__photo tp-hero__screen">
+            <canvas class="tp-hero__video" role="img" aria-label="Animated inspection line: parts pass through a scanning gate and are marked pass or hold"></canvas>
+            <span class="tp-hero__live" aria-hidden="true"><i></i>Live inspection</span>
           </div>
-          <figcaption class="tp-report" aria-label="Typical inspection checkpoints">
-            <span class="tp-report__head"><i aria-hidden="true"></i>Inspection checklist</span>
-            <ul>
-              <li>Dimensions &amp; specifications</li>
-              <li>Visual &amp; functional checks</li>
-              <li>Packaging &amp; labelling</li>
-              <li>Records &amp; documentation</li>
-            </ul>
-            <span class="tp-report__stamp">Verified</span>
-          </figcaption>
         </figure>
       </div>
     </section>
@@ -138,6 +129,22 @@
             <p class="tp-body tp-reveal" style="--d:.2s">Our inspectors work from your drawings, specifications and acceptance criteria, and report exactly what they find, free from production pressure or supplier influence.</p>
           </div>
         </div>
+
+        <figure class="tp-cost tp-reveal" aria-labelledby="tpCostTitle">
+          <div class="tp-cost__text">
+            <span class="tp-cost__k">Why the stage matters</span>
+            <h3 id="tpCostTitle">The later a defect is found, <em>the more it costs.</em></h3>
+            <p>A fault caught at the supplier costs a quick correction. The same fault found by your customer brings rework, returns, freight and lost confidence.</p>
+            <small>Illustrative, not to scale.</small>
+          </div>
+          <div class="tp-cost__chart" aria-hidden="true">
+            <div class="tp-cost__bar" style="--h:.12;--i:0"><i></i><span>At the supplier</span></div>
+            <div class="tp-cost__bar" style="--h:.22;--i:1"><i></i><span>On receipt</span></div>
+            <div class="tp-cost__bar" style="--h:.38;--i:2"><i></i><span>On the line</span></div>
+            <div class="tp-cost__bar" style="--h:.6;--i:3"><i></i><span>Final check</span></div>
+            <div class="tp-cost__bar is-late" style="--h:1;--i:4"><i><b>Complaint</b></i><span>At the customer</span></div>
+          </div>
+        </figure>
 
         <div class="tp-benefits">
           <article class="tp-benefit tp-reveal" style="--d:0s">
@@ -172,31 +179,31 @@
 
         <ol class="tp-flow">
           <li class="tp-stage tp-reveal" style="--d:0s">
-            <span class="tp-stage__node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5V10l5 3v-3l5 3V7l8 4v9.5z"/><path d="M2 20.5h20M7 17h2M12 17h2M17 17h2"/></svg></span>
+            <span class="tp-stage__node" style="--s:0" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5V10l5 3v-3l5 3V7l8 4v9.5z"/><path d="M2 20.5h20M7 17h2M12 17h2M17 17h2"/></svg></span>
             <span class="tp-stage__n">01 &middot; At the supplier</span>
             <h3>Vendor Inspection</h3>
             <p>Assessment of supplier capability, quality controls and product conformity at the vendor's site, before parts are released to you.</p>
           </li>
           <li class="tp-stage tp-reveal" style="--d:.06s">
-            <span class="tp-stage__node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span>
+            <span class="tp-stage__node" style="--s:1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span>
             <span class="tp-stage__n">02 &middot; On receipt</span>
             <h3>Incoming Inspection</h3>
             <p>Verification of raw materials and bought-out parts against specifications, drawings and supplier certificates as they arrive.</p>
           </li>
           <li class="tp-stage tp-reveal" style="--d:.12s">
-            <span class="tp-stage__node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8"/></svg></span>
+            <span class="tp-stage__node" style="--s:2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8"/></svg></span>
             <span class="tp-stage__n">03 &middot; On the line</span>
             <h3>In-Process Inspection</h3>
             <p>Checks at intermediate stages of production to stop defects from propagating downstream and causing costly scrap or rework.</p>
           </li>
           <li class="tp-stage tp-reveal" style="--d:.18s">
-            <span class="tp-stage__node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/><path d="M8 10.5l1.8 1.8 3-3.3"/></svg></span>
+            <span class="tp-stage__node" style="--s:3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/><path d="M8 10.5l1.8 1.8 3-3.3"/></svg></span>
             <span class="tp-stage__n">04 &middot; Finished goods</span>
             <h3>Final Inspection</h3>
             <p>Confirmation that finished products meet specifications, functional requirements and acceptance criteria before release.</p>
           </li>
           <li class="tp-stage tp-reveal" style="--d:.24s">
-            <span class="tp-stage__node" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h11v10.5h-11z"/><path d="M13.5 9.5h4l3 3.2v3.8h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
+            <span class="tp-stage__node" style="--s:4" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h11v10.5h-11z"/><path d="M13.5 9.5h4l3 3.2v3.8h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span>
             <span class="tp-stage__n">05 &middot; Before shipment</span>
             <h3>Pre-Dispatch Inspection</h3>
             <p>Verification of quantity, packaging, labelling and shipping documents so every consignment leaves complete and correct.</p>
@@ -205,11 +212,73 @@
       </div>
     </section>
 
+    <!-- HOW AN INSPECTION WORKS -->
+    <section class="tp-section tp-light tp-method" aria-labelledby="tpMethodTitle">
+      <div class="tp-wrap tp-method__inner">
+        <div>
+          <div class="tp-eyebrow tp-reveal">How an Inspection Works</div>
+          <h2 class="tp-h2 tp-reveal" style="--d:.08s" id="tpMethodTitle">Clear criteria in.<br><em>Clear decisions out.</em></h2>
+          <ol class="tp-method__steps">
+            <li class="tp-reveal" style="--d:.12s"><span>01</span><div><h3>Plan</h3><p>We agree the scope, sampling and acceptance criteria from your drawings, specifications and purchase order.</p></div></li>
+            <li class="tp-reveal" style="--d:.18s"><span>02</span><div><h3>Inspect</h3><p>Our inspector checks dimensions, workmanship, function, packaging and records on site.</p></div></li>
+            <li class="tp-reveal" style="--d:.24s"><span>03</span><div><h3>Report</h3><p>You receive a clear report with findings, measurements and photographs of any non-conformities.</p></div></li>
+            <li class="tp-reveal" style="--d:.3s"><span>04</span><div><h3>Decide</h3><p>Accept, hold or reject with confidence, and follow up corrective action with the supplier.</p></div></li>
+          </ol>
+        </div>
+
+        <figure class="tp-sheet tp-reveal" style="--d:.14s" aria-hidden="true">
+          <svg viewBox="0 0 440 520">
+            <defs>
+              <linearGradient id="tpSheetHead" x1="0" x2="1"><stop offset="0" stop-color="#7d1b2c" /><stop offset="1" stop-color="#2a4f9e" /></linearGradient>
+            </defs>
+            <rect class="tp-sheet__shadow" x="34" y="30" width="360" height="460" rx="18" />
+            <rect x="24" y="18" width="360" height="460" rx="18" fill="#ffffff" stroke="rgba(125,27,44,.14)" />
+            <rect x="24" y="18" width="360" height="74" rx="18" fill="url(#tpSheetHead)" />
+            <rect x="24" y="74" width="360" height="18" fill="url(#tpSheetHead)" />
+            <text x="48" y="50" class="tp-sheet__k">INSPECTION REPORT</text>
+            <text x="48" y="74" class="tp-sheet__t">Lot 24 &middot; Pre-dispatch</text>
+            <circle cx="346" cy="55" r="17" fill="none" stroke="#f4e2a6" stroke-width="1.5" />
+            <path d="M339 55l5 5 9-10" fill="none" stroke="#f4e2a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+            <g class="tp-sheet__rows">
+              <g class="tp-row" style="--r:0"><rect x="48" y="118" width="22" height="22" rx="6" /><path class="tp-tick" d="M53 129l4 4 8-9" /><text x="84" y="134">Dimensions</text><rect class="tp-meas" x="250" y="124" width="90" height="10" rx="5" /></g>
+              <g class="tp-row" style="--r:1"><rect x="48" y="160" width="22" height="22" rx="6" /><path class="tp-tick" d="M53 171l4 4 8-9" /><text x="84" y="176">Visual &amp; finish</text><rect class="tp-meas" x="250" y="166" width="70" height="10" rx="5" /></g>
+              <g class="tp-row" style="--r:2"><rect x="48" y="202" width="22" height="22" rx="6" /><path class="tp-tick" d="M53 213l4 4 8-9" /><text x="84" y="218">Function test</text><rect class="tp-meas" x="250" y="208" width="82" height="10" rx="5" /></g>
+              <g class="tp-row" style="--r:3"><rect x="48" y="244" width="22" height="22" rx="6" /><path class="tp-tick" d="M53 255l4 4 8-9" /><text x="84" y="260">Packaging &amp; labels</text><rect class="tp-meas" x="250" y="250" width="60" height="10" rx="5" /></g>
+            </g>
+
+            <g class="tp-sheet__caliper">
+              <rect x="48" y="300" width="312" height="96" rx="12" fill="#fbf7ec" stroke="rgba(230,193,95,.6)" />
+              <text x="64" y="324" class="tp-sheet__small">MEASURED AGAINST DRAWING</text>
+              <path d="M64 362h240" stroke="#2c3e6e" stroke-width="2" />
+              <path d="M64 352v20M304 352v20" stroke="#2c3e6e" stroke-width="2" />
+              <g class="tp-jaw"><path d="M120 340v32" stroke="#7d1b2c" stroke-width="3" stroke-linecap="round" /><path d="M110 340h20" stroke="#7d1b2c" stroke-width="3" stroke-linecap="round" /></g>
+              <path d="M64 382h240" stroke="rgba(44,62,110,.25)" stroke-dasharray="2 6" />
+              <text x="318" y="368" class="tp-sheet__val">OK</text>
+            </g>
+
+            <g class="tp-sheet__sign">
+              <path d="M48 446c18-14 26 6 40-6s20-12 30 2 22-8 34 0" fill="none" stroke="#2c3e6e" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M48 456h130" stroke="rgba(44,62,110,.3)" />
+              <text x="48" y="470" class="tp-sheet__small">INSPECTOR</text>
+            </g>
+
+            <g class="tp-stamp">
+              <circle cx="300" cy="438" r="44" fill="rgba(244,226,166,.35)" stroke="#e6c15f" stroke-width="2.5" />
+              <circle cx="300" cy="438" r="36" fill="none" stroke="#e6c15f" stroke-width="1" stroke-dasharray="3 4" />
+              <text x="300" y="434" text-anchor="middle" class="tp-stamp__t">Passed</text>
+              <text x="300" y="452" text-anchor="middle" class="tp-stamp__s">VERIFIED</text>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
     <!-- QUALITY MANPOWER DEPLOYMENT -->
-    <section class="tp-section tp-light tp-manpower" aria-labelledby="tpManTitle">
+    <section class="tp-section tp-manpower" aria-labelledby="tpManTitle">
       <div class="tp-wrap tp-manpower__inner">
         <figure class="tp-photo tp-reveal">
-          <img src="assets/images/tpi.png" alt="Two quality inspectors checking records beside weaving machines" loading="lazy" />
+          <img src="assets/images/industry-process.png" alt="Quality inspector with a tablet checking equipment on a process plant walkway" loading="lazy" />
           <figcaption class="tp-photo__chip"><b>On-site support</b>Qualified inspectors working inside your quality process.</figcaption>
         </figure>
         <div>
@@ -300,6 +369,7 @@
   <script src="assets/js/mars-sigma.js" defer></script>
   <script src="assets/js/headline-reveal.js" defer></script>
   <script src="assets/js/tpi-page.js" defer></script>
+  <script src="assets/js/tpi-hero-loop.js" defer></script>
 </body>
 
 </html>
