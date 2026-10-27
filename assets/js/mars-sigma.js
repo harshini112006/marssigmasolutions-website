@@ -685,7 +685,6 @@ function init() {
   initLenis();
   initCursor();
   initNav();
-  initHeroAnimation();
   initStatCounters();
   initRevealObserver(); // CSS-based guaranteed animations
   // Delay GSAP scroll animations by one rAF to let Lenis + layout settle
@@ -702,6 +701,10 @@ function init() {
   initPageTransitions();
   initHashScrolling();
 }
+
+// Start the hero intro right away (this script is deferred, so the DOM is ready);
+// waiting for 'load' kept the hero text hidden while large images downloaded.
+initHeroAnimation();
 
 // Use 'load' so all images/webfonts are measured before ScrollTrigger calculates positions
 if (document.readyState === 'complete') {
