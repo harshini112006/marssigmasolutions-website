@@ -2470,7 +2470,7 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   }
 
   .service-panel__meta {
-    flex-direction: column;
+    flex-direction: column !important;
     gap: 1.5rem;
     padding: 2.5rem var(--pad-x);
   }
@@ -2560,7 +2560,7 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
 
 @media (max-width: 480px) {
   .hero__ctas {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .hero__ctas .btn {
@@ -2582,13 +2582,13 @@ body :is(p, a, address, .eyebrow, .nav__logo-line2, .nav__link, .nav__cta,
   }
 
   .footer__bottom {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: flex-start;
     gap: 0.75rem;
   }
 
   .final-cta__actions {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .final-cta__actions .btn {
@@ -5788,4 +5788,80 @@ html body .nav__hamburger { min-width: 44px; min-height: 44px; align-items: cent
   html body .tcard__footer { flex-wrap: wrap; }
   html body .tcard__meta { flex: 1 1 0; min-width: 0; }
   html body .tcard__tag { margin-left: 52px; }
+}
+
+/* ============================================================
+   NAVBAR TEXT BRAND — replaces the logo image on every page
+   ============================================================ */
+html body .nav .nav__logo.nav__brand {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: baseline;
+  gap: 0.6em;
+  flex-shrink: 1;
+  min-width: 0;
+  padding: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  text-decoration: none;
+  white-space: nowrap;
+  text-shadow: 0 1px 14px rgba(2, 12, 30, 0.35);
+  transition: opacity .3s var(--ease-out) !important;
+  transform: none !important;
+}
+html body .nav .nav__logo.nav__brand:hover { opacity: .85; }
+.nav__brand-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.nav__brand-name em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 1.12em;
+  letter-spacing: 0;
+  color: #9cc8ff;
+}
+.nav__brand-suffix {
+  position: relative;
+  padding-left: 0.85em;
+  font-family: 'Manrope', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  line-height: 1;
+  color: rgba(225, 238, 255, 0.72);
+}
+.nav__brand-suffix::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 1.3em;
+  transform: translateY(-50%);
+  background: linear-gradient(180deg, transparent, rgba(156, 200, 255, 0.7), transparent);
+}
+@media (max-width: 1240px) and (min-width: 769px) {
+  .nav__brand-name { font-size: 17px; }
+  .nav__brand-suffix { font-size: 9px; }
+}
+@media (max-width: 768px) {
+  html body .nav .nav__inner { gap: 1rem; }
+  .nav__brand-name { font-size: 17px; }
+}
+@media (max-width: 420px) {
+  html body .nav .nav__logo.nav__brand {
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .nav__brand-name { font-size: 16px; }
+  .nav__brand-suffix { padding-left: 0; font-size: 8.5px; letter-spacing: 0.3em; }
+  .nav__brand-suffix::before { display: none; }
 }
