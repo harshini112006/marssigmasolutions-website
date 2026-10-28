@@ -6170,3 +6170,8 @@ html body.bt-page .mobile-menu__link, html body.bt-page .mobile-menu__link:hover
 html body.bt-page .mobile-menu__link:focus { color: #eaf2ff; border-color: rgba(156,200,255,0.16); }
 html body.cs-page .mobile-menu__footer, html body.tp-page .mobile-menu__footer { color: rgba(255,199,207,0.6); border-color: rgba(255,199,207,0.16); }
 html body.bt-page .mobile-menu__footer { color: rgba(156,200,255,0.6); border-color: rgba(156,200,255,0.16); }
+
+/* Footer social/legal links: full-size tap target on touch screens */
+@media (max-width: 768px) {
+  body footer.footer .footer__legal-link { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.25rem; margin-left: -0.25rem; }
+}
