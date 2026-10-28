@@ -1068,7 +1068,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -1628,85 +1628,92 @@
   </section>
 
   <!-- FOUNDER -->
-  <section class="founder" id="founder" aria-labelledby="founderSectionHeadline">
-    <div class="founder__inner">
+  <section class="mf" id="founder" aria-labelledby="founderSectionHeadline">
+    <div class="mf__glow mf__glow--a" aria-hidden="true"></div>
+    <div class="mf__glow mf__glow--b" aria-hidden="true"></div>
+    <div class="mf__inner">
 
       <!-- Section heading -->
-      <div class="founder__header">
-        <div>
-          <div class="eyebrow founder__eyebrow" data-reveal>MEET OUR FOUNDER</div>
-          <h2 class="founder__section-headline" id="founderSectionHeadline" data-reveal data-delay="1">LEADERSHIP THAT<br>DRIVES QUALITY.</h2>
+      <header class="mf__header">
+        <div class="mf__heading">
+          <div class="mf__eyebrow" data-reveal><span class="mf__eyebrow-line"></span>MEET OUR FOUNDER</div>
+          <h2 class="mf__title" id="founderSectionHeadline" data-reveal data-delay="1">Leadership that <em>drives quality.</em></h2>
         </div>
-        <p class="founder__section-sub" data-reveal data-delay="2">To help organizations build stronger management systems, develop capable people and achieve lasting business excellence.</p>
-      </div>
+        <p class="mf__lede" data-reveal data-delay="2">To help organizations build stronger management systems, develop capable people and achieve lasting business excellence.</p>
+      </header>
 
-      <!-- Portrait -->
-      <div class="founder__portrait-col">
-        <div class="founder__img-frame">
-          <img src="assets/images/founder-real.png"
-               alt="Mr. Subramanian Srinivasan — Founder, Mars Sigma Solutions"
-               class="founder__img" loading="lazy" />
-          <div class="founder__img-glow"></div>
-        </div>
-        <div class="founder__name-tag">
-          <span class="founder__name">MR. SUBRAMANIAN SRINIVASAN</span>
-          <span class="founder__role">Founder &amp; Principal Consultant</span>
-        </div>
-      </div>
+      <div class="mf__grid">
 
-      <!-- Founder's message -->
-      <figure class="founder__message" data-reveal>
-        <div class="eyebrow founder__eyebrow">A MESSAGE FROM OUR FOUNDER</div>
-        <blockquote class="founder__message-text">
-          <p>At Mars Sigma, we believe that quality is not achieved through certification alone. It is achieved when effective processes, competent people and a commitment to continual improvement become part of an organization&rsquo;s everyday operations.</p>
-          <p>Our mission is to help businesses translate management-system requirements into practical improvements that strengthen performance, enhance customer confidence and create sustainable value.</p>
-          <p>We are committed to working alongside our customers as trusted partners in their journey towards operational excellence.</p>
-        </blockquote>
-        <figcaption class="founder__message-sign">
-          <span class="founder__message-name">Mr. Subramanian Srinivasan</span>
-          <span class="founder__message-role">Founder &amp; Principal Consultant<br>Mars Sigma Solutions Pvt Ltd</span>
-        </figcaption>
-      </figure>
-
-      <!-- Content -->
-      <div class="founder__content-col">
-        <div class="eyebrow founder__eyebrow" data-reveal>EXPERTISE &amp; LEADERSHIP</div>
-        <h2 class="founder__headline" id="founderHeadline" data-reveal data-delay="1">
-          25+ YEARS OF<br>INDUSTRY<br>EXPERIENCE.
-        </h2>
-        <p class="founder__body" data-reveal data-delay="2">
-          Mr. Subramanian Srinivasan brings 25+ years of industry consulting and audit
-          experience across manufacturing, automotive, aerospace, and process industries
-          in India and the Gulf.
-        </p>
-
-        <!-- Credentials grid -->
-        <div class="founder__creds" data-reveal data-delay="3">
-          <div class="founder__cred"><span class="founder__cred-label">LEAD AUDITOR</span><span class="founder__cred-value">ISO 9001</span></div>
-          <div class="founder__cred"><span class="founder__cred-label">LEAD AUDITOR</span><span class="founder__cred-value">IATF 16949</span></div>
-          <div class="founder__cred"><span class="founder__cred-label">LEAD AUDITOR</span><span class="founder__cred-value">ISO 14001</span></div>
-          <div class="founder__cred"><span class="founder__cred-label">LEAD AUDITOR</span><span class="founder__cred-value">ISO 45001</span></div>
-          <div class="founder__cred"><span class="founder__cred-label">CERTIFIED</span><span class="founder__cred-value">VDA 6.3</span></div>
-          <div class="founder__cred"><span class="founder__cred-label">CERTIFIED</span><span class="founder__cred-value">Six Sigma BB</span></div>
-        </div>
-
-        <!-- Stats -->
-        <div class="founder__stats" data-reveal data-delay="4">
-          <div class="founder__stat">
-            <span class="founder__stat-num">3,000+</span>
-            <span class="founder__stat-label">Companies Audited</span>
+        <!-- Portrait card -->
+        <div class="mf__portrait" data-reveal="left">
+          <div class="mf__photo">
+            <div class="mf__photo-ring" aria-hidden="true"></div>
+            <img src="assets/images/founder-real.png"
+                 alt="Mr. Subramanian Srinivasan — Founder, Mars Sigma Solutions"
+                 class="mf__img" loading="lazy" />
+            <div class="mf__badge">
+              <span class="mf__badge-num">25+</span>
+              <span class="mf__badge-label">Years of Industry<br>Experience</span>
+            </div>
           </div>
-          <div class="founder__stat">
-            <span class="founder__stat-num">5,000+</span>
-            <span class="founder__stat-label">Professionals Trained</span>
-          </div>
-          <div class="founder__stat">
-            <span class="founder__stat-num">25+</span>
-            <span class="founder__stat-label">Years of Industry Experience</span>
+          <div class="mf__nameplate">
+            <span class="mf__name">Mr. Subramanian Srinivasan</span>
+            <span class="mf__role">Founder &amp; Principal Consultant</span>
+            <span class="mf__loc">India &middot; Bahrain</span>
           </div>
         </div>
-      </div>
 
+        <!-- Founder's message -->
+        <figure class="mf__message" data-reveal data-delay="1">
+          <span class="mf__quote-mark" aria-hidden="true">&ldquo;</span>
+          <div class="mf__label">A Message from Our Founder</div>
+          <blockquote class="mf__quote">
+            <p class="mf__quote-lead">At Mars Sigma, we believe that quality is not achieved through certification alone. It is achieved when effective processes, competent people and a commitment to continual improvement become part of an organization&rsquo;s everyday operations.</p>
+            <p>Our mission is to help businesses translate management-system requirements into practical improvements that strengthen performance, enhance customer confidence and create sustainable value.</p>
+            <p>We are committed to working alongside our customers as trusted partners in their journey towards operational excellence.</p>
+          </blockquote>
+          <figcaption class="mf__sign">
+            <span class="mf__sign-line" aria-hidden="true"></span>
+            <span class="mf__sign-text">
+              <span class="mf__sign-name">Mr. Subramanian Srinivasan</span>
+              <span class="mf__sign-role">Founder &amp; Principal Consultant, Mars Sigma Solutions Pvt Ltd</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Expertise -->
+        <div class="mf__expertise">
+          <div class="mf__label" data-reveal>Expertise &amp; Leadership</div>
+          <p class="mf__bio" data-reveal data-delay="1">Mr. Subramanian Srinivasan brings 25+ years of industry consulting and audit
+            experience across manufacturing, automotive, aerospace, and process industries
+            in India and the Gulf.</p>
+
+          <ul class="mf__creds" data-reveal data-delay="2" aria-label="Professional credentials">
+            <li class="mf__cred"><span class="mf__cred-label">Lead Auditor</span><span class="mf__cred-value">ISO 9001</span></li>
+            <li class="mf__cred"><span class="mf__cred-label">Lead Auditor</span><span class="mf__cred-value">IATF 16949</span></li>
+            <li class="mf__cred"><span class="mf__cred-label">Lead Auditor</span><span class="mf__cred-value">ISO 14001</span></li>
+            <li class="mf__cred"><span class="mf__cred-label">Lead Auditor</span><span class="mf__cred-value">ISO 45001</span></li>
+            <li class="mf__cred"><span class="mf__cred-label">Certified</span><span class="mf__cred-value">VDA 6.3</span></li>
+            <li class="mf__cred"><span class="mf__cred-label">Certified</span><span class="mf__cred-value">Six Sigma BB</span></li>
+          </ul>
+
+          <div class="mf__stats" data-reveal data-delay="3">
+            <div class="mf__stat">
+              <span class="mf__stat-num" data-count="3000" data-suffix="+">3,000+</span>
+              <span class="mf__stat-label">Companies Audited</span>
+            </div>
+            <div class="mf__stat">
+              <span class="mf__stat-num" data-count="5000" data-suffix="+">5,000+</span>
+              <span class="mf__stat-label">Professionals Trained</span>
+            </div>
+            <div class="mf__stat">
+              <span class="mf__stat-num" data-count="25" data-suffix="+">25+</span>
+              <span class="mf__stat-label">Years of Industry Experience</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 

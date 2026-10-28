@@ -443,24 +443,6 @@ function initScrollAnimations() {
     scrollTrigger: { trigger: '.industries__grid', start: 'top 82%', once: true },
   });
 
-  /* ── FOUNDER ── */
-  const founderImg = document.querySelector('.founder__img');
-  if (founderImg) {
-    gsap.from(founderImg.parentElement, {
-      opacity: 0, x: -50, duration: 1.4, ease: 'expo.out',
-      scrollTrigger: { trigger: '.founder__inner', start: 'top 82%', once: true },
-    });
-    gsap.from(founderImg, {
-      scale: 1.1, duration: 1.4, ease: 'power2.out',
-      scrollTrigger: { trigger: '.founder__inner', start: 'top 82%', once: true },
-    });
-  }
-  gsap.timeline({ scrollTrigger: { trigger: '.founder__content-col', start: 'top 82%', once: true } })
-    .from('.founder__headline', { y: 50, opacity: 0, duration: 1.2, ease: 'expo.out' })
-    .from('.founder__body',     { y: 30, opacity: 0, duration: 1.0, ease: 'power2.out' }, '-=0.75')
-    .from('.credential',        { y: 20, opacity: 0, duration: 0.6, stagger: 0.07, ease: 'power2.out' }, '-=0.6')
-    .from('.founder__stats',    { y: 20, opacity: 0, duration: 0.8, ease: 'power2.out' }, '-=0.4');
-
   /* ── PROCESS ── */
   fadeUp('.process__headline', { y: 60, dur: 1.3, st: { trigger: '.process__header' } });
   gsap.from('.process__step', {
@@ -678,6 +660,34 @@ function initRevealObserver() {
 }
 
 /* ============================================================
+   FOUNDER STAT CARDS — count up once when scrolled into view
+   ============================================================ */
+function initFounderCounters() {
+  const nums = document.querySelectorAll('.mf__stat-num[data-count]');
+  if (!nums.length) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      io.unobserve(entry.target);
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      if (reduce) return;
+      const start = performance.now();
+      const tick = now => {
+        const t = Math.min((now - start) / 1600, 1);
+        const v = Math.round(target * (1 - Math.pow(1 - t, 3)));
+        el.textContent = v.toLocaleString('en-IN') + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.4 });
+  nums.forEach(el => io.observe(el));
+}
+
+/* ============================================================
    INIT — fires on window load so all images/fonts are measured
    ============================================================ */
 function init() {
@@ -687,6 +697,7 @@ function init() {
   initNav();
   initStatCounters();
   initRevealObserver(); // CSS-based guaranteed animations
+  initFounderCounters();
   // Delay GSAP scroll animations by one rAF to let Lenis + layout settle
   requestAnimationFrame(() => {
     initScrollAnimations();
