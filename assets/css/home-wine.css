@@ -1,0 +1,168 @@
+/* ============================================================
+   HOME PAGE - WINE THEME
+   Same maroon to dusk-blue blend as the Consulting page (consulting-wine.css),
+   alternating direction section to section so the joins stay soft.
+   Loaded after the home page's inline styles; scoped to body.hm-wine.
+   ============================================================ */
+body.hm-wine {
+  --hm-wine: linear-gradient(160deg, #5a1422 0%, #3f0d1a 55%, #2c3e6e 100%);
+  --hm-wine-rev: linear-gradient(200deg, #5a1422 0%, #3f0d1a 50%, #2c3e6e 100%);
+  --hm-accent: linear-gradient(100deg, #ffd9de 0%, #ffffff 50%, #cfe0ff 100%);
+  --hm-btn: linear-gradient(135deg, #7d1b2c 0%, #2a4f9e 100%);
+  background: #3f0d1a !important;
+}
+
+/* navbar + mobile menu */
+body.hm-wine .nav.nav--scrolled { background: rgba(74,16,32,0.88) !important; border-bottom: 1px solid rgba(255,217,222,0.14) !important; }
+body.hm-wine .mobile-menu { background: var(--hm-wine) !important; }
+
+/* section backgrounds */
+body.hm-wine .hero,
+body.hm-wine .showcase,
+body.hm-wine .standards-hero,
+body.hm-wine .why,
+body.hm-wine .mf,
+body.hm-wine .final-cta { background: var(--hm-wine) !important; }
+body.hm-wine .intro,
+body.hm-wine .services,
+body.hm-wine .iso-feature,
+body.hm-wine .industries,
+body.hm-wine .testimonials { background: var(--hm-wine-rev) !important; }
+
+/* hero: wine tint over the photo, dark enough on the left that the headline stays crisp */
+body.hm-wine #hero .hero__gradient {
+  background:
+    radial-gradient(ellipse 55% 60% at 22% 48%, rgba(125,27,44,0.3) 0%, transparent 70%),
+    linear-gradient(90deg, rgba(74,16,30,0.94) 0%, rgba(63,13,26,0.78) 34%, rgba(63,13,26,0.32) 62%, rgba(44,62,110,0.45) 100%) !important;
+}
+body.hm-wine #hero .hero__gradient-solid {
+  background:
+    radial-gradient(ellipse 120% 90% at 60% 40%, transparent 55%, rgba(30,6,14,0.5) 100%),
+    linear-gradient(180deg, rgba(63,13,26,0) 60%, #3f0d1a 100%) !important;
+}
+body.hm-wine #hero .hero__orb--1 { background: rgba(125,27,44,0.45) !important; }
+body.hm-wine #hero .hero__orb--2 { background: rgba(44,62,110,0.35) !important; }
+body.hm-wine #hero .hero__headline .hero__line > span { color: #fff !important; -webkit-text-fill-color: #fff !important; text-shadow: 0 2px 28px rgba(30,6,14,0.65); }
+body.hm-wine #hero .hero__headline .hero__line--accent > span { color: #ffc9d0 !important; -webkit-text-fill-color: #ffc9d0 !important; }
+body.hm-wine #hero .hero__headline em {
+  /* light pink base with a white band sweeping across, readable on the wine tint */
+  background-image: linear-gradient(100deg, #ffc9d0 0%, #ffc9d0 32%, #ffe6ea 43%, #ffffff 50%, #ffe6ea 57%, #ffc9d0 68%, #ffc9d0 100%) !important;
+  background-size: 300% 100% !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+body.hm-wine #hero .hero__eyebrow-text { color: #ffc9d0 !important; }
+body.hm-wine #hero .hero__eyebrow-line { background: #ffc9d0 !important; }
+
+/* buttons: maroon to dusk-blue, like the Consulting CTA */
+body.hm-wine .btn--light,
+body.hm-wine .nav__cta,
+body.hm-wine #hero .hero__ctas .btn--light,
+body.hm-wine .final-cta__actions .btn--light {
+  background: var(--hm-btn) !important;
+  border-color: rgba(255,217,222,0.35) !important;
+  color: #fff !important;
+  box-shadow: 0 12px 30px rgba(30,6,14,0.4), inset 0 1px 0 rgba(255,255,255,0.18) !important;
+}
+body.hm-wine .btn--light:hover,
+body.hm-wine .nav__cta:hover,
+body.hm-wine #hero .hero__ctas .btn--light:hover,
+body.hm-wine .final-cta__actions .btn--light:hover {
+  background: linear-gradient(135deg, #8f2135 0%, #3460b5 100%) !important;
+  border-color: rgba(207,224,255,0.55) !important;
+  box-shadow: 0 16px 36px rgba(30,6,14,0.5), 0 0 24px rgba(231,163,171,0.3) !important;
+}
+body.hm-wine #hero .hero__ctas .btn--ghost,
+body.hm-wine .final-cta__actions .btn--ghost { border-color: rgba(255,217,222,0.32) !important; color: #fff0f2 !important; }
+body.hm-wine #hero .hero__ctas .btn--ghost:hover,
+body.hm-wine .final-cta__actions .btn--ghost:hover { border-color: rgba(255,217,222,0.65) !important; }
+
+/* gradient headings */
+body.hm-wine #introHeadline,
+body.hm-wine #whyHeadline {
+  background: var(--hm-accent) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* "Precision at every layer" banner */
+body.hm-wine #introVisual.intro__visual { background: var(--hm-wine) !important; }
+body.hm-wine #introVisual .intro__visual-overlay {
+  background: linear-gradient(90deg, rgba(63,13,26,0.92) 0%, rgba(63,13,26,0.55) 40%, rgba(44,62,110,0.15) 100%) !important;
+}
+
+/* showcase */
+body.hm-wine .showcase__gradient-bg { background: radial-gradient(circle, rgba(125,27,44,0.25) 0%, transparent 80%) !important; }
+body.hm-wine .showcase .showcase__massive-text {
+  background: linear-gradient(100deg, rgba(255,201,208,0.07) 0%, rgba(255,201,208,0.07) 40%, rgba(255,226,230,0.22) 50%, rgba(255,201,208,0.07) 60%, rgba(255,201,208,0.07) 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text; background-clip: text;
+}
+
+/* standards orbit + seal */
+body.hm-wine .standards-orbit {
+  border-color: rgba(255,217,222,0.16) !important;
+  background: radial-gradient(circle at 50% 50%, rgba(125,27,44,0.35) 0%, rgba(63,13,26,0.55) 45%, rgba(44,62,110,0.2) 72%, transparent 100%) !important;
+  box-shadow: 0 0 80px rgba(125,27,44,0.2), inset 0 0 60px rgba(44,62,110,0.2);
+}
+body.hm-wine .orbit__ring--outer { border-color: rgba(255,217,222,0.22); }
+body.hm-wine .orbit__ring--inner { border-color: rgba(255,217,222,0.16); }
+body.hm-wine .orbit__seal {
+  background: radial-gradient(circle at 35% 30%, #7d1b2c 0%, #4a1020 55%, #2c3e6e 100%);
+  border-color: rgba(255,217,222,0.45);
+  animation: none;
+  box-shadow: 0 0 0 6px rgba(255,217,222,0.06), 0 0 40px rgba(231,163,171,0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+body.hm-wine .orbit__seal-kicker, body.hm-wine .orbit__seal-foot { color: rgba(255,217,222,0.8); }
+body.hm-wine .orbit__seal-main { color: #fff; }
+body.hm-wine .orbit__seal-main em { color: #ffc9d0; }
+
+/* industry cards: glass on wine */
+body.hm-wine #industries .industries__grid--four .industry-card {
+  border-color: rgba(255,217,222,0.18) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(63,13,26,0.6) 100%) !important;
+}
+body.hm-wine #industries .industries__grid--four .industry-card:hover {
+  border-color: rgba(207,224,255,0.45) !important;
+  box-shadow: 0 24px 50px rgba(30,6,14,0.45), 0 0 36px rgba(231,163,171,0.2) !important;
+}
+body.hm-wine #industries .industries__grid--four .industry-card__img-wrap::after {
+  background: linear-gradient(180deg, transparent 45%, rgba(63,13,26,0.95) 100%);
+}
+
+/* founder section: glass cards in place of the navy ones */
+body.hm-wine .mf { --mf-ink: #fff; --mf-soft: rgba(255,240,242,0.82); --mf-muted: rgba(255,217,222,0.7); --mf-accent: #ffc9d0; --mf-line: rgba(255,217,222,0.18); }
+body.hm-wine .mf__glow--a { background: rgba(125,27,44,0.35); }
+body.hm-wine .mf__glow--b { background: rgba(44,62,110,0.3); }
+body.hm-wine .mf__photo::before {
+  background:
+    radial-gradient(ellipse 75% 55% at 50% 35%, rgba(231,163,171,0.4) 0%, rgba(125,27,44,0.25) 50%, transparent 78%),
+    linear-gradient(180deg, #5a1422 0%, #3f0d1a 65%, #2c3e6e 100%);
+}
+body.hm-wine .mf__badge { background: rgba(63,13,26,0.75); }
+body.hm-wine .mf__message { background: rgba(255,255,255,0.06); }
+body.hm-wine .mf__cred { background: rgba(255,255,255,0.06); }
+body.hm-wine .mf__cred:hover { background: rgba(255,255,255,0.1); }
+body.hm-wine .mf__stat { background: linear-gradient(160deg, rgba(125,27,44,0.45), rgba(44,62,110,0.35)); }
+
+/* final CTA tint */
+body.hm-wine .final-cta .final-cta__gradient {
+  background: linear-gradient(to right, rgba(74,16,30,0.94) 0%, rgba(63,13,26,0.72) 38%, rgba(44,62,110,0.3) 75%, rgba(44,62,110,0.12) 100%) !important;
+}
+
+/* footer, matching Consulting */
+body.hm-wine footer.footer { background: var(--hm-wine-rev) !important; border-top: 1px solid rgba(255,217,222,0.12) !important; }
+body.hm-wine footer.footer::after { color: rgba(255,217,222,0.05); }
+body.hm-wine footer.footer .footer__wordmark em,
+body.hm-wine footer.footer .footer__col-title {
+  background: var(--hm-accent) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+body.hm-wine footer.footer :is(.footer__link, .footer__contact-link, .footer__address, .footer__copy, .footer__legal-link, .footer__tagline) { color: rgba(255,244,246,0.82) !important; }
+
+@media (max-width: 768px) {
+  body.hm-wine #hero .hero__gradient {
+    background: linear-gradient(180deg, rgba(90,20,34,0.82) 0%, rgba(63,13,26,0.72) 55%, rgba(44,62,110,0.75) 100%) !important;
+  }
+}
