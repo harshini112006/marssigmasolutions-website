@@ -5908,3 +5908,64 @@ html body .nav .nav__brand-suffix {
 @media (prefers-reduced-motion: reduce) {
   html body .nav .nav__logo.nav__brand::after { animation: none; }
 }
+
+/* -- Home founder: smaller portrait + founder's message column ------- */
+html body .founder__inner {
+  max-width: 1360px;
+  grid-template-columns: 280px minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 4vw, 4rem);
+  align-items: center;
+}
+html body .founder__portrait-col { width: 100%; max-width: 280px; justify-self: center; }
+html body .founder__img { aspect-ratio: 4/5; max-height: none; object-position: center 8%; }
+html body .founder__headline { font-size: clamp(2.2rem, 3.4vw, 3.4rem); }
+html body .founder__creds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.founder__message {
+  margin: 0;
+  padding: 0 0 0 clamp(1.5rem, 2.5vw, 2.25rem);
+  border-left: 1px solid rgba(100,170,255,0.28);
+}
+.founder__message-text { margin: 0 0 1.75rem; }
+.founder__message-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(200,226,255,0.82);
+  margin: 0 0 1.1rem;
+}
+.founder__message-text p:first-child {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.22rem;
+  line-height: 1.6;
+  color: #d5eeff;
+}
+.founder__message-sign { display: flex; flex-direction: column; gap: 0.35rem; }
+.founder__message-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #9cc8ff;
+}
+.founder__message-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: rgba(160,205,255,0.6);
+}
+
+@media (max-width: 1180px) {
+  html body .founder__inner { grid-template-columns: 260px minmax(0, 1fr); gap: 3rem 3.5rem; }
+  html body .founder__portrait-col { max-width: 260px; }
+  html body .founder__content-col { grid-column: 1 / -1; }
+  html body .founder__creds { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  html body .founder__inner { grid-template-columns: minmax(0, 1fr); gap: 2.75rem; }
+  html body .founder__portrait-col { max-width: 240px; }
+  html body .founder__creds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .founder__message-text p:first-child { font-size: 1.12rem; }
+}
