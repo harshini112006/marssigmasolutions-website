@@ -5787,7 +5787,7 @@ html body .nav__hamburger { min-width: 44px; min-height: 44px; align-items: cent
 }
 @media (max-width: 480px) {
   html body .tcard__footer { flex-wrap: wrap; }
-  html body .tcard__meta { flex: 1 1 0; min-width: 0; }
+  html body .tcard__meta { flex: 1 1 calc(100% - 64px); min-width: 0; }
   html body .tcard__tag { margin-left: 52px; }
 }
 
