@@ -5969,3 +5969,30 @@ html body .founder__creds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   html body .founder__creds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .founder__message-text p:first-child { font-size: 1.12rem; }
 }
+
+/* -- Home founder: section heading above the three columns ---------- */
+html body .founder__inner { align-items: start; }
+html body .founder__message, html body .founder__content-col { padding-top: 0.25rem; }
+.founder__header {
+  grid-column: 1 / -1;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  flex-wrap: wrap; gap: 1.5rem 2rem;
+  padding-bottom: 2.25rem;
+  border-bottom: 1px solid rgba(100,170,255,0.15);
+}
+.founder__section-headline {
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: #d5eeff;
+  margin: 0;
+}
+.founder__section-sub {
+  font-size: 1rem; line-height: 1.6;
+  color: rgba(130,200,255,0.68) !important;
+  max-width: 450px; margin: 0;
+}
+@media (max-width: 768px) {
+  .founder__header { padding-bottom: 1.75rem; }
+}
