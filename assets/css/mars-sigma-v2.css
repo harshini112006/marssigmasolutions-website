@@ -6158,3 +6158,15 @@ html body .nav .nav__brand-suffix {
 @media (prefers-reduced-motion: reduce) {
   .mf__photo-ring { animation: none; }
 }
+
+/* -- Mobile menu: keep each page's dark theme (the base rule above is white) -- */
+html body.cs-page .mobile-menu,
+html body.tp-page .mobile-menu { background: linear-gradient(160deg, #5a1422 0%, #3f0d1a 55%, #2c3e6e 100%); color: #fff4f6; border: none; }
+html body.bt-page .mobile-menu { background: #06173a; color: #eaf2ff; border: none; }
+html body.cs-page .mobile-menu__link, html body.tp-page .mobile-menu__link,
+html body.cs-page .mobile-menu__link:hover, html body.tp-page .mobile-menu__link:hover,
+html body.cs-page .mobile-menu__link:focus, html body.tp-page .mobile-menu__link:focus { color: #fff4f6; border-color: rgba(255,199,207,0.16); }
+html body.bt-page .mobile-menu__link, html body.bt-page .mobile-menu__link:hover,
+html body.bt-page .mobile-menu__link:focus { color: #eaf2ff; border-color: rgba(156,200,255,0.16); }
+html body.cs-page .mobile-menu__footer, html body.tp-page .mobile-menu__footer { color: rgba(255,199,207,0.6); border-color: rgba(255,199,207,0.16); }
+html body.bt-page .mobile-menu__footer { color: rgba(156,200,255,0.6); border-color: rgba(156,200,255,0.16); }
