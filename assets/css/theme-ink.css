@@ -850,3 +850,28 @@ html body .ink-light:not(#_) .services__header::after {
   color: var(--mr-700) !important; -webkit-text-fill-color: var(--mr-700) !important; opacity: 0.85 !important;
 }
 html body .ink-light:not(#_) .services__headline { animation: none !important; }
+
+/* ------------------------------------------------------------
+   LIGHT SECTIONS: maroon-to-blue gradient on section headings
+   and the big stat numbers (solid ink stays as the fallback)
+   ------------------------------------------------------------ */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  html body .ink-light:not(#_) :is(h1, h2),
+  html body .ink-light:not(#_) :is(.stat__num, .stat__counter, .mf__stat-num):not(#_) {
+    background-image: linear-gradient(90deg, var(--mr-700) 0%, #6B2147 40%, #1E3A8A 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    width: fit-content;
+    max-width: 100%;
+  }
+  html body .ink-light:not(#_) :is(h1, h2) *:not(#_),
+  html body .ink-light:not(#_) :is(.stat__num, .stat__counter, .mf__stat-num):not(#_) * {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    background: none !important;
+  }
+  /* centred headings keep their centring once they shrink to the text */
+  html body .ink-light:not(#_) .services__headline { margin-inline: auto; }
+}
