@@ -9,7 +9,7 @@
   const dots = hero ? [...hero.querySelectorAll('.hero-carousel__dot')] : [];
   if (slides.length < 2) return;
 
-  const DELAY = 5500;
+  const DELAY = 4000;
   let current = 0;
   let timer = null;
   let paused = false;
