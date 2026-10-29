@@ -16,8 +16,8 @@
   --ink-muted: #5B6B84;
   --ink-line: #E1E6EE;
   --ink-line-strong: #CBD3DF;
-  --ink-bg: #FFFFFF;
-  --ink-bg-alt: #F4F6FA;
+  --ink-bg: #FAF6EF;
+  --ink-bg-alt: #F3ECE0;
   --ink-pale: #C9D5E8;
   --mr-700: #7D1B2C;
   --mr-600: #94233A;
@@ -292,7 +292,7 @@ html body .ink-light:not(#_) li[class=""],
 html body .ink-light:not(#_) .tr-why li { background: var(--ink-bg-alt) !important; }
 
 /* glows and colour washes off */
-html body .ink-light:not(#_) :is(.mf__glow, .showcase__gradient-bg, .showcase__massive-text, [class*="__glow"], [class*="__orb"], .services__particles) { opacity: 0 !important; }
+html body .ink-light:not(#_) :is(.mf__glow, .showcase__gradient-bg, .showcase__massive-text, [class*="__glow"], [class*="__orb"]) { opacity: 0 !important; }
 html body .ink-light:not(#_) .services__header.has-particles { background: none !important; }
 
 /* photo captions and image overlays stay dark for legibility */
@@ -624,7 +624,7 @@ html body .ink-light:not(#_) :is(.cs-std__tag, .cs-std__tag *) {
    COLOUR BALANCE: white base, rich ink bands, visible maroon
    ============================================================ */
 :root {
-  --ink-tint: #EEF3FA;
+  --ink-tint: #EEF1F6;
   --mr-500: #A3263C;
   --mr-rose: #E9A6B2;
   --ink-band-rich:
@@ -635,7 +635,7 @@ html body .ink-light:not(#_) :is(.cs-std__tag, .cs-std__tag *) {
 
 /* soft blue tint for alternating light sections */
 html body .ink-light.ink-tint:not(#_) {
-  background: linear-gradient(180deg, #EEF3FA 0%, #F5F8FC 100%) !important;
+  background: linear-gradient(180deg, #F3ECE0 0%, #FAF6EF 100%) !important;
 }
 
 /* ink bands get a maroon glow in one corner and a blue one in the other */
@@ -818,3 +818,35 @@ html body .ink-dark:not(#_) .tr-cycle__k { fill: var(--mr-rose) !important; }
 html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee) { background: var(--ink-tint) !important; }
 html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::before,
 html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::after { background: linear-gradient(90deg, var(--ink-tint), rgba(238,243,250,0)) !important; }
+
+/* ------------------------------------------------------------
+   CREAM BASE: warm off-white instead of pure white
+   ------------------------------------------------------------ */
+html body .nav.nav--scrolled,
+html body.cs-page .nav.nav--scrolled,
+html body.tp-page .nav.nav--scrolled,
+html body.hm-wine .nav.nav--scrolled,
+html body.bt-page .nav.nav--scrolled { background: rgba(250, 246, 239, 0.96) !important; }
+html body .mobile-menu,
+html body.hm-wine .mobile-menu,
+html body.cs-page .mobile-menu,
+html body.tp-page .mobile-menu,
+html body.bt-page .mobile-menu,
+html body .nav:has(.nav__hamburger.active) { background: var(--ink-bg) !important; }
+html body .nav.nav--scrolled .nav__logo.nav__brand,
+html body .nav:has(.nav__hamburger.active) .nav__logo.nav__brand { background: #FFFDF9 !important; }
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee) { background: var(--ink-bg-alt) !important; }
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::before,
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::after { background: linear-gradient(90deg, var(--ink-bg-alt), rgba(243,236,224,0)) !important; }
+html body.bt-page:not(#_) .ink-light .bt-challenge__photo::after {
+  background: linear-gradient(90deg, #FAF6EF 0%, rgba(250,246,239,0.92) 30%, rgba(250,246,239,0.5) 75%, rgba(250,246,239,0.8) 100%),
+              linear-gradient(180deg, #FAF6EF 0%, rgba(250,246,239,0) 25%, rgba(250,246,239,0) 75%, #FAF6EF 100%) !important;
+}
+html body .ink-light:not(#_) .tcard--featured { background: linear-gradient(160deg, #fff 0%, #F7ECEE 100%) !important; }
+html body .ink-light:not(#_) :is([class*="__tag"]:not(.mf__tag):not([class*="__tags"]):not(.cs-std__tag):not(.cs-phase__tag), .cs-chip) { background: #fff !important; }
+
+/* home "What we do": particle headline and number strip readable on cream */
+html body .ink-light:not(#_) .services__header::after {
+  color: var(--mr-700) !important; -webkit-text-fill-color: var(--mr-700) !important; opacity: 0.85 !important;
+}
+html body .ink-light:not(#_) .services__headline { animation: none !important; }

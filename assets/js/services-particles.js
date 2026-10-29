@@ -1,5 +1,5 @@
 /**
- * "Three ways we create certainty." — scattered glowing particles converge
+ * "What we do" headline: scattered ink and maroon particles converge
  * into the headline as the visitor scrolls through the services header.
  * Needs GSAP + ScrollTrigger (loaded in index.html). Reduced-motion visitors
  * just see the normal headline.
@@ -25,7 +25,7 @@
   pinWrap.appendChild(header);
 
   const ctx = canvas.getContext('2d');
-  const COLORS = ['255,255,255', '214,232,255', '170,205,255', '120,180,255', '255,178,110'];
+  const COLORS = ['11,31,58', '19,41,75', '30,58,100', '42,79,158', '125,27,44'];
   let particles = [];
   let W = 0, H = 0, dpr = 1;
   let progress = 0;
@@ -95,7 +95,7 @@
       // scatter on a loose swirl around the centre, like a starfield
       const a = Math.random() * Math.PI * 2;
       const rad = (0.35 + Math.random() * 0.85) * Math.max(W, H) * 0.6;
-      const orange = Math.random() < 0.05;
+      const orange = Math.random() < 0.22;
       return {
         sx: cx + Math.cos(a) * rad,
         sy: cy + Math.sin(a) * rad * 0.6,
@@ -114,7 +114,7 @@
 
   function draw(now) {
     ctx.clearRect(0, 0, W, H);
-    ctx.globalCompositeOperation = 'lighter';
+    ctx.globalCompositeOperation = 'source-over';
     const t = now / 1000;
     const cx = W / 2, cy = H / 2;
     for (const p of particles) {
@@ -155,7 +155,7 @@
     // crisp headline fades in over the formed particles at the end
     const reveal = Math.min(1, Math.max(0, (p - 0.8) / 0.2));
     header.style.setProperty('--headline-reveal', reveal.toFixed(3));
-    canvas.style.opacity = (1 - reveal * 0.75).toFixed(3);
+    canvas.style.opacity = (1 - reveal).toFixed(3);
   }
 
   function init() {
