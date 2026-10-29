@@ -1,7 +1,9 @@
 /**
- * Home hero background carousel: crossfades between the slides every few
- * seconds, with dot indicators. Pauses while the visitor hovers or touches
- * the hero, and while the tab is hidden.
+ * Home hero background carousel: crossfades to the next slide every 3 seconds,
+ * with dot indicators. It always auto-advances (the hero fills the screen, so
+ * pausing on hover would stop it for most visitors); clicking a dot jumps to
+ * that slide and restarts the 3s count. The timer only rests while the tab is
+ * hidden.
  */
 (function () {
   const hero = document.getElementById('hero');
@@ -12,7 +14,6 @@
   const DELAY = 3000;
   let current = 0;
   let timer = null;
-  let paused = false;
 
   function show(index) {
     current = (index + slides.length) % slides.length;
@@ -24,27 +25,12 @@
     });
   }
 
-  function stop() { clearInterval(timer); timer = null; }
   function start() {
-    stop();
-    if (paused || document.hidden) return;
-    timer = setInterval(() => show(current + 1), DELAY);
-  }
-  function setPaused(value) {
-    paused = value;
-    hero.classList.toggle('is-paused', value);
-    start();
+    clearInterval(timer);
+    timer = document.hidden ? null : setInterval(() => show(current + 1), DELAY);
   }
 
   dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); start(); }));
-
-  hero.addEventListener('mouseenter', () => setPaused(true));
-  hero.addEventListener('mouseleave', () => setPaused(false));
-  // touch: hold while the finger is down, then resume shortly after
-  let resumeTimer = null;
-  hero.addEventListener('touchstart', () => { clearTimeout(resumeTimer); setPaused(true); }, { passive: true });
-  hero.addEventListener('touchend', () => { resumeTimer = setTimeout(() => setPaused(false), 2500); }, { passive: true });
-
   document.addEventListener('visibilitychange', start);
 
   show(0);
