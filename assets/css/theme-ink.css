@@ -875,3 +875,24 @@ html body .ink-light:not(#_) .services__headline { animation: none !important; }
   /* centred headings keep their centring once they shrink to the text */
   html body .ink-light:not(#_) .services__headline { margin-inline: auto; }
 }
+
+/* ------------------------------------------------------------
+   HOME CAPABILITY ROW: maroon-and-blue particle field behind
+   six cards with a maroon-to-blue gradient body
+   ------------------------------------------------------------ */
+html body .ink-light:not(#_) .showcase__particles {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
+}
+html body .ink-light:not(#_) .showcase__bg {
+  background:
+    radial-gradient(ellipse 45% 60% at 8% 20%, rgba(125, 27, 44, 0.10) 0%, rgba(125, 27, 44, 0) 70%),
+    radial-gradient(ellipse 50% 65% at 92% 85%, rgba(30, 58, 138, 0.12) 0%, rgba(30, 58, 138, 0) 70%) !important;
+}
+html body .ink-light:not(#_) .showcase__card {
+  background: linear-gradient(160deg, #7D1B2C 0%, #4E2152 48%, #1E3A8A 100%) !important;
+  border: 0 !important;
+  box-shadow: 0 22px 44px rgba(30, 58, 138, 0.18), 0 8px 18px rgba(125, 27, 44, 0.14) !important;
+}
+html body .ink-light:not(#_) .showcase__card-content { background: linear-gradient(165deg, #7D1B2C 0%, #5A1F4E 45%, #1E3A8A 100%) !important; }
+html body .ink-light:not(#_) .showcase__card .showcase__card-label { color: #F2C9D1 !important; -webkit-text-fill-color: #F2C9D1 !important; }
