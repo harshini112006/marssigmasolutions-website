@@ -1087,6 +1087,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Instrument+Serif:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme-ink.css" />
+  <link rel="stylesheet" href="assets/css/nav-font.css" />
 </head>
 
 <body class="hm-wine">
@@ -1143,13 +1145,18 @@
   </div>
 
   <!-- HERO -->
-  <section class="hero" id="hero" aria-label="Hero">
+  <section class="hero ink-dark ink-hero" id="hero" aria-label="Hero">
     <div class="hero__bg">
       <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
       <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
-      <div class="hero__img-wrap" id="heroImgWrap">
-        <img src="assets/images/hero-suits-right-hd.png" alt="Mars Sigma Solutions &mdash; Corporate Professionals" class="hero__img" id="heroImg"
-          width="1920" height="1080" fetchpriority="high" style="object-position: right center;" />
+      <div class="hero__img-wrap hero-carousel" id="heroImgWrap" aria-roledescription="carousel" aria-label="Mars Sigma at work">
+        <div class="hero-carousel__track" id="heroImg">
+          <figure class="hero-slide is-active" aria-roledescription="slide" aria-label="1 of 5"><img src="assets/images/hero-slides/slide-1.webp" alt="Mars Sigma consultants walking through a corporate office" class="hero__img" width="1024" height="1024" fetchpriority="high" /></figure>
+          <figure class="hero-slide" aria-roledescription="slide" aria-label="2 of 5"><img src="assets/images/hero-slides/slide-2.webp" alt="Management system audit review in a boardroom" class="hero__img" width="1024" height="1024" loading="lazy" decoding="async" /></figure>
+          <figure class="hero-slide" aria-roledescription="slide" aria-label="3 of 5"><img src="assets/images/hero-slides/slide-3.webp" alt="Consultants reviewing a manufacturing line" class="hero__img" width="1024" height="1024" loading="lazy" decoding="async" /></figure>
+          <figure class="hero-slide" aria-roledescription="slide" aria-label="4 of 5"><img src="assets/images/hero-slides/slide-4.webp" alt="Inspector checking parts on the shop floor" class="hero__img" width="1024" height="1024" loading="lazy" decoding="async" /></figure>
+          <figure class="hero-slide" aria-roledescription="slide" aria-label="5 of 5"><img src="assets/images/hero-slides/slide-5.webp" alt="Engineers on an industrial plant walkway" class="hero__img" width="1024" height="1024" loading="lazy" decoding="async" /></figure>
+        </div>
       </div>
       <div class="hero__gradient" aria-hidden="true"></div>
       <div class="hero__gradient-solid" aria-hidden="true"></div>
@@ -1175,6 +1182,13 @@
     <div class="hero__meta" id="heroMeta">
       <div class="hero__meta-left">INDIA / BAHRAIN</div>
     </div>
+    <div class="hero-carousel__dots" id="heroDots" role="group" aria-label="Choose hero image">
+      <button type="button" class="hero-carousel__dot is-active" aria-label="Show image 1" aria-current="true"><span></span></button>
+      <button type="button" class="hero-carousel__dot" aria-label="Show image 2"><span></span></button>
+      <button type="button" class="hero-carousel__dot" aria-label="Show image 3"><span></span></button>
+      <button type="button" class="hero-carousel__dot" aria-label="Show image 4"><span></span></button>
+      <button type="button" class="hero-carousel__dot" aria-label="Show image 5"><span></span></button>
+    </div>
     <div class="hero__scroll" id="heroScroll" aria-label="Scroll down">
       <span class="hero__scroll-label">SCROLL</span>
       <span class="hero__scroll-line"></span>
@@ -1182,7 +1196,7 @@
   </section>
 
   <!-- INTRO -->
-  <section class="intro" id="intro" aria-labelledby="introHeadline">
+  <section class="intro ink-light" id="intro" aria-labelledby="introHeadline">
     <div class="intro__inner">
       <div class="intro__left">
         <div class="eyebrow" data-reveal>01 / WHO WE ARE</div>
@@ -1233,7 +1247,7 @@
   </div>
 
   <!-- SHOWCASE (Pro Floating Cards) -->
-  <section class="showcase" id="showcase">
+  <section class="showcase ink-light ink-alt" id="showcase">
     <div class="showcase__bg">
       <div class="showcase__gradient-bg"></div>
       <div class="showcase__overlay"></div>
@@ -1378,7 +1392,7 @@
   </section>
 
   <!-- SERVICES -->
-  <section class="services" id="services" aria-labelledby="servicesHeadline">
+  <section class="services ink-light" id="services" aria-labelledby="servicesHeadline">
     <div class="services__header">
       <div class="eyebrow" data-reveal>WHAT WE DO</div>
       <h2 class="services__headline" id="servicesHeadline" data-reveal data-delay="1">OUR EXPERTISE.<br>YOUR BUSINESS<br>ADVANTAGE.</h2>
@@ -1532,7 +1546,7 @@
   </section>
 
   <!-- STANDARDS HERO -->
-  <section class="standards-hero" id="standardsHero">
+  <section class="standards-hero ink-light ink-alt" id="standardsHero">
     <div class="standards-hero__inner">
       <div class="standards-hero__left">
         <div class="eyebrow eyebrow--light">STANDARDS &amp; FRAMEWORKS</div>
@@ -1572,7 +1586,7 @@
   </section>
 
   <!-- ISO FEATURE -->
-  <section class="iso-feature" id="isoFeature" aria-labelledby="isoHeadline">
+  <section class="iso-feature ink-light ink-alt" id="isoFeature" aria-labelledby="isoHeadline">
     <div class="iso-feature__inner">
       <div class="iso-feature__header">
         <div class="eyebrow eyebrow--light" data-reveal>ISO 9001:2026 TRANSITION</div>
@@ -1629,7 +1643,7 @@
   </section>
 
   <!-- WHY MARS SIGMA -->
-  <section class="why" id="why" aria-labelledby="whyHeadline">
+  <section class="why ink-light" id="why" aria-labelledby="whyHeadline">
     <div class="why__inner">
       <div class="why__header">
         <div class="eyebrow" data-reveal>WHY MARS SIGMA?</div>
@@ -1686,7 +1700,7 @@
   </section>
 
   <!-- INDUSTRIES -->
-  <section class="industries" id="industries" aria-labelledby="industriesHeadline">
+  <section class="industries ink-light ink-alt" id="industries" aria-labelledby="industriesHeadline">
     <div class="industries__header">
       <div class="industries__header-main">
         <div class="eyebrow eyebrow--light" data-reveal>INDUSTRIES WE SERVE</div>
@@ -1771,7 +1785,7 @@
   </section>
 
   <!-- FOUNDER -->
-  <section class="mf" id="founder" aria-labelledby="founderSectionHeadline">
+  <section class="mf ink-light" id="founder" aria-labelledby="founderSectionHeadline">
     <div class="mf__glow mf__glow--a" aria-hidden="true"></div>
     <div class="mf__glow mf__glow--b" aria-hidden="true"></div>
     <div class="mf__inner">
@@ -1862,7 +1876,7 @@
 
 
   <!-- HOW WE WORK -->
-  <section class="why why--how" id="how-we-work" aria-labelledby="howHeadline">
+  <section class="why why--how ink-light ink-alt" id="how-we-work" aria-labelledby="howHeadline">
     <div class="why__inner">
       <div class="why__header">
         <div class="eyebrow" data-reveal>HOW WE WORK</div>
@@ -1920,7 +1934,7 @@
   </section>
 
   <!-- CLIENT SUCCESS -->
-  <section class="testimonials" id="testimonials" aria-labelledby="testimonialsHeadline">
+  <section class="testimonials ink-light" id="testimonials" aria-labelledby="testimonialsHeadline">
     <div class="testimonials__header-row">
       <div class="testimonials__header">
         <div class="eyebrow" data-reveal>CLIENT SUCCESS &amp; EXPERIENCE</div>
@@ -1979,7 +1993,7 @@
 
 
 
-  <section class="final-cta" id="finalCta" aria-labelledby="finalCtaHeadline">
+  <section class="final-cta ink-light" id="finalCta" aria-labelledby="finalCtaHeadline">
     <div class="final-cta__bg" id="finalCtaBg" aria-hidden="true">
       <img src="assets/images/cta-bg-blue.png" alt="" class="final-cta__img" loading="lazy" decoding="async" />
     </div>
@@ -2000,7 +2014,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer" id="footer" role="contentinfo">
+  <footer class="footer ink-dark" id="footer" role="contentinfo">
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand" data-reveal>
@@ -2050,6 +2064,7 @@
   <script src="assets/js/mars-sigma.js" defer></script>
   <script src="assets/js/services-particles.js" defer></script>
   <script src="assets/js/headline-reveal.js" defer></script>
+  <script src="assets/js/hero-carousel.js" defer></script>
 
 
 </body>

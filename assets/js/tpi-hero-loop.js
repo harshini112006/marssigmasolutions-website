@@ -34,7 +34,7 @@
 
   function backdrop() {
     const g = ctx.createLinearGradient(0, 0, W, H);
-    g.addColorStop(0, '#5a1422'); g.addColorStop(0.55, '#3f0d1a'); g.addColorStop(1, '#2c3e6e');
+    g.addColorStop(0, '#13294b'); g.addColorStop(0.55, '#0b1f3a'); g.addColorStop(1, '#081833');
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     const glow = ctx.createRadialGradient(W * 0.5, H * 0.6, 10, W * 0.5, H * 0.6, W * 0.7);
     glow.addColorStop(0, 'rgba(42,79,158,0.35)'); glow.addColorStop(1, 'rgba(42,79,158,0)');
