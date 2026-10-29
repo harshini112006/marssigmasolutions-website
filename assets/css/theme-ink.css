@@ -619,3 +619,202 @@ html body .ink-light:not(#_) :is(.cs-std__tag, .cs-std__tag *) {
   background: none !important; border: 0 !important; padding: 0 !important;
   color: var(--mr-700) !important; -webkit-text-fill-color: var(--mr-700) !important;
 }
+
+/* ============================================================
+   COLOUR BALANCE: white base, rich ink bands, visible maroon
+   ============================================================ */
+:root {
+  --ink-tint: #EEF3FA;
+  --mr-500: #A3263C;
+  --mr-rose: #E9A6B2;
+  --ink-band-rich:
+    radial-gradient(ellipse 60% 70% at 100% 0%, rgba(125, 27, 44, 0.42) 0%, rgba(125, 27, 44, 0) 60%),
+    radial-gradient(ellipse 50% 60% at 0% 100%, rgba(42, 79, 158, 0.35) 0%, rgba(42, 79, 158, 0) 65%),
+    linear-gradient(160deg, #0B1F3A 0%, #102849 55%, #081833 100%);
+}
+
+/* soft blue tint for alternating light sections */
+html body .ink-light.ink-tint:not(#_) {
+  background: linear-gradient(180deg, #EEF3FA 0%, #F5F8FC 100%) !important;
+}
+
+/* ink bands get a maroon glow in one corner and a blue one in the other */
+html body .ink-dark:not(#_):not(.ink-hero):not(.footer) { background: var(--ink-band-rich) !important; }
+html body .ink-dark.final-cta:not(#_) { background: var(--ink-800) !important; }
+html body:not(#_) .final-cta.ink-dark .final-cta__gradient {
+  background:
+    radial-gradient(ellipse 50% 80% at 0% 100%, rgba(125,27,44,0.45) 0%, rgba(125,27,44,0) 65%),
+    linear-gradient(to right, rgba(11,31,58,0.96) 0%, rgba(11,31,58,0.82) 40%, rgba(11,31,58,0.4) 78%, rgba(11,31,58,0.25) 100%) !important;
+}
+html body:not(#_) .final-cta.ink-dark .final-cta__img { opacity: 0.5 !important; filter: none !important; }
+html body .ink-hero:not(#_)::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; z-index: 6; opacity: 1 !important;
+  background: linear-gradient(90deg, var(--mr-700), var(--mr-500) 40%, rgba(163,38,60,0) 100%) !important;
+  pointer-events: none;
+}
+html body:not(#_) footer.footer {
+  background: var(--ink-band-rich) !important;
+  border-top: 3px solid var(--mr-700) !important;
+}
+html body.cs-page:not(#_) .cs-hero,
+html body.tp-page:not(#_) .tp-hero,
+html body.tr-page:not(#_) .tr-hero { background: var(--ink-band-rich) !important; }
+html body:not(#_) .cs-hero__tint,
+html body:not(#_) .tr-hero .cs-hero__tint {
+  background:
+    radial-gradient(ellipse 55% 70% at 100% 0%, rgba(125,27,44,0.38) 0%, rgba(125,27,44,0) 60%),
+    linear-gradient(180deg, rgba(11,31,58,0.86) 0%, rgba(11,31,58,0.7) 55%, rgba(8,24,51,0.9) 100%) !important;
+}
+html body #hero .hero__gradient,
+html body.hm-wine #hero .hero__gradient {
+  background:
+    radial-gradient(ellipse 45% 60% at 0% 100%, rgba(125,27,44,0.45) 0%, rgba(125,27,44,0) 70%),
+    linear-gradient(90deg, rgba(7,20,40,0.92) 0%, rgba(7,20,40,0.74) 34%, rgba(7,20,40,0.32) 68%, rgba(7,20,40,0.18) 100%),
+    linear-gradient(0deg, rgba(7,20,40,0.6) 0%, rgba(7,20,40,0) 35%) !important;
+}
+@media (max-width: 768px) {
+  html body #hero .hero__gradient,
+  html body.hm-wine #hero .hero__gradient {
+    background:
+      radial-gradient(ellipse 80% 40% at 0% 100%, rgba(125,27,44,0.45) 0%, rgba(125,27,44,0) 70%),
+      linear-gradient(180deg, rgba(7,20,40,0.7) 0%, rgba(7,20,40,0.76) 50%, rgba(7,20,40,0.9) 100%) !important;
+  }
+}
+
+/* maroon accents on ink: italic highlights, labels, numbers, rules */
+html body .ink-dark:not(#_) :is(h1, h2, h3, h4, h5, h6) :is(em, i),
+html body .ink-dark:not(#_) :is(h1, h2, h3, h4, h5, h6) :is(em, i) span {
+  color: var(--mr-rose) !important; -webkit-text-fill-color: var(--mr-rose) !important;
+}
+html body .ink-dark:not(#_):not(.ink-hero) :is([class*="eyebrow"], [class*="kicker"], [class*="__num"], [class*="-num"], [class*="__n"]):not([class*="btn"]) {
+  color: var(--mr-rose) !important; -webkit-text-fill-color: var(--mr-rose) !important;
+}
+html body #hero .hero__headline em,
+html body.hm-wine #hero .hero__headline em {
+  background-image: linear-gradient(100deg, #E9A6B2 0%, #E9A6B2 32%, #F7DCE1 43%, #ffffff 50%, #F7DCE1 57%, #E9A6B2 68%, #E9A6B2 100%) !important;
+}
+html body.hm-wine #hero .hero__headline .hero__line--accent > span { color: var(--mr-rose) !important; -webkit-text-fill-color: var(--mr-rose) !important; }
+
+/* cards on ink: glassy panels with a maroon top edge */
+html body .ink-dark:not(#_) :is(.why__pillar, .cs-phase, .tp-card, .tr-benefit, .tr-perk) {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(201,213,232,0.16) !important;
+  border-top: 2px solid var(--mr-500) !important;
+  border-radius: 12px;
+  box-shadow: none !important;
+}
+html body .ink-dark:not(#_) .why__pillar { padding: 1.2rem 1.4rem !important; margin-bottom: 0.8rem; }
+html body .ink-dark:not(#_) :is(.why__pillar-title, .cs-phase__tag, h3, h4) { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+html body .ink-dark:not(#_) :is(.cs-phase__ic, .tp-ic, .tr-node__ic) { background: var(--mr-700) !important; color: #fff !important; }
+html body .ink-dark:not(#_) .cs-phase__tag { background: none !important; border: 0 !important; padding: 0 !important; }
+html body .ink-dark:not(#_) .cs-steps__rail { background: var(--mr-500) !important; }
+
+/* ------------------------------------------------------------
+   MAROON ON LIGHT: buttons, card edges, icons, stats
+   ------------------------------------------------------------ */
+html body .ink-light:not(#_) :is(.btn, [class*="__btn"], [class*="-btn"]:not([class*="btn__"])):not([class*="btn--ghost"]):not([class*="btn--text"]):not([class*="--link"]),
+html body.hm-wine:not(#_):not(#_):not(#_) .ink-light .btn--light {
+  background: var(--mr-700) !important;
+  border-color: var(--mr-700) !important;
+  color: #fff !important; -webkit-text-fill-color: #fff !important;
+  box-shadow: 0 10px 24px rgba(125,27,44,0.25) !important;
+}
+html body .ink-light:not(#_) :is(.btn, [class*="__btn"], [class*="-btn"]:not([class*="btn__"])):not([class*="btn--ghost"]):not([class*="btn--text"]):not([class*="--link"]):hover,
+html body.hm-wine:not(#_):not(#_):not(#_) .ink-light .btn--light:hover {
+  background: var(--ink-800) !important; border-color: var(--ink-800) !important;
+}
+/* primary buttons on ink: maroon fill, white on hover */
+html body .ink-dark:not(#_) :is(.btn, [class*="__btn"], [class*="-btn"]:not([class*="btn__"])):not([class*="btn--ghost"]):not([class*="btn--text"]):not([class*="--link"]),
+html body.hm-wine:not(#_) :is(#hero .hero__ctas .btn--light, .final-cta__actions .btn--light) {
+  background: var(--mr-700) !important; border-color: var(--mr-700) !important;
+  color: #fff !important; -webkit-text-fill-color: #fff !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.3) !important;
+}
+html body .ink-dark:not(#_) :is(.btn, [class*="__btn"], [class*="-btn"]:not([class*="btn__"])):not([class*="btn--ghost"]):not([class*="btn--text"]):not([class*="--link"]):hover,
+html body.hm-wine:not(#_) :is(#hero .hero__ctas .btn--light, .final-cta__actions .btn--light):hover {
+  background: #fff !important; border-color: #fff !important;
+  color: var(--ink-800) !important; -webkit-text-fill-color: var(--ink-800) !important;
+}
+html body.bt-page:not(#_) .bt-btn--primary .bt-btn__icon { background: #fff !important; border-color: #fff !important; color: var(--mr-700) !important; -webkit-text-fill-color: var(--mr-700) !important; }
+html body.bt-page:not(#_) .bt-btn--primary:hover .bt-btn__icon { background: var(--ink-800) !important; border-color: var(--ink-800) !important; color: #fff !important; -webkit-text-fill-color: #fff !important; }
+
+/* cards: maroon top edge, faint blue wash */
+html body .ink-light:not(#_) :is(.industry-card, .tcard, .mf__stat, .mf__cred, .bt-challenge__card, .bt-chart, .bt-offer, .cs-std, .tp-card, .tp-stage, .tp-benefit, .tr-prog, .tr-card, .iso-timeline) {
+  border-top: 3px solid var(--mr-700) !important;
+}
+html body .ink-light:not(#_) .tcard--featured { background: linear-gradient(160deg, #fff 0%, #F7EEF0 100%) !important; }
+html body .ink-light:not(#_) :is(.cs-std__ic, .cs-chip__ic, .cs-step__ic, .tp-ic, .tp-stage__node, .tr-node__ic, .tcard__avatar) {
+  background: var(--mr-700) !important;
+}
+html body .ink-light:not(#_) .cs-std:hover .cs-std__ic,
+html body .ink-light:not(#_) .tp-stage:hover .tp-stage__node { background: var(--ink-800) !important; }
+html body .ink-light:not(#_) :is(.stat__num, .stat__num *, .stat__counter, .mf__stat-num) { color: var(--mr-700) !important; -webkit-text-fill-color: var(--mr-700) !important; }
+html body .ink-light:not(#_) .intro__headline + *,
+html body .ink-light:not(#_) .eyebrow::before { background: var(--mr-700) !important; }
+html body .ink-light:not(#_) :is([class*="__tag"]:not(.mf__tag):not([class*="__tags"]):not(.cs-std__tag):not(.cs-phase__tag), .cs-chip) {
+  background: #F7EEF0 !important; border-color: rgba(125,27,44,0.18) !important;
+  color: var(--mr-700) !important; -webkit-text-fill-color: var(--mr-700) !important;
+}
+
+/* home: intro photo banner back to an ink overlay */
+html body.hm-wine:not(#_) #introVisual.intro__visual { background: var(--ink-800) !important; border: 0; }
+html body.hm-wine:not(#_) #introVisual .intro__visual-overlay {
+  background:
+    radial-gradient(ellipse 45% 80% at 0% 100%, rgba(125,27,44,0.5) 0%, rgba(125,27,44,0) 70%),
+    linear-gradient(90deg, rgba(11,31,58,0.95) 0%, rgba(11,31,58,0.65) 42%, rgba(11,31,58,0.1) 100%) !important;
+}
+html body:not(#_) #introVisual :is(.intro__visual-text, .intro__visual-text b, .intro__visual-facts span) { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+html body:not(#_) #introVisual .intro__visual-text em { color: var(--mr-rose) !important; -webkit-text-fill-color: var(--mr-rose) !important; }
+html body:not(#_) #introVisual :is(.intro__visual-sub) { color: rgba(230,236,245,0.85) !important; -webkit-text-fill-color: rgba(230,236,245,0.85) !important; }
+html body:not(#_) #introVisual .intro__visual-eyebrow { color: var(--mr-rose) !important; -webkit-text-fill-color: var(--mr-rose) !important; }
+@media (max-width: 768px) {
+  html body.hm-wine:not(#_) #introVisual .intro__visual-overlay {
+    background: linear-gradient(180deg, rgba(11,31,58,0.3) 0%, rgba(11,31,58,0.88) 45%, rgba(11,31,58,0.96) 100%) !important;
+  }
+}
+
+/* home: showcase photo cards keep an ink caption */
+html body .ink-light:not(#_) .showcase__card { background: var(--ink-800) !important; border: 0 !important; border-bottom: 3px solid var(--mr-700) !important; }
+html body .ink-light:not(#_) .showcase__card-content { background: var(--ink-800) !important; }
+html body .ink-light:not(#_) .showcase__card :is(h1, h2, h3, h4, h5, h6, h3 *, h4 *, p, span, div) { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+html body .ink-light:not(#_) .showcase__card .showcase__card-label { color: var(--mr-rose) !important; -webkit-text-fill-color: var(--mr-rose) !important; }
+html body .ink-light:not(#_) .showcase__overlay { background: none !important; }
+
+/* home: standards orbit on ink */
+html body .ink-dark:not(#_) .pattern-box.standards-orbit {
+  background: radial-gradient(circle at 50% 50%, rgba(125,27,44,0.28) 0%, rgba(42,79,158,0.18) 45%, transparent 72%) !important;
+}
+html body .ink-dark:not(#_) .standards-orbit .orbit__seal { background: var(--mr-700) !important; border-color: rgba(255,255,255,0.3) !important; }
+html body .ink-dark:not(#_) .standards-orbit .orbit__seal * { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+html body .ink-dark:not(#_) .standards-orbit .orbit__track li span {
+  background: rgba(11,31,58,0.9) !important; color: #fff !important; -webkit-text-fill-color: #fff !important;
+  border: 1px solid rgba(233,166,178,0.45) !important;
+}
+
+/* business transformation DMAIC on ink */
+html body.bt-page:not(#_) .ink-dark .bt-approach__photo::after {
+  background: radial-gradient(ellipse 45% 55% at 55% 50%, rgba(11,31,58,0.55) 0%, rgba(11,31,58,0.2) 70%),
+              linear-gradient(90deg, #0B1F3A 0%, rgba(11,31,58,0.6) 30%, rgba(11,31,58,0.3) 75%, rgba(11,31,58,0.7) 100%),
+              linear-gradient(180deg, #0B1F3A 0%, rgba(11,31,58,0) 25%, rgba(11,31,58,0) 75%, #0B1F3A 100%) !important;
+}
+html body.bt-page:not(#_) .bt-approach.ink-dark { background: var(--ink-800) !important; }
+html body.bt-page:not(#_) .ink-dark .bt-cycle__ring { stroke: var(--mr-500) !important; }
+html body.bt-page:not(#_) .ink-dark .bt-cycle__nodes circle { fill: var(--mr-700) !important; stroke: rgba(255,255,255,0.6) !important; }
+html body.bt-page:not(#_) .ink-dark .bt-cycle__center-sub { fill: var(--mr-rose) !important; }
+
+/* inspection manpower photo and training cycle on ink */
+html body .ink-dark:not(#_) .tp-photo__chip { background: rgba(11,31,58,0.85) !important; border: 1px solid rgba(255,255,255,0.15) !important; }
+html body .ink-dark:not(#_) .tp-photo__chip, html body .ink-dark:not(#_) .tp-photo__chip * { color: #fff !important; -webkit-text-fill-color: #fff !important; }
+html body .ink-dark:not(#_) .tp-photo__chip b { color: var(--mr-rose) !important; -webkit-text-fill-color: var(--mr-rose) !important; }
+html body:not(#_) .tp-photo::after { background: linear-gradient(160deg, #7D1B2C 0%, #0B1F3A 55%, #1E3A64 100%) !important; opacity: 0.5 !important; }
+html body .ink-dark:not(#_) .tr-cycle__node circle { animation-name: trNodeInkDark !important; }
+html body .ink-dark:not(#_) .tr-cycle svg > circle[r="78"] { fill: rgba(125,27,44,0.35) !important; }
+html body .ink-dark:not(#_) .tr-cycle__k { fill: var(--mr-rose) !important; }
+@keyframes trNodeInkDark {
+  0%, 30%, 100% { fill: #13294B; stroke: rgba(201,213,232,0.45); }
+  5%, 22% { fill: #7D1B2C; stroke: #fff; }
+}
+/* marquee strips: maroon separators */
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee) { background: var(--ink-tint) !important; }
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::before,
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::after { background: linear-gradient(90deg, var(--ink-tint), rgba(238,243,250,0)) !important; }
