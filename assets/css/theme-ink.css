@@ -1255,3 +1255,12 @@ html body .ink-light:not(#_):not(#_):not(#_) :is(.why__pillar, .bt-offer, .bt-ch
 html body .ink-light:not(#_):not(#_):not(#_) :is(.why__pillar, .bt-offer, .bt-challenge__card, .cs-std, .cs-step, .tp-benefit, .tp-stage):is(:hover, :focus-within, .is-touched) *:not(#_):not(#_):not(#_):not(#_) {
   transition: color .2s ease .14s;
 }
+
+/* ------------------------------------------------------------
+   PHONES: stacked footer links sit 44px apart so every link keeps
+   a full-size, non-overlapping tap area (the invisible ::before
+   in mars-sigma-v2.css supplies the height).
+   ------------------------------------------------------------ */
+@media (max-width: 768px) {
+  html body footer.footer:not(#_) :is(.footer__link, .footer__contact-link) { margin-bottom: 1.1rem !important; }
+}

@@ -1,0 +1,246 @@
+/* ============================================================
+   TRAINING PAGE: same gradient language as Home, Business Transformation,
+   Consulting and Third-Party Inspection.
+   Cards are filled maroon red to ink blue by default (no mouse needed) with
+   cream text; hover lifts, brightens and breathes. Cream sections get soft
+   glows and a very faint photo background. No pure white.
+   Scoped to body.tr-page; stacked ":not(#_)" beats the older page themes.
+   ============================================================ */
+.tr-page {
+  --g-deep: linear-gradient(155deg, #7D1B2C 0%, #4A1A4A 50%, #14275F 100%);
+  --g-bright: linear-gradient(155deg, #9A2540 0%, #5E2262 50%, #1E3A8A 100%);
+  --g-cream: #F7F2EA;
+  --g-rose: #E9A6B2;
+}
+
+/* ---------- running topics headline: bold gradient text ---------- */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-marquee span {
+  font-weight: 700 !important;
+  background-image: linear-gradient(90deg, #B0192E 0%, #7D1B2C 30%, #2F4FA8 70%, #1E3A8A 100%) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  color: transparent !important; -webkit-text-fill-color: transparent !important;
+  padding-right: 0.06em;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-marquee i { color: #B0192E !important; -webkit-text-fill-color: #B0192E !important; }
+
+/* ---------- bolder headings and running text ---------- */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-h2 { font-weight: 700 !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-light .cs-body { font-weight: 500 !important; }
+
+/* ---------- hero topics as gradient chips ---------- */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds { display: flex; flex-wrap: wrap; gap: 0.55rem; max-width: 520px; line-height: 1.2; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds i { display: none; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds span {
+  display: inline-flex; align-items: center; padding: 0.5rem 0.95rem; border-radius: 999px;
+  background: var(--g-deep); border: 1px solid rgba(247, 242, 234, 0.28);
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+  font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.3);
+  transition: transform .35s ease, background .35s ease;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds span:hover { background: var(--g-bright); transform: translateY(-3px) scale(1.04); }
+
+/* ---------- soft glows + faint photo behind the cream sections ---------- */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey) { position: relative; isolation: isolate; overflow: clip; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::before,
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%;
+  filter: blur(80px); opacity: 1 !important; will-change: transform;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::before {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(125, 27, 44, 0.17) 0%, rgba(176, 25, 46, 0.08) 45%, transparent 72%);
+  animation: trGlowA 20s ease-in-out infinite alternate;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::after {
+  width: 580px; height: 580px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, rgba(47, 79, 168, 0.07) 45%, transparent 72%);
+  animation: trGlowB 24s ease-in-out infinite alternate;
+}
+@keyframes trGlowA { to { transform: translate(70px, 50px) scale(1.12); } }
+@keyframes trGlowB { to { transform: translate(-60px, -50px) scale(1.1); } }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-why::before { left: -160px; top: -100px; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-why::after { right: -180px; bottom: -160px; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-programmes::before { right: -170px; top: -120px; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-programmes::after { left: -190px; bottom: -150px; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-journey::before { left: -190px; top: 20%; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-journey::after { right: -170px; bottom: -150px; }
+
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-why {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/tr-why.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-programmes {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/tr-programmes.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-journey {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/tr-journey.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+
+/* ---------- "why train" section: caption, topic chips, quote ---------- */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-photo__chip {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.28) !important;
+  color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-photo__chip b { color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; font-weight: 700; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-creds { gap: 0.6rem !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-creds li {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.25) !important;
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.22) !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important;
+  padding: 0.6rem 1rem 0.6rem 2rem !important;
+  transition: transform .35s ease, background .35s ease;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-creds li::before { background: var(--g-cream) !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-creds li:hover { background: var(--g-bright) !important; transform: translateY(-3px) scale(1.03); }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-quote {
+  margin-top: 1.8rem; padding: 1.5rem 1.7rem; border: 1px solid rgba(247, 242, 234, 0.2) !important; border-radius: 18px;
+  background: var(--g-deep); box-shadow: 0 16px 36px rgba(11, 31, 58, 0.28);
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 600 !important;
+}
+
+/* ---------- shared dark gradient cards: programmes and journey steps ---------- */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node) {
+  position: relative;
+  background: var(--g-deep) !important;
+  border: 1px solid rgba(247, 242, 234, 0.2) !important;
+  border-top: 1px solid rgba(247, 242, 234, 0.2) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.28), 0 4px 12px rgba(125, 27, 44, 0.2) !important;
+  transition: transform .45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .45s ease, background .45s ease, border-color .45s ease !important;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node):is(:hover, :focus-within, .is-touched) {
+  background: var(--g-bright) !important;
+  transform: translateY(-6px);
+  border-color: rgba(247, 242, 234, 0.45) !important;
+  box-shadow: 0 26px 50px rgba(30, 58, 138, 0.38), 0 10px 24px rgba(125, 27, 44, 0.3) !important;
+  animation: trBreathe 1.4s ease-in-out infinite;
+}
+@keyframes trBreathe {
+  0%, 100% { transform: translateY(-6px) scale(1); }
+  50% { transform: translateY(-6px) scale(1.03); }
+}
+/* idle gradient ring drifting around each card */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node)::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none;
+  padding: 1.5px;
+  background: linear-gradient(110deg, #E9A6B2, #7D1B2C 22%, #8FA8FF 50%, #7D1B2C 78%, #E9A6B2);
+  background-size: 300% 100%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0.55;
+  animation: trRingDrift 7s linear infinite, trRingGlow 3.6s ease-in-out infinite;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node):nth-child(2n)::before { animation-delay: -2.3s, -1.1s; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node):nth-child(3n)::before { animation-delay: -4.6s, -2.2s; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node):is(:hover, :focus-within, .is-touched)::before { opacity: 1; animation-duration: 3s, 1.4s; }
+@keyframes trRingDrift { to { background-position: 300% 0; } }
+@keyframes trRingGlow { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.85; } }
+
+/* light text; gradient heading effect switched off inside dark cards */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node) :is(h3, h3 *, p, .cs-std__text) {
+  background: none !important; background-image: none !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node) h3 { font-weight: 700 !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node) p { font-weight: 400 !important; color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-std__tag, html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-node__n { color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; background: none !important; border: 0 !important; font-weight: 700 !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-std__ic, html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-node__ic {
+  background: rgba(247, 242, 234, 0.1) !important; border: 1.5px solid rgba(247, 242, 234, 0.55) !important; box-shadow: none !important;
+  color: var(--g-cream) !important;
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std__ic, .tr-node__ic) svg { stroke: var(--g-cream) !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-std__bar i { background: linear-gradient(90deg, var(--g-rose), #8FA8FF) !important; }
+
+/* programme cards: roomier */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-grid { gap: 1.4rem !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-grid .cs-std { padding: 1.9rem 1.7rem 1.8rem !important; }
+
+/* journey: six step cards in a row, each with its own icon */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-path__rail { display: none !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-path { gap: 1.2rem !important; align-items: stretch; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-node { padding: 1.6rem 1.3rem 1.6rem !important; margin: 0 !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-node__ic { position: relative !important; left: auto !important; top: auto !important; width: 48px !important; height: 48px !important; background: var(--g-bright) !important; border: 2px solid var(--g-cream) !important; box-shadow: 0 8px 18px rgba(11, 31, 58, 0.3) !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-node__n { margin-top: 1rem !important; font-size: 26px !important; }
+
+/* ---------- learning loop (dark section): diagram labels and outcome chips ---------- */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-cycle__node circle {
+  fill: url(#trNodeG) !important; stroke: rgba(247, 242, 234, 0.6) !important; stroke-width: 1.6;
+  transform-box: fill-box; transform-origin: center;
+  animation: trNodePulse 12s ease-in-out infinite; animation-delay: calc(var(--i) * 3s);
+}
+@keyframes trNodePulse {
+  0%, 30%, 100% { transform: scale(1); filter: none; }
+  5%, 22% { transform: scale(1.1); filter: drop-shadow(0 0 10px rgba(233, 166, 178, 0.8)); }
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-cycle__node text { font-weight: 700; fill: #F7F2EA !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chips { gap: 0.9rem !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.25) !important; border-radius: 14px !important;
+  padding: 0.9rem 1rem !important; min-height: 58px;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important;
+  box-shadow: 0 10px 22px rgba(11, 31, 58, 0.25);
+}
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip:hover { background: var(--g-bright) !important; transform: translateY(-4px) !important; box-shadow: 0 16px 30px rgba(30, 58, 138, 0.35); }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip__ic { background: rgba(247, 242, 234, 0.12) !important; border: 1.5px solid rgba(247, 242, 234, 0.5) !important; color: var(--g-cream) !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip__ic svg { stroke: var(--g-cream) !important; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 1100px) {
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-path { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; row-gap: 1.2rem !important; padding-left: 0 !important; }
+}
+@media (max-width: 768px) {
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-node__n { margin-top: 0.8rem !important; font-size: 24px !important; }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::before,
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::after { width: 300px; height: 300px; filter: blur(50px); animation: none; will-change: auto; }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-why {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/tr-why-sm.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-programmes {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/tr-programmes-sm.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-journey {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/tr-journey-sm.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::before,
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tr-why, .tr-programmes, .tr-journey)::after { animation: none; }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node)::before { animation: none; opacity: 0.6; }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .tr-node):is(:hover, :focus-within, .is-touched) { animation: none; transform: none; }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-cycle__node circle { animation: none; }
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip:hover, html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-creds li:hover { transform: none !important; }
+}
+
+/* programme topic tags inside the cards: readable cream pills */
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-tags { gap: 0.45rem !important; margin-top: 1.1rem !important; }
+html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-tags li {
+  padding: 0.3rem 0.75rem !important; border-radius: 999px !important;
+  background: rgba(247, 242, 234, 0.14) !important; border: 1px solid rgba(247, 242, 234, 0.34) !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important; font-size: 11.5px !important;
+}
+
+@media (max-width: 700px) {
+  html body.tr-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tr-path { grid-template-columns: minmax(0, 1fr) !important; gap: 1.2rem !important; }
+}
