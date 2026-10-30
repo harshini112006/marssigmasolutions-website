@@ -1,0 +1,206 @@
+/* ============================================================
+   CONSULTING PAGE: same gradient language as Home and Business Transformation
+   Cards are filled maroon red to ink blue by default (no mouse needed) with
+   cream text; hover lifts and brightens. Cream sections get soft glows.
+   Palette: cream, ink blue, maroon red. No pure white.
+   Scoped to body.cs-page; stacked ":not(#_)" beats the older page themes.
+   ============================================================ */
+.cs-page {
+  --g-deep: linear-gradient(155deg, #7D1B2C 0%, #4A1A4A 50%, #14275F 100%);
+  --g-bright: linear-gradient(155deg, #9A2540 0%, #5E2262 50%, #1E3A8A 100%);
+  --g-cream: #F7F2EA;
+  --g-rose: #E9A6B2;
+}
+
+/* ---------- running standards headline: bold gradient text ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-marquee span {
+  font-weight: 700 !important;
+  background-image: linear-gradient(90deg, #B0192E 0%, #7D1B2C 30%, #2F4FA8 70%, #1E3A8A 100%) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  color: transparent !important; -webkit-text-fill-color: transparent !important;
+  padding-right: 0.06em;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-marquee i { color: #B0192E !important; -webkit-text-fill-color: #B0192E !important; }
+
+/* ---------- headings and running text a notch bolder ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-h2 { font-weight: 700 !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-light .cs-body { font-weight: 500 !important; }
+
+/* ---------- hero standards as gradient chips ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds { display: flex; flex-wrap: wrap; gap: 0.55rem; max-width: 520px; line-height: 1.2; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds i { display: none; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds span {
+  display: inline-flex; align-items: center; padding: 0.5rem 0.95rem; border-radius: 999px;
+  background: var(--g-deep); border: 1px solid rgba(247, 242, 234, 0.28);
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+  font-family: 'Manrope', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.3);
+  transition: transform .35s ease, background .35s ease;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-hero__stds span:hover { background: var(--g-bright); transform: translateY(-3px) scale(1.04); }
+
+/* ---------- soft glows behind the cream sections ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain) { position: relative; isolation: isolate; overflow: clip; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::before,
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%;
+  filter: blur(80px); opacity: 1 !important; will-change: transform;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::before {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(125, 27, 44, 0.17) 0%, rgba(176, 25, 46, 0.08) 45%, transparent 72%);
+  animation: csGlowA 20s ease-in-out infinite alternate;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::after {
+  width: 580px; height: 580px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, rgba(47, 79, 168, 0.07) 45%, transparent 72%);
+  animation: csGlowB 24s ease-in-out infinite alternate;
+}
+@keyframes csGlowA { to { transform: translate(70px, 50px) scale(1.12); } }
+@keyframes csGlowB { to { transform: translate(-60px, -50px) scale(1.1); } }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-philosophy::before { left: -160px; top: -100px; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-philosophy::after  { right: -180px; bottom: -160px; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-standards::before  { right: -170px; top: -120px; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-standards::after   { left: -190px; bottom: -150px; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-transition::before { left: -190px; top: 20%; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-transition::after  { right: -170px; bottom: -150px; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-sustain::before    { right: -160px; top: -100px; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-sustain::after     { left: -180px; bottom: -150px; }
+
+/* ---------- philosophy: photo caption and quote ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-photo__chip {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.28) !important;
+  color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-photo__chip b { color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; font-weight: 700; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-quote {
+  margin-top: 1.8rem; padding: 1.5rem 1.7rem; border: 1px solid rgba(247, 242, 234, 0.2) !important; border-radius: 18px;
+  background: var(--g-deep); box-shadow: 0 16px 36px rgba(11, 31, 58, 0.28);
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 600 !important;
+}
+
+/* ---------- shared dark gradient cards ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .cs-step) {
+  background: var(--g-deep) !important;
+  border: 1px solid rgba(247, 242, 234, 0.2) !important;
+  border-top: 1px solid rgba(247, 242, 234, 0.2) !important;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.28), 0 4px 12px rgba(125, 27, 44, 0.2) !important;
+  transition: transform .45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .45s ease, background .45s ease, border-color .45s ease !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .cs-step):is(:hover, :focus-within, .is-touched) {
+  background: var(--g-bright) !important;
+  transform: translateY(-6px);
+  border-color: rgba(247, 242, 234, 0.45) !important;
+  box-shadow: 0 26px 50px rgba(30, 58, 138, 0.38), 0 10px 24px rgba(125, 27, 44, 0.3) !important;
+}
+/* readable light text, with the gradient heading effect switched off inside dark cards */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .cs-step) :is(h3, h3 *, p, .cs-std__text) {
+  background: none !important; background-image: none !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .cs-step) :is(h3) { font-weight: 700 !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .cs-step) p { font-weight: 400 !important; color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-std__tag, html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step::before {
+  color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; background: none !important; border: 0 !important;
+  font-weight: 700 !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-std__ic, html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step__ic {
+  background: rgba(247, 242, 234, 0.1) !important; border: 1.5px solid rgba(247, 242, 234, 0.55) !important; box-shadow: none !important;
+  color: var(--g-cream) !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std__ic, .cs-step__ic) svg { stroke: var(--g-cream) !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-std__bar i { background: linear-gradient(90deg, var(--g-rose), #8FA8FF) !important; }
+
+/* ---------- ISO 9001:2026 transition ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-shift {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.2) !important;
+  box-shadow: 0 18px 40px rgba(11, 31, 58, 0.28) !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-shift__focus { border-top-color: rgba(247, 242, 234, 0.22) !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-shift__focus li {
+  background: rgba(247, 242, 234, 0.12) !important; border: 1px solid rgba(247, 242, 234, 0.32) !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-shift__arrow text { fill: rgba(247, 242, 234, 0.85) !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-callout {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.22) !important;
+  box-shadow: 0 18px 40px rgba(11, 31, 58, 0.28);
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-callout :is(h3, h3 *) { background: none !important; color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-callout p { color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important; font-weight: 500 !important; }
+
+/* the six transition steps: room to breathe */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-steps { display: grid; gap: 1.7rem; padding-left: 78px !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-steps__rail { left: 22px !important; top: 28px !important; bottom: 28px !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step {
+  position: relative; padding: 1.7rem 1.9rem 1.7rem 2rem !important; margin: 0 !important;
+  min-height: 158px; border-radius: 20px !important;
+  display: flex; flex-direction: column; justify-content: center; gap: 0.25rem;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step:last-child { padding-bottom: 1.7rem !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step h3 { margin: 0.15rem 0 0.35rem !important; font-size: 1.2rem !important; line-height: 1.3; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step p { max-width: none !important; font-size: 15px !important; line-height: 1.7 !important; margin: 0 !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step__ic {
+  position: absolute; left: -78px !important; top: 1.5rem !important; width: 44px !important; height: 44px !important;
+  background: var(--g-bright) !important; border: 2px solid var(--g-cream) !important;
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.3) !important;
+}
+
+/* ---------- approach (dark section): filled by default, ring and breathing kept ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-dark .cs-cycle { gap: 1rem !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-dark .cs-phase {
+  background-image: linear-gradient(160deg, #6A1424 0%, #4A1A4A 50%, #14275F 100%) !important;
+  background-size: 100% 100% !important;
+  border: 1px solid rgba(247, 242, 234, 0.18) !important;
+  padding: 1.7rem 1.2rem 1.5rem !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-dark .cs-phase:is(:hover, :focus-within, .is-touched) {
+  background-image: linear-gradient(160deg, #B0192E 0%, #7D1B2C 30%, #2F4FA8 72%, #1E3A8A 100%) !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-dark .cs-phase :is(h3, .cs-phase__tag) { font-weight: 700 !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-dark .cs-phase p:not(.cs-phase__tag) { color: rgba(247, 242, 234, 0.9) !important; font-weight: 400 !important; }
+
+/* ---------- sustenance: gradient chips on a soft gradient card ---------- */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-sustain__card {
+  background:
+    linear-gradient(145deg, rgba(125, 27, 44, 0.1), rgba(251, 247, 240, 0) 45%, rgba(30, 58, 138, 0.13)) padding-box,
+    linear-gradient(#FBF7F0, #FBF7F0) padding-box,
+    linear-gradient(135deg, #7D1B2C, #1E3A8A) border-box !important;
+  border: 1.5px solid transparent !important;
+  box-shadow: 0 24px 56px rgba(11, 31, 58, 0.14) !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chips { gap: 0.9rem !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.22) !important; border-radius: 14px !important;
+  padding: 0.9rem 1rem !important; min-height: 58px;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important;
+  box-shadow: 0 10px 22px rgba(11, 31, 58, 0.2);
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip:hover { background: var(--g-bright) !important; transform: translateY(-4px) !important; box-shadow: 0 16px 30px rgba(30, 58, 138, 0.32); }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip__ic { background: rgba(247, 242, 234, 0.12) !important; border: 1.5px solid rgba(247, 242, 234, 0.5) !important; color: var(--g-cream) !important; }
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chip__ic svg { stroke: var(--g-cream) !important; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 900px) {
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-steps { padding-left: 62px !important; gap: 1.4rem; }
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-steps__rail { left: 17px !important; }
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step__ic { left: -62px !important; width: 38px !important; height: 38px !important; }
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-step { padding: 1.4rem 1.3rem 1.4rem 1.4rem !important; min-height: 0; }
+}
+@media (max-width: 768px) {
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::before,
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::after { width: 300px; height: 300px; filter: blur(50px); animation: none; will-change: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::before,
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-philosophy, .cs-standards, .cs-transition, .cs-sustain)::after { animation: none; }
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.cs-std, .cs-step, .cs-chip):hover { transform: none !important; }
+}
+
+/* the callout button needs its own colour on the maroon card */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-callout .cs-btn {
+  background: linear-gradient(135deg, #14275F, #1E3A8A) !important;
+  border: 1.5px solid rgba(247, 242, 234, 0.6) !important;
+}
+
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chips { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; }
