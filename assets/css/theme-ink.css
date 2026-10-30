@@ -852,25 +852,47 @@ html body .ink-light:not(#_) .services__header::after {
 html body .ink-light:not(#_) .services__headline { animation: none !important; }
 
 /* ------------------------------------------------------------
-   LIGHT SECTIONS: maroon-to-blue gradient on section headings
-   and the big stat numbers (solid ink stays as the fallback)
+   LIGHT SECTIONS: red-to-blue gradient on every heading, card
+   title and big number (solid ink stays as the fallback).
+   ink-gradient.js wraps each heading's text in .ink-grad so every
+   wrapped line runs red to blue on its own.
    ------------------------------------------------------------ */
+:root { --ink-grad: linear-gradient(90deg, #B0192E 0%, #8A1C3A 30%, #3553B8 62%, #1E3A8A 100%); }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  html body .ink-light:not(#_) :is(h1, h2),
-  html body .ink-light:not(#_) :is(.stat__num, .stat__counter, .mf__stat-num):not(#_) {
-    background-image: linear-gradient(90deg, var(--mr-700) 0%, #6B2147 40%, #1E3A8A 100%) !important;
+  html body .ink-light:not(#_) :is(h1, h2, h3, h4):not(.showcase__card *),
+  html body .ink-light:not(#_) :is(.stat__num, .stat__counter, .mf__stat-num, .service-panel__num):not(#_) {
+    background-image: var(--ink-grad) !important;
     -webkit-background-clip: text !important;
     background-clip: text !important;
     color: transparent !important;
     -webkit-text-fill-color: transparent !important;
-    width: fit-content;
-    max-width: 100%;
   }
-  html body .ink-light:not(#_) :is(h1, h2) *:not(#_),
-  html body .ink-light:not(#_) :is(.stat__num, .stat__counter, .mf__stat-num):not(#_) * {
+  html body .ink-light:not(#_) :is(h1, h2) { width: fit-content; max-width: 100%; }
+  html body .ink-light:not(#_) :is(h1, h2, h3, h4):not(.showcase__card *) *:not(#_),
+  html body .ink-light:not(#_) :is(.stat__num, .stat__counter, .mf__stat-num, .service-panel__num):not(#_) * {
     color: transparent !important;
     -webkit-text-fill-color: transparent !important;
     background: none !important;
+  }
+  /* per-line gradient once the text is wrapped */
+  html body .ink-light:not(#_) :is(h1, h2, h3, h4).has-ink-grad:not(#_) { background-image: none !important; }
+  html body .ink-light:not(#_) .has-ink-grad > .ink-grad:not(#_):not(#_) {
+    background: var(--ink-grad) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  /* word-split reveal headings: each word carries its slice of the line's gradient */
+  html body .ink-light:not(#_) :is(h1, h2, h3, h4).has-word-grad:not(#_) { background-image: none !important; }
+  html body .ink-light:not(#_) .has-word-grad .reveal-word:not(#_):not(#_) {
+    /* ink-gradient.js sets --gw/--gx so each word shows its slice of the line */
+    background-image: var(--ink-grad) !important;
+    background-repeat: no-repeat !important;
+    background-size: var(--gw, 100%) 100% !important;
+    background-position: var(--gx, 0px) 0 !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
   }
   /* centred headings keep their centring once they shrink to the text */
   html body .ink-light:not(#_) .services__headline { margin-inline: auto; }
