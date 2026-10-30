@@ -16,8 +16,8 @@
   --ink-muted: #5B6B84;
   --ink-line: #E1E6EE;
   --ink-line-strong: #CBD3DF;
-  --ink-bg: #EFE7DA;
-  --ink-bg-alt: #E8DFD0;
+  --ink-bg: #F7F2EA;
+  --ink-bg-alt: #F1EADF;
   --ink-pale: #C9D5E8;
   --mr-700: #7D1B2C;
   --mr-600: #94233A;
@@ -635,7 +635,7 @@ html body .ink-light:not(#_) :is(.cs-std__tag, .cs-std__tag *) {
 
 /* soft blue tint for alternating light sections */
 html body .ink-light.ink-tint:not(#_) {
-  background: linear-gradient(180deg, #E8DFD0 0%, #EFE7DA 100%) !important;
+  background: linear-gradient(180deg, #F1EADF 0%, #F7F2EA 100%) !important;
 }
 
 /* ink bands get a maroon glow in one corner and a blue one in the other */
@@ -826,7 +826,7 @@ html body .nav.nav--scrolled,
 html body.cs-page .nav.nav--scrolled,
 html body.tp-page .nav.nav--scrolled,
 html body.hm-wine .nav.nav--scrolled,
-html body.bt-page .nav.nav--scrolled { background: rgba(239, 231, 218, 0.96) !important; }
+html body.bt-page .nav.nav--scrolled { background: rgba(247, 242, 234, 0.96) !important; }
 html body .mobile-menu,
 html body.hm-wine .mobile-menu,
 html body.cs-page .mobile-menu,
@@ -837,10 +837,10 @@ html body .nav.nav--scrolled .nav__logo.nav__brand,
 html body .nav:has(.nav__hamburger.active) .nav__logo.nav__brand { background: #FFFDF9 !important; }
 html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee) { background: var(--ink-bg-alt) !important; }
 html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::before,
-html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::after { background: linear-gradient(90deg, var(--ink-bg-alt), rgba(232,223,208,0)) !important; }
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::after { background: linear-gradient(90deg, var(--ink-bg-alt), rgba(241,234,223,0)) !important; }
 html body.bt-page:not(#_) .ink-light .bt-challenge__photo::after {
-  background: linear-gradient(90deg, #EFE7DA 0%, rgba(239,231,218,0.92) 30%, rgba(239,231,218,0.5) 75%, rgba(239,231,218,0.8) 100%),
-              linear-gradient(180deg, #EFE7DA 0%, rgba(239,231,218,0) 25%, rgba(239,231,218,0) 75%, #EFE7DA 100%) !important;
+  background: linear-gradient(90deg, #F7F2EA 0%, rgba(247,242,234,0.92) 30%, rgba(247,242,234,0.5) 75%, rgba(247,242,234,0.8) 100%),
+              linear-gradient(180deg, #F7F2EA 0%, rgba(247,242,234,0) 25%, rgba(247,242,234,0) 75%, #F7F2EA 100%) !important;
 }
 html body .ink-light:not(#_) .tcard--featured { background: linear-gradient(160deg, #fff 0%, #F7ECEE 100%) !important; }
 html body .ink-light:not(#_) :is([class*="__tag"]:not(.mf__tag):not([class*="__tags"]):not(.cs-std__tag):not(.cs-phase__tag), .cs-chip) { background: #fff !important; }
@@ -999,3 +999,24 @@ html body .ink-light:not(#_) .showcase__card[data-target]:hover {
   box-shadow: 0 28px 52px rgba(30, 58, 138, 0.24), 0 10px 22px rgba(125, 27, 44, 0.18) !important;
 }
 html body .ink-light:not(#_) .showcase__card[data-target]:focus-visible { outline: 3px solid #3553B8; outline-offset: 4px; }
+
+/* light sections: fuller type. Thin (300) headings move to bold, italic accent
+   words to semibold Playfair, and lead copy gets a little more weight */
+html body .ink-light:not(#_) :is(h1, h2, h3, h4):not(.services__headline):not(.why__headline):not(.why__pillar-title):not(.showcase__card *) {
+  font-weight: 700 !important;
+  letter-spacing: -0.015em;
+}
+html body .ink-light:not(#_) :is(h1, h2, h3, h4) .reveal-word:not(#_) { font-weight: inherit !important; }
+html body .ink-light:not(#_) :is(h1, h2, h3, h4) :is(em, i):not(#_) { font-weight: 600 !important; }
+html body .ink-light:not(#_) :is(h1, h2, h3, h4) :is(em, i) .reveal-word:not(#_) { font-weight: 600 !important; }
+html body .ink-light:not(#_) p { font-weight: 400 !important; }
+html body .ink-light:not(#_) p:is([class*="lede"], [class*="lead"], [class*="__intro"], [class*="__body"], [class*="__sub"]) {
+  font-weight: 500 !important;
+}
+
+/* gradient text only paints inside the heading's box, so the longest word
+   must fit its column: keep these two big uppercase headings within it */
+html body .ink-light:not(#_) .why__headline { font-size: clamp(2rem, 3.3vw, 3.4rem) !important; }
+@media (max-width: 480px) {
+  html body .ink-light:not(#_) .services__headline { font-size: clamp(2.1rem, 11vw, 2.75rem) !important; }
+}
