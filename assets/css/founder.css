@@ -1,0 +1,229 @@
+/* ============================================================
+   HOME: MEET OUR FOUNDER
+   Palette: cream, ink blue, maroon red. No pure white.
+   Loaded after theme-ink.css; "#founder" plus stacked ":not(#_)" beats
+   the older page themes without touching them.
+   ============================================================ */
+#founder.mf {
+  --f-cream: #F7F2EA;
+  --f-cream-2: #F1EADF;
+  --f-cream-3: #FBF7F0;
+  --f-sand: #E6DCCB;
+  --f-ink: #0B1F3A;
+  --f-ink-2: #13294B;
+  --f-blue: #1E3A8A;
+  --f-pale: #C9D5E8;
+  --f-mr: #7D1B2C;
+  --f-mr-2: #B0192E;
+}
+
+/* ---------- section backdrop: cream with slow drifting colour ---------- */
+html body #founder.mf:not(#_):not(#_):not(#_) {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(30, 58, 138, 0.07), transparent 42%),
+    radial-gradient(circle at 92% 92%, rgba(125, 27, 44, 0.07), transparent 40%),
+    var(--f-cream) !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__glow {
+  opacity: 1 !important;
+  filter: blur(80px);
+  z-index: -1;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__glow--a { background: rgba(30, 58, 138, 0.16); animation: mfDriftA 16s ease-in-out infinite alternate; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__glow--b { background: rgba(125, 27, 44, 0.14); animation: mfDriftB 19s ease-in-out infinite alternate; }
+@keyframes mfDriftA { to { transform: translate(90px, 60px) scale(1.12); } }
+@keyframes mfDriftB { to { transform: translate(-80px, -50px) scale(1.1); } }
+
+/* ---------- header ---------- */
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__eyebrow { color: var(--f-mr) !important; -webkit-text-fill-color: var(--f-mr) !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__eyebrow-line { background: linear-gradient(90deg, var(--f-mr), var(--f-blue)) !important; width: 48px; height: 2px; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__lede {
+  background: var(--f-cream-3);
+  border: 1px solid rgba(11, 31, 58, 0.08);
+  border-left: 3px solid var(--f-mr);
+  border-radius: 0 14px 14px 0;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 10px 26px rgba(11, 31, 58, 0.06);
+  color: var(--f-ink-2) !important;
+  -webkit-text-fill-color: var(--f-ink-2) !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__lede strong { color: var(--f-mr) !important; -webkit-text-fill-color: var(--f-mr) !important; }
+
+/* ---------- portrait: offset frame, soft glow, floating accents ---------- */
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait { position: relative; isolation: isolate; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait::before,
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait::before {
+  width: 96px; height: 96px; left: -34px; top: -30px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(30, 58, 138, 0.55), rgba(11, 31, 58, 0.18) 70%);
+  animation: mfFloat 7s ease-in-out infinite;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait::after {
+  width: 64px; height: 64px; right: -26px; top: 46%; border-radius: 14px;
+  border: 2px solid rgba(125, 27, 44, 0.55);
+  animation: mfFloat 9s ease-in-out -3s infinite reverse, mfTurn 24s linear infinite;
+}
+@keyframes mfFloat { 0%, 100% { translate: 0 0; } 50% { translate: 0 -14px; } }
+@keyframes mfTurn { to { rotate: 360deg; } }
+
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__photo {
+  isolation: isolate;
+  background: linear-gradient(160deg, var(--f-cream-3), var(--f-sand)) !important;
+  border-radius: 22px;
+  box-shadow: 0 28px 60px rgba(11, 31, 58, 0.2), 0 0 70px rgba(30, 58, 138, 0.12) !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__photo::before {
+  background:
+    radial-gradient(ellipse 75% 55% at 50% 35%, rgba(251, 247, 240, 0.95) 0%, rgba(201, 213, 232, 0.35) 55%, transparent 80%),
+    linear-gradient(180deg, var(--f-cream-2) 0%, var(--f-sand) 100%) !important;
+}
+/* maroon frame offset behind the photo */
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__photo::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; border-radius: 22px;
+  border: 2px solid var(--f-mr);
+  transform: translate(14px, 14px);
+  transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait:hover .mf__photo::after { transform: translate(20px, 20px); }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__photo-ring { border-color: rgba(125, 27, 44, 0.3) !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__badge {
+  background: linear-gradient(135deg, var(--f-ink), var(--f-ink-2)) !important;
+  border: 1px solid rgba(201, 213, 232, 0.3) !important;
+  border-left: 3px solid var(--f-mr-2) !important;
+  box-shadow: 0 14px 30px rgba(11, 31, 58, 0.35);
+  animation: mfFloat 6s ease-in-out infinite;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__badge :is(*, span) { color: var(--f-cream) !important; -webkit-text-fill-color: var(--f-cream) !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__badge .mf__badge-label { color: var(--f-pale) !important; -webkit-text-fill-color: var(--f-pale) !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__name { color: var(--f-ink) !important; -webkit-text-fill-color: var(--f-ink) !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__loc { color: var(--f-mr) !important; -webkit-text-fill-color: var(--f-mr) !important; }
+
+/* ---------- message card: cream, gradient border, maroon quote mark ---------- */
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__message {
+  background:
+    linear-gradient(var(--f-cream-3), var(--f-cream-3)) padding-box,
+    linear-gradient(135deg, var(--f-mr), var(--f-blue)) border-box !important;
+  border: 1.5px solid transparent !important;
+  border-radius: 22px;
+  box-shadow: 0 24px 56px rgba(11, 31, 58, 0.12) !important;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+  transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .5s ease;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__message:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 70px rgba(11, 31, 58, 0.18), 0 10px 28px rgba(125, 27, 44, 0.12) !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__message::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 5px;
+  background: linear-gradient(90deg, var(--f-mr-2), var(--f-mr) 40%, var(--f-blue));
+  background-size: 200% 100%;
+  animation: mfSheen 8s linear infinite;
+}
+@keyframes mfSheen { to { background-position: -200% 0; } }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__quote-mark {
+  top: 0.4rem; right: 1rem; font-size: 9rem;
+  color: rgba(125, 27, 44, 0.16) !important; -webkit-text-fill-color: rgba(125, 27, 44, 0.16) !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__quote {
+  background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__quote p { color: var(--f-ink-2) !important; -webkit-text-fill-color: var(--f-ink-2) !important; background: none !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__quote p.mf__quote-lead {
+  color: var(--f-ink) !important; -webkit-text-fill-color: var(--f-ink) !important;
+  padding-left: 1rem; border-left: 3px solid var(--f-mr);
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__sign-line { background: linear-gradient(90deg, var(--f-mr), var(--f-blue)) !important; width: 56px; flex-basis: 56px; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__sign-name { color: var(--f-mr) !important; -webkit-text-fill-color: var(--f-mr) !important; }
+
+/* ---------- expertise: ink-blue chips with maroon ticks ---------- */
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__bio { color: var(--f-ink-2) !important; -webkit-text-fill-color: var(--f-ink-2) !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred {
+  background: linear-gradient(135deg, var(--f-ink), var(--f-ink-2)) !important;
+  border: 1px solid rgba(201, 213, 232, 0.16) !important;
+  border-top: 1px solid rgba(201, 213, 232, 0.16) !important;
+  box-shadow: inset 3px 0 0 var(--f-mr-2), 0 10px 22px rgba(11, 31, 58, 0.16) !important;
+  overflow: hidden;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred::before {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6.2l2 2 4-4.4' fill='none' stroke='%237D1B2C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 72% no-repeat,
+    #F7F2EA;
+  box-shadow: 0 0 0 3px rgba(176, 25, 46, 0.35);
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(247, 242, 234, 0.14) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .7s ease;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred:hover {
+  background: linear-gradient(135deg, var(--f-mr), var(--f-ink) 85%) !important;
+  transform: translateY(-4px);
+  box-shadow: inset 3px 0 0 var(--f-cream), 0 16px 30px rgba(11, 31, 58, 0.28) !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred:hover::after { transform: translateX(120%); }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred-label { color: var(--f-pale) !important; -webkit-text-fill-color: var(--f-pale) !important; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred-value { color: var(--f-cream) !important; -webkit-text-fill-color: var(--f-cream) !important; }
+
+/* ---------- stats: ink-blue panel, cream numbers, maroon accents ---------- */
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stats {
+  padding: 0.85rem;
+  border-radius: 18px;
+  background: linear-gradient(160deg, var(--f-ink) 0%, var(--f-ink-2) 60%, #1B3470 100%);
+  border-top: 3px solid var(--f-mr-2);
+  box-shadow: 0 22px 46px rgba(11, 31, 58, 0.28);
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stat {
+  background: rgba(247, 242, 234, 0.07) !important;
+  border: 1px solid rgba(247, 242, 234, 0.14) !important;
+  border-top: 1px solid rgba(247, 242, 234, 0.14) !important;
+  box-shadow: none !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stat:hover {
+  background: rgba(125, 27, 44, 0.45) !important;
+  border-color: rgba(247, 242, 234, 0.4) !important;
+  transform: translateY(-4px);
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stat-num {
+  display: block;
+  background: none !important; background-image: none !important;
+  -webkit-background-clip: border-box !important; background-clip: border-box !important;
+  color: var(--f-cream) !important; -webkit-text-fill-color: var(--f-cream) !important;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stat-num::after {
+  content: ""; display: block; width: 28px; height: 3px; margin-top: 0.45rem; border-radius: 3px;
+  background: linear-gradient(90deg, var(--f-mr-2), #E06A7C);
+  transition: width .4s ease;
+}
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stat:hover .mf__stat-num::after { width: 52px; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stat-label { color: var(--f-pale) !important; -webkit-text-fill-color: var(--f-pale) !important; }
+
+/* ---------- staggered entrance (parents carry data-reveal / .in-view) ---------- */
+@keyframes mfRise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__creds.in-view .mf__cred,
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__stats.in-view .mf__stat { animation: mfRise .7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+html body #founder.mf:not(#_):not(#_):not(#_) :is(.mf__creds .mf__cred:nth-child(2), .mf__stats .mf__stat:nth-child(2)) { animation-delay: .08s; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__creds .mf__cred:nth-child(3) { animation-delay: .16s; }
+html body #founder.mf:not(#_):not(#_):not(#_) :is(.mf__creds .mf__cred:nth-child(4), .mf__stats .mf__stat:nth-child(3)) { animation-delay: .24s; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__creds .mf__cred:nth-child(5) { animation-delay: .32s; }
+html body #founder.mf:not(#_):not(#_):not(#_) .mf__creds .mf__cred:nth-child(6) { animation-delay: .4s; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 480px) {
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__creds { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 768px) {
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait::before { left: -10px; top: -18px; width: 70px; height: 70px; }
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__portrait::after { right: -6px; width: 44px; height: 44px; }
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__photo::after { transform: translate(10px, 10px); }
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__quote-mark { font-size: 6rem; }
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__stats { padding: 0.65rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #founder.mf *, #founder.mf *::before, #founder.mf *::after { animation: none !important; }
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__photo::after,
+  html body #founder.mf:not(#_):not(#_):not(#_) .mf__cred::after { transition: none; }
+}

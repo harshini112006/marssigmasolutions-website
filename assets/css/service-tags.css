@@ -1,0 +1,70 @@
+/* ============================================================
+   HOME: SERVICE PANEL TAGS (standards, support areas, programmes)
+   Small maroon-to-ink-blue gradient cards with a cream check mark.
+   No pure white. "#services" plus stacked ":not(#_)" beats the older themes.
+   ============================================================ */
+html body #services:not(#_):not(#_) .service-panel__tags {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.6rem !important;
+  align-items: stretch;
+  padding: 0; list-style: none;
+}
+html body #services:not(#_):not(#_) .service-panel__tags li {
+  position: relative;
+  display: flex !important; align-items: center; gap: 0.6rem;
+  min-height: 46px;
+  padding: 0.55rem 0.85rem 0.55rem 0.6rem !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(247, 242, 234, 0.2) !important;
+  background: linear-gradient(135deg, #7D1B2C 0%, #5A1F4E 50%, #1E3A8A 100%) !important;
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.18), inset 0 1px 0 rgba(247, 242, 234, 0.14);
+  color: #F7F2EA !important; -webkit-text-fill-color: #F7F2EA !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 10.5px !important; font-weight: 700 !important;
+  letter-spacing: 0.08em !important; line-height: 1.3;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .35s ease, background .35s ease, border-color .35s ease !important;
+}
+html body #services:not(#_):not(#_) .service-panel__tags li::before {
+  content: ""; flex: none;
+  width: 22px; height: 22px; border-radius: 50%;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 6.2l2 2 4-4.4' fill='none' stroke='%237D1B2C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 68% no-repeat,
+    #F7F2EA;
+  box-shadow: 0 0 0 3px rgba(247, 242, 234, 0.16);
+  transition: transform .35s ease;
+}
+/* soft highlight that sweeps across on hover */
+html body #services:not(#_):not(#_) .service-panel__tags li::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(247, 242, 234, 0.2) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .7s ease;
+}
+html body #services:not(#_):not(#_) .service-panel__tags li:hover,
+html body #services:not(#_):not(#_) .service-panel:hover .service-panel__tags li:hover {
+  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(135deg, #94243A 0%, #6A2660 50%, #2B4FB0 100%) !important;
+  border-color: rgba(247, 242, 234, 0.5) !important;
+  color: #F7F2EA !important; -webkit-text-fill-color: #F7F2EA !important;
+  box-shadow: 0 14px 28px rgba(30, 58, 138, 0.35), 0 4px 12px rgba(125, 27, 44, 0.3), inset 0 1px 0 rgba(247, 242, 234, 0.2);
+}
+html body #services:not(#_):not(#_) .service-panel__tags li:hover::before { transform: scale(1.12); }
+html body #services:not(#_):not(#_) .service-panel__tags li:hover::after { transform: translateX(120%); }
+/* keep the colour when the whole panel is hovered */
+html body #services:not(#_):not(#_) .service-panel:hover .service-panel__tags li:not(:hover) {
+  color: #F7F2EA !important; -webkit-text-fill-color: #F7F2EA !important;
+  background: linear-gradient(135deg, #7D1B2C 0%, #5A1F4E 50%, #1E3A8A 100%) !important;
+  border-color: rgba(247, 242, 234, 0.2) !important;
+}
+
+@media (max-width: 480px) {
+  html body #services:not(#_):not(#_) .service-panel__tags { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body #services:not(#_):not(#_) .service-panel__tags li,
+  html body #services:not(#_):not(#_) .service-panel__tags li::before,
+  html body #services:not(#_):not(#_) .service-panel__tags li::after { transition: none !important; }
+  html body #services:not(#_):not(#_) .service-panel__tags li:hover { transform: none; }
+}
