@@ -1039,3 +1039,36 @@ html body #showcase .showcase__headline {
 }
 html body #showcase .showcase__headline em { font-family: 'Playfair Display', Georgia, serif; font-style: italic; }
 html body #showcase.showcase { padding-top: clamp(3.5rem, 6vw, 5.5rem) !important; }
+
+/* ------------------------------------------------------------
+   LIGHT SECTIONS: text cards fill with the red-to-blue gradient
+   on hover / keyboard focus / tap (the fill wipes in from the left;
+   nothing moves in the layout except a small lift)
+   ------------------------------------------------------------ */
+html body .ink-light:not(#_) :is(.why__pillar, .bt-offer, .bt-challenge__card, .cs-std, .cs-step, .tp-benefit, .tp-stage):not(#_) {
+  position: relative;
+  border-radius: 14px;
+  background-image: linear-gradient(120deg, #B0192E 0%, #7D1B2C 30%, #2F4FA8 72%, #1E3A8A 100%) !important;
+  background-repeat: no-repeat !important;
+  background-size: 0% 100% !important;
+  background-position: left center !important;
+  transition: background-size .35s ease, transform .35s ease, box-shadow .35s ease;
+}
+/* the "why us" rows have no box of their own: give them one that keeps the text on the same edge */
+html body .ink-light:not(#_) .why__pillar:not(#_) { margin-inline: -1.25rem; padding-inline: 1.25rem !important; }
+html body .ink-light:not(#_) :is(.why__pillar, .bt-offer, .bt-challenge__card, .cs-std, .cs-step, .tp-benefit, .tp-stage):is(:hover, :focus-within, .is-touched):not(#_) {
+  background-size: 100% 100% !important;
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(30, 58, 138, 0.22), 0 6px 16px rgba(125, 27, 44, 0.16) !important;
+  border-color: transparent !important;
+}
+html body .ink-light:not(#_) :is(.why__pillar, .bt-offer, .bt-challenge__card, .cs-std, .cs-step, .tp-benefit, .tp-stage):is(:hover, :focus-within, .is-touched) *:not(#_):not(#_):not(#_) {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background-image: none !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  transition: color .25s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  html body .ink-light:not(#_) :is(.why__pillar, .bt-offer, .bt-challenge__card, .cs-std, .cs-step, .tp-benefit, .tp-stage):not(#_) { transition: none; }
+}
