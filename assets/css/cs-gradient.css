@@ -204,3 +204,72 @@ html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-callout .cs-btn {
 }
 
 html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-chips { background: none !important; border: 0 !important; box-shadow: none !important; padding: 0 !important; }
+
+/* ============================================================
+   Subtle photo backgrounds for the cream sections
+   photo (desaturated, ~84% cream over it => ~16% visible) + faint
+   maroon/ink-blue wash + cream fade at the top and bottom edges.
+   Scrolls with the page (never fixed); smaller file on phones.
+   ============================================================ */
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-philosophy {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/cs-philosophy.webp") center 35% / cover no-repeat,
+    #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-standards {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/cs-standards.webp") center 40% / cover no-repeat,
+    #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-transition {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/cs-transition.webp") center 30% / cover no-repeat,
+    #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-sustain {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/cs-sustain.webp") center 45% / cover no-repeat,
+    #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+@media (max-width: 768px) {
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-philosophy {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/cs-philosophy-sm.webp") center 35% / cover no-repeat,
+      #F7F2EA !important;
+  }
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-standards {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/cs-standards-sm.webp") center 40% / cover no-repeat,
+      #F7F2EA !important;
+  }
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-transition {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/cs-transition-sm.webp") center 30% / cover no-repeat,
+      #F7F2EA !important;
+  }
+  html body.cs-page:not(#_):not(#_):not(#_):not(#_):not(#_) .cs-sustain {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/cs-sustain-sm.webp") center 45% / cover no-repeat,
+      #F7F2EA !important;
+  }
+}
