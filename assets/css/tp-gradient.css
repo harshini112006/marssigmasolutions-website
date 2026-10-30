@@ -1,0 +1,238 @@
+/* ============================================================
+   THIRD-PARTY INSPECTION PAGE: same gradient language as Home,
+   Business Transformation and Consulting.
+   Cards are filled maroon red to ink blue by default (no mouse needed)
+   with cream text; hover lifts, brightens and breathes.
+   Cream sections get soft glows and a very faint photo background.
+   Gold / mustard accents (stage labels, node rings, stats, stamp) are kept.
+   Palette: cream, ink blue, maroon red. No pure white.
+   Scoped to body.tp-page; stacked ":not(#_)" beats the older page themes.
+   ============================================================ */
+.tp-page {
+  --g-deep: linear-gradient(155deg, #7D1B2C 0%, #4A1A4A 50%, #14275F 100%);
+  --g-bright: linear-gradient(155deg, #9A2540 0%, #5E2262 50%, #1E3A8A 100%);
+  --g-cream: #F7F2EA;
+  --g-rose: #E9A6B2;
+}
+
+/* ---------- running headline: bold gradient text, gold accents kept ---------- */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-marquee span:not(.is-accent) {
+  font-weight: 700 !important;
+  background-image: linear-gradient(90deg, #B0192E 0%, #7D1B2C 30%, #2F4FA8 70%, #1E3A8A 100%) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  color: transparent !important; -webkit-text-fill-color: transparent !important;
+  padding-right: 0.06em;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-marquee span.is-accent {
+  font-weight: 700 !important;
+  background-image: linear-gradient(90deg, #8a6210 0%, #d9ad4c 50%, #8a6210 100%) !important;
+  -webkit-background-clip: text !important; background-clip: text !important;
+  color: transparent !important; -webkit-text-fill-color: transparent !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-marquee i { color: #d9ad4c !important; -webkit-text-fill-color: #d9ad4c !important; }
+
+/* ---------- bolder headings and running text ---------- */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-h2 { font-weight: 700 !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .ink-light .tp-body { font-weight: 500 !important; }
+
+/* ---------- hero facts as gradient chips ---------- */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-hero__facts { gap: 0.6rem !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-hero__facts li {
+  display: inline-flex; align-items: center; padding: 0.55rem 1rem; border-radius: 999px;
+  background: var(--g-deep); border: 1px solid rgba(247, 242, 234, 0.28);
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+  font-weight: 700; box-shadow: 0 8px 18px rgba(11, 31, 58, 0.3);
+  transition: transform .35s ease, background .35s ease;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-hero__facts li:hover { background: var(--g-bright); transform: translateY(-3px) scale(1.04); }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-hero__facts b { color: #f4e2a6 !important; -webkit-text-fill-color: #f4e2a6 !important; }
+
+/* ---------- soft glows + faint photo behind the cream sections ---------- */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method) { position: relative; isolation: isolate; overflow: clip; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::before,
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%;
+  filter: blur(80px); opacity: 1 !important; will-change: transform;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::before {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(125, 27, 44, 0.17) 0%, rgba(176, 25, 46, 0.08) 45%, transparent 72%);
+  animation: tpGlowA 20s ease-in-out infinite alternate;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::after {
+  width: 580px; height: 580px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, rgba(47, 79, 168, 0.07) 45%, transparent 72%);
+  animation: tpGlowB 24s ease-in-out infinite alternate;
+}
+@keyframes tpGlowA { to { transform: translate(70px, 50px) scale(1.12); } }
+@keyframes tpGlowB { to { transform: translate(-60px, -50px) scale(1.1); } }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-why::before { left: -160px; top: -100px; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-why::after { right: -180px; bottom: -160px; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-services::before { right: -170px; top: -120px; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-services::after { left: -190px; bottom: -150px; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-method::before { left: -190px; top: 20%; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-method::after { right: -170px; bottom: -150px; }
+
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-why {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/tp-why.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-services {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/tp-services.webp") center 35% / cover no-repeat, #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-method {
+  background:
+    linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.88) 16%, rgba(247, 242, 234, 0.88) 84%, rgba(247, 242, 234, 1) 100%),
+    linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+    url("../images/bg/tp-method.webp") center 45% / cover no-repeat, #F7F2EA !important;
+  background-attachment: scroll !important;
+}
+
+/* ---------- cost-of-a-late-defect panel ---------- */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.2) !important;
+  box-shadow: 0 20px 44px rgba(11, 31, 58, 0.28) !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost__k { color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost h3, html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost h3 * { background: none !important; color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost h3 em { color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost p { color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important; font-weight: 500 !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost small { color: rgba(247, 242, 234, 0.75) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.75) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost__chart { border-bottom-color: rgba(247, 242, 234, 0.3) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost__bar span { color: rgba(247, 242, 234, 0.9) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.9) !important; font-weight: 700 !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost i { background: linear-gradient(180deg, #8FA8FF, #1E3A8A) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost__bar:first-child i { background: linear-gradient(180deg, #f4e2a6, #d9ad4c) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost__bar.is-late i { background: linear-gradient(180deg, #E06A7C, #B0192E) !important; box-shadow: 0 12px 26px rgba(176, 25, 46, 0.4) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-cost b { background: #4A1A4A !important; color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; }
+
+/* ---------- shared dark gradient cards: benefits, stages, method steps ---------- */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li) {
+  position: relative;
+  background: var(--g-deep) !important;
+  border: 1px solid rgba(247, 242, 234, 0.2) !important;
+  border-top: 1px solid rgba(247, 242, 234, 0.2) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.28), 0 4px 12px rgba(125, 27, 44, 0.2) !important;
+  transition: transform .45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .45s ease, background .45s ease, border-color .45s ease !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li):is(:hover, :focus-within, .is-touched) {
+  background: var(--g-bright) !important;
+  transform: translateY(-6px);
+  border-color: rgba(247, 242, 234, 0.45) !important;
+  box-shadow: 0 26px 50px rgba(30, 58, 138, 0.38), 0 10px 24px rgba(125, 27, 44, 0.3) !important;
+  animation: tpBreathe 1.4s ease-in-out infinite;
+}
+@keyframes tpBreathe {
+  0%, 100% { transform: translateY(-6px) scale(1); }
+  50% { transform: translateY(-6px) scale(1.03); }
+}
+/* idle gradient ring drifting around each card */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li)::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; pointer-events: none;
+  padding: 1.5px;
+  background: linear-gradient(110deg, #E9A6B2, #7D1B2C 22%, #8FA8FF 50%, #7D1B2C 78%, #E9A6B2);
+  background-size: 300% 100%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  opacity: 0.55;
+  animation: tpRingDrift 7s linear infinite, tpRingGlow 3.6s ease-in-out infinite;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li):nth-child(2n)::before { animation-delay: -2.3s, -1.1s; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li):nth-child(3n)::before { animation-delay: -4.6s, -2.2s; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li):is(:hover, :focus-within, .is-touched)::before { opacity: 1; animation-duration: 3s, 1.4s; }
+@keyframes tpRingDrift { to { background-position: 300% 0; } }
+@keyframes tpRingGlow { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.85; } }
+
+/* light text, with the gradient heading effect switched off inside the dark cards */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li) :is(h3, h3 *) {
+  background: none !important; background-image: none !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important; font-weight: 700 !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li) p {
+  color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important; font-weight: 400 !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-benefit .tp-ic {
+  background: rgba(247, 242, 234, 0.1) !important; border: 1.5px solid rgba(247, 242, 234, 0.55) !important; box-shadow: none !important;
+  color: var(--g-cream) !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-benefit .tp-ic svg { stroke: var(--g-cream) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-benefit::after { transform: scaleX(1) !important; background: linear-gradient(90deg, #f4e2a6, #d9ad4c) !important; }
+
+/* stage cards: roomier, node and label (gold) kept */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-flow { gap: 1.4rem !important; align-items: stretch; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-flow::before, html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-flow::after { display: none !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-stage { padding: 1.7rem 1.4rem 1.8rem !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-stage__node {
+  background: var(--g-bright) !important; border: 2px solid var(--g-cream) !important;
+  box-shadow: 0 10px 22px rgba(11, 31, 58, 0.35) !important; color: var(--g-cream) !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-stage__node svg { stroke: var(--g-cream) !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-stage__n { color: #f4e2a6 !important; -webkit-text-fill-color: #f4e2a6 !important; font-weight: 700 !important; }
+
+/* method steps: each step is its own card, with room to breathe */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-method__steps { gap: 1.1rem !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-method__steps li { padding: 1.3rem 1.5rem !important; gap: 1.1rem !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-method__steps li > span {
+  color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; font-weight: 700 !important; font-size: 30px !important;
+}
+
+/* the sample inspection report: cream paper instead of white */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-sheet svg rect[fill="#ffffff"] { fill: #FBF7F0; }
+
+/* ---------- manpower (dark section): gradient chips and caption ---------- */
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-photo__chip {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.28) !important;
+  color: rgba(247, 242, 234, 0.92) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.92) !important;
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-photo__chip b { color: #f4e2a6 !important; -webkit-text-fill-color: #f4e2a6 !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-chips { gap: 0.9rem !important; }
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-chip {
+  background: var(--g-deep) !important; border: 1px solid rgba(247, 242, 234, 0.25) !important; border-radius: 14px !important;
+  padding: 0.9rem 1.1rem !important; min-height: 58px; font-weight: 700 !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+  box-shadow: 0 10px 22px rgba(11, 31, 58, 0.25);
+}
+html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-chip:hover { background: var(--g-bright) !important; transform: translateY(-4px) !important; box-shadow: 0 16px 30px rgba(30, 58, 138, 0.35); }
+
+/* ---------- small screens ---------- */
+@media (max-width: 900px) {
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-stage { padding: 1.4rem 1.3rem 1.5rem !important; }
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-flow { row-gap: 1.2rem !important; }
+}
+@media (max-width: 768px) {
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::before,
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::after { width: 300px; height: 300px; filter: blur(50px); animation: none; will-change: auto; }
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-why {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/tp-why-sm.webp") center 40% / cover no-repeat, #F7F2EA !important;
+  }
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-services {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/tp-services-sm.webp") center 35% / cover no-repeat, #F7F2EA !important;
+  }
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-method {
+    background:
+      linear-gradient(180deg, rgba(247, 242, 234, 1) 0%, rgba(247, 242, 234, 0.9) 14%, rgba(247, 242, 234, 0.9) 86%, rgba(247, 242, 234, 1) 100%),
+      linear-gradient(135deg, rgba(125, 27, 44, 0.08) 0%, rgba(125, 27, 44, 0) 40%, rgba(30, 58, 138, 0.1) 100%),
+      url("../images/bg/tp-method-sm.webp") center 45% / cover no-repeat, #F7F2EA !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::before,
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-why, .tp-services, .tp-method)::after { animation: none; }
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li)::before { animation: none; opacity: 0.6; }
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) :is(.tp-benefit, .tp-stage, .tp-method__steps li):is(:hover, :focus-within, .is-touched) { animation: none; transform: none; }
+  html body.tp-page:not(#_):not(#_):not(#_):not(#_):not(#_) .tp-chip:hover { transform: none !important; }
+}
