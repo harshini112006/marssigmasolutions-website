@@ -1,0 +1,65 @@
+/* ============================================================
+   HOME: soft maroon / ink-blue glows behind the cream sections
+   Same technique as the Business Transformation "Challenge" area:
+   two large blurred radial blobs per section, in alternating corners,
+   sitting behind the content (z-index -1 inside an isolated section).
+   The founder section has its own glows (founder.css).
+   ============================================================ */
+html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_) {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  /* per-section placement; overridden below */
+  --gm-x: -140px; --gm-y: -80px;      /* maroon blob offset from its corner */
+  --gb-x: -160px; --gb-y: -160px;     /* blue blob offset from its corner */
+}
+html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::before,
+html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 1 !important;
+  will-change: transform;
+}
+/* maroon-rose blob */
+html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::before {
+  width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(125, 27, 44, 0.17) 0%, rgba(176, 25, 46, 0.08) 45%, transparent 72%);
+  animation: hgDriftA 20s ease-in-out infinite alternate;
+}
+/* ink-blue blob */
+html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::after {
+  width: 580px; height: 580px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, rgba(47, 79, 168, 0.07) 45%, transparent 72%);
+  animation: hgDriftB 24s ease-in-out infinite alternate;
+}
+@keyframes hgDriftA { to { transform: translate(70px, 50px) scale(1.12); } }
+@keyframes hgDriftB { to { transform: translate(-60px, -50px) scale(1.1); } }
+
+/* placement: alternate the corners so the page feels designed */
+html body #intro:not(#_):not(#_):not(#_)::before        { left: -160px;  top: -100px; }
+html body #intro:not(#_):not(#_):not(#_)::after         { right: -180px; bottom: -160px; }
+html body #showcase:not(#_):not(#_):not(#_)::before     { left: -180px;  bottom: -140px; }
+html body #showcase:not(#_):not(#_):not(#_)::after      { right: -160px; top: -120px; }
+html body #services:not(#_):not(#_):not(#_)::before     { right: -200px; top: 22%; }
+html body #services:not(#_):not(#_):not(#_)::after      { left: -200px;  bottom: -120px; }
+html body #isoFeature:not(#_):not(#_):not(#_)::before   { right: -140px; top: -140px; }
+html body #isoFeature:not(#_):not(#_):not(#_)::after    { left: -180px;  bottom: -160px; }
+html body #why:not(#_):not(#_):not(#_)::before          { right: -180px; bottom: -150px; }
+html body #why:not(#_):not(#_):not(#_)::after           { left: -200px;  top: -100px; }
+html body #industries:not(#_):not(#_):not(#_)::before   { left: -190px;  top: 28%; }
+html body #industries:not(#_):not(#_):not(#_)::after    { right: -170px; top: -140px; }
+html body #testimonials:not(#_):not(#_):not(#_)::before { right: -160px; top: -120px; }
+html body #testimonials:not(#_):not(#_):not(#_)::after  { left: -190px;  bottom: -150px; }
+
+/* phones: smaller, lighter blur, no animation (cheap) */
+@media (max-width: 768px) {
+  html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::before,
+  html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::after {
+    width: 300px; height: 300px; filter: blur(50px); animation: none; will-change: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::before,
+  html body :is(#intro, #showcase, #services, #isoFeature, #why, #industries, #testimonials):not(#_):not(#_):not(#_)::after { animation: none; }
+}
