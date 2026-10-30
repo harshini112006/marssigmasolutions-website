@@ -16,8 +16,8 @@
   --ink-muted: #5B6B84;
   --ink-line: #E1E6EE;
   --ink-line-strong: #CBD3DF;
-  --ink-bg: #FAF6EF;
-  --ink-bg-alt: #F3ECE0;
+  --ink-bg: #EFE7DA;
+  --ink-bg-alt: #E8DFD0;
   --ink-pale: #C9D5E8;
   --mr-700: #7D1B2C;
   --mr-600: #94233A;
@@ -635,7 +635,7 @@ html body .ink-light:not(#_) :is(.cs-std__tag, .cs-std__tag *) {
 
 /* soft blue tint for alternating light sections */
 html body .ink-light.ink-tint:not(#_) {
-  background: linear-gradient(180deg, #F3ECE0 0%, #FAF6EF 100%) !important;
+  background: linear-gradient(180deg, #E8DFD0 0%, #EFE7DA 100%) !important;
 }
 
 /* ink bands get a maroon glow in one corner and a blue one in the other */
@@ -826,7 +826,7 @@ html body .nav.nav--scrolled,
 html body.cs-page .nav.nav--scrolled,
 html body.tp-page .nav.nav--scrolled,
 html body.hm-wine .nav.nav--scrolled,
-html body.bt-page .nav.nav--scrolled { background: rgba(250, 246, 239, 0.96) !important; }
+html body.bt-page .nav.nav--scrolled { background: rgba(239, 231, 218, 0.96) !important; }
 html body .mobile-menu,
 html body.hm-wine .mobile-menu,
 html body.cs-page .mobile-menu,
@@ -837,10 +837,10 @@ html body .nav.nav--scrolled .nav__logo.nav__brand,
 html body .nav:has(.nav__hamburger.active) .nav__logo.nav__brand { background: #FFFDF9 !important; }
 html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee) { background: var(--ink-bg-alt) !important; }
 html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::before,
-html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::after { background: linear-gradient(90deg, var(--ink-bg-alt), rgba(243,236,224,0)) !important; }
+html body:not(#_) :is(.cs-marquee, .tp-marquee, .bt-marquee)::after { background: linear-gradient(90deg, var(--ink-bg-alt), rgba(232,223,208,0)) !important; }
 html body.bt-page:not(#_) .ink-light .bt-challenge__photo::after {
-  background: linear-gradient(90deg, #FAF6EF 0%, rgba(250,246,239,0.92) 30%, rgba(250,246,239,0.5) 75%, rgba(250,246,239,0.8) 100%),
-              linear-gradient(180deg, #FAF6EF 0%, rgba(250,246,239,0) 25%, rgba(250,246,239,0) 75%, #FAF6EF 100%) !important;
+  background: linear-gradient(90deg, #EFE7DA 0%, rgba(239,231,218,0.92) 30%, rgba(239,231,218,0.5) 75%, rgba(239,231,218,0.8) 100%),
+              linear-gradient(180deg, #EFE7DA 0%, rgba(239,231,218,0) 25%, rgba(239,231,218,0) 75%, #EFE7DA 100%) !important;
 }
 html body .ink-light:not(#_) .tcard--featured { background: linear-gradient(160deg, #fff 0%, #F7ECEE 100%) !important; }
 html body .ink-light:not(#_) :is([class*="__tag"]:not(.mf__tag):not([class*="__tags"]):not(.cs-std__tag):not(.cs-phase__tag), .cs-chip) { background: #fff !important; }
@@ -991,3 +991,11 @@ html body:not(#_) #introVisual .intro__visual-facts b { font-size: clamp(1.5rem,
   html body .nav .nav__cta { display: none !important; }
   html body .nav .nav__hamburger { display: flex !important; }
 }
+
+/* home capability cards link to their service panels below */
+html body .ink-light:not(#_) .showcase__card[data-target] { cursor: pointer; user-select: none; -webkit-user-select: none; transition: transform .35s ease, box-shadow .35s ease; }
+html body .ink-light:not(#_) .showcase__card[data-target]:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 52px rgba(30, 58, 138, 0.24), 0 10px 22px rgba(125, 27, 44, 0.18) !important;
+}
+html body .ink-light:not(#_) .showcase__card[data-target]:focus-visible { outline: 3px solid #3553B8; outline-offset: 4px; }
