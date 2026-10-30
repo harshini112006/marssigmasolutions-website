@@ -1020,3 +1020,22 @@ html body .ink-light:not(#_) .why__headline { font-size: clamp(2rem, 3.3vw, 3.4r
 @media (max-width: 480px) {
   html body .ink-light:not(#_) .services__headline { font-size: clamp(2.1rem, 11vw, 2.75rem) !important; }
 }
+
+/* home capability row: "Our major services" heading above the cards */
+html body #showcase .showcase__header {
+  position: relative; z-index: 2;
+  width: 100%; max-width: 1400px;
+  margin: 0 auto clamp(2rem, 4vw, 3.25rem);
+  padding-inline: var(--pad-x, 6vw);
+  box-sizing: border-box;
+}
+html body #showcase .showcase__header .eyebrow { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem; }
+html body #showcase .showcase__header .eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--mr-700); }
+html body #showcase .showcase__headline {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+}
+html body #showcase .showcase__headline em { font-family: 'Playfair Display', Georgia, serif; font-style: italic; }
+html body #showcase.showcase { padding-top: clamp(3.5rem, 6vw, 5.5rem) !important; }
