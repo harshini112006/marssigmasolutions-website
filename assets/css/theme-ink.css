@@ -984,9 +984,9 @@ html body:not(#_) #introVisual .intro__visual-facts b { font-size: clamp(1.5rem,
   }
 }
 
-/* navbar: between 769px and 900px the five links crowd the brand,
+/* navbar: below 1080px the six links crowd the brand and wrap,
    so switch to the menu button there too */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   html body .nav .nav__links,
   html body .nav .nav__cta { display: none !important; }
   html body .nav .nav__hamburger { display: flex !important; }

@@ -1,0 +1,147 @@
+/* ============================================================
+   CONTACT PAGE: same gradient language as the service pages.
+   Ink hero with breathing rings, cream section with soft glows,
+   maroon red to ink blue cards with cream text. No pure white.
+   Scoped to body.ct-page; stacked ":not(#_)" beats the older page themes.
+   ============================================================ */
+.ct-page {
+  --g-deep: linear-gradient(155deg, #7D1B2C 0%, #4A1A4A 50%, #14275F 100%);
+  --g-bright: linear-gradient(155deg, #9A2540 0%, #5E2262 50%, #1E3A8A 100%);
+  --g-cream: #F7F2EA;
+  --g-rose: #E9A6B2;
+}
+
+/* ---------- hero: compact, rings to the right of the text ---------- */
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-hero {
+  min-height: 0;
+  display: block;
+  padding: clamp(130px, 15vw, 190px) 0 clamp(60px, 7vw, 96px);
+  overflow: hidden;
+}
+.ct-hero__inner { position: relative; z-index: 2; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-hero .cs-cta__rings { left: 76%; width: 760px; height: 760px; }
+
+/* ---------- main section: soft glows on cream ---------- */
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main { position: relative; isolation: isolate; overflow: clip; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::before,
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%;
+  filter: blur(80px); opacity: 1 !important; will-change: transform;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::before {
+  left: -160px; top: -100px; width: 520px; height: 520px;
+  background: radial-gradient(circle, rgba(125, 27, 44, 0.17) 0%, rgba(176, 25, 46, 0.08) 45%, transparent 72%);
+  animation: ctGlowA 20s ease-in-out infinite alternate;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::after {
+  right: -180px; bottom: -160px; width: 580px; height: 580px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.15) 0%, rgba(47, 79, 168, 0.07) 45%, transparent 72%);
+  animation: ctGlowB 24s ease-in-out infinite alternate;
+}
+@keyframes ctGlowA { to { transform: translate(70px, 50px) scale(1.12); } }
+@keyframes ctGlowB { to { transform: translate(-60px, -50px) scale(1.1); } }
+
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .cs-h2 { font-weight: 700 !important; }
+
+.ct-grid {
+  display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1.4rem; align-items: start; margin-top: clamp(28px, 4vw, 48px);
+}
+.ct-cards { display: grid; gap: 1.2rem; }
+
+/* ---------- shared gradient panels ---------- */
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) :is(.ct-card, .ct-form) {
+  background: var(--g-deep) !important;
+  border: 1px solid rgba(247, 242, 234, 0.2) !important;
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.28), 0 4px 12px rgba(125, 27, 44, 0.2);
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) :is(.ct-card, .ct-form) :is(h3, h3 *) {
+  background: none !important; background-image: none !important;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+  font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 20px; margin: 0;
+}
+
+/* ---------- office and email cards ---------- */
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card {
+  display: flex; gap: 1.1rem; padding: 1.5rem;
+  transition: transform .45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .45s ease, background .45s ease;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card:is(:hover, :focus-within, .is-touched) {
+  background: var(--g-bright) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 26px 50px rgba(30, 58, 138, 0.38), 0 10px 24px rgba(125, 27, 44, 0.3);
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card__ic {
+  flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(247, 242, 234, 0.1); border: 1.5px solid rgba(247, 242, 234, 0.55) !important;
+}
+.ct-card__ic svg { width: 22px; height: 22px; fill: none; stroke: #F7F2EA; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.ct-card > div { min-width: 0; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card address {
+  font-style: normal; font-size: 15px; line-height: 1.55; margin: 0.45rem 0 0.35rem;
+  color: rgba(247, 242, 234, 0.88) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.88) !important;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card a {
+  display: block; width: fit-content; max-width: 100%; padding: 0.3rem 0; overflow-wrap: anywhere;
+  font-size: 15px; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(233, 166, 178, 0.55); text-underline-offset: 3px;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card a:hover { color: var(--g-rose) !important; -webkit-text-fill-color: var(--g-rose) !important; }
+
+/* ---------- form ---------- */
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-form { display: grid; gap: 1.1rem; padding: clamp(1.4rem, 3vw, 2.2rem); }
+.ct-form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
+.ct-field { display: grid; gap: 0.4rem; min-width: 0; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-field label {
+  font-family: 'Manrope', sans-serif; font-size: 14px; font-weight: 600;
+  color: var(--g-cream) !important; -webkit-text-fill-color: var(--g-cream) !important;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-field label span { font-weight: 400; color: rgba(247, 242, 234, 0.75) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.75) !important; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-field :is(input, select, textarea) {
+  width: 100%; min-height: 48px; padding: 0.7rem 0.9rem; border-radius: 10px;
+  border: 1px solid rgba(247, 242, 234, 0.45) !important;
+  background-color: #FFFDF9; color: var(--ink-800); -webkit-text-fill-color: var(--ink-800);
+  font-family: 'Manrope', sans-serif; font-size: 16px; font-weight: 500; line-height: 1.4;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-field textarea { resize: vertical; min-height: 128px; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-field select {
+  appearance: none; -webkit-appearance: none; padding-right: 2.4rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237D1B2C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 18px;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-field :is(input, select, textarea):focus {
+  outline: none; border-color: var(--g-rose) !important; box-shadow: 0 0 0 3px rgba(233, 166, 178, 0.45);
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-form .ct-submit {
+  justify-self: start; display: inline-flex; align-items: center; gap: 0.7rem; min-height: 48px; cursor: pointer;
+  background: var(--g-cream) !important; border: 1px solid var(--g-cream) !important;
+  color: var(--ink-800) !important; -webkit-text-fill-color: var(--ink-800) !important;
+}
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-form .ct-submit :is(span) { color: var(--ink-800) !important; -webkit-text-fill-color: var(--ink-800) !important; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-form .ct-submit:hover { background: var(--g-rose) !important; border-color: var(--g-rose) !important; }
+html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-form__note {
+  margin: 0; font-size: 13.5px; line-height: 1.5;
+  color: rgba(247, 242, 234, 0.85) !important; -webkit-text-fill-color: rgba(247, 242, 234, 0.85) !important;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 920px) {
+  .ct-grid { grid-template-columns: minmax(0, 1fr); }
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-hero .cs-cta__rings { left: 88%; width: 520px; height: 520px; }
+}
+@media (max-width: 600px) {
+  .ct-form__row { grid-template-columns: minmax(0, 1fr); }
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card { padding: 1.25rem; }
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-form .ct-submit { justify-self: stretch; justify-content: center; }
+}
+@media (max-width: 768px) {
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::before,
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::after { width: 300px; height: 300px; filter: blur(50px); animation: none; will-change: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::before,
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-main::after { animation: none; }
+  html body.ct-page:not(#_):not(#_):not(#_):not(#_) .ct-card:is(:hover, :focus-within, .is-touched) { transform: none; }
+}
