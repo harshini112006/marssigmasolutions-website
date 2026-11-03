@@ -1,4 +1,26 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/system-sustenance-amc.html",
+      "destination": "/amc.html",
+      "permanent": true
+    },
+    {
+      "source": "/ims-iso-9001-14001-45001.html",
+      "destination": "/ims.html",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-system-sustenance-amc.html",
+      "destination": "/thank-you-amc.html",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-ims-iso-9001-14001-45001.html",
+      "destination": "/thank-you-ims.html",
+      "permanent": true
+    }
+  ]
 }
