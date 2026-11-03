@@ -30,6 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/images/landing/automotive-line.webp" imagesrcset="assets/images/landing/automotive-line-sm.webp 640w, assets/images/landing/automotive-line.webp 1200w" imagesizes="(max-width: 980px) 100vw, 46vw" />
   <link rel="stylesheet" href="assets/css/landing.css" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -38,187 +39,193 @@
   <header class="lp-header">
     <div class="lp-wrap">
       <span class="lp-brand" aria-label="Mars Sigma Solutions Pvt Ltd"><b>Mars Sigma Solutions</b><small>Pvt Ltd</small></span>
-      <a class="lp-btn lp-btn--sm" href="mailto:info@marssigma.com?subject=Enquiry%3A%20IATF%2016949&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20IATF%2016949%20%28Automotive%20Quality%20Management%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you." aria-label="Email us about IATF 16949 (Automotive Quality Management)"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m4 7.5 8 6 8-6" /></svg><span>Email Us</span></a>
+      <a class="lp-btn lp-btn--sm" href="mailto:info@marssigma.com?subject=Enquiry%3A%20IATF%2016949&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20IATF%2016949%20%28Automotive%20Quality%20Management%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you." aria-label="Email us about IATF 16949 (Automotive Quality Management)"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg><span>Email Us</span></a>
     </div>
   </header>
 
   <main>
     <section class="lp-hero lp-dark" aria-labelledby="heroTitle">
       <svg class="lp-hero__rings" viewBox="0 0 900 900" aria-hidden="true">
-        <g fill="none" stroke="rgba(247,218,221,.14)">
+        <g fill="none" stroke="rgba(247,218,221,.12)">
           <circle cx="450" cy="450" r="180" /><circle cx="450" cy="450" r="270" /><circle cx="450" cy="450" r="360" stroke-dasharray="2 10" /><circle cx="450" cy="450" r="440" stroke="rgba(207,224,255,.1)" />
         </g>
       </svg>
-      <div class="lp-wrap">
-        <span class="lp-eyebrow">IATF 16949 · Automotive Quality Management</span>
-        <h1 class="lp-h1" id="heroTitle">Automotive quality. <em>Supplier excellence.</em></h1>
-        <p class="lp-lede">Supporting automotive manufacturers and suppliers in meeting stringent quality requirements, strengthening process controls and improving supplier performance.</p>
-        <div class="lp-actions">
-          <a class="lp-btn" href="mailto:info@marssigma.com?subject=Enquiry%3A%20IATF%2016949&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20IATF%2016949%20%28Automotive%20Quality%20Management%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you."><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m4 7.5 8 6 8-6" /></svg><span>Talk to Our Experts</span></a>
-          <a class="lp-btn lp-btn--ghost" href="tel:+919444084652"><span>Call +91 94440 84652</span></a>
+      <div class="lp-wrap lp-hero__grid">
+        <div class="lp-hero__text">
+          <span class="lp-eyebrow">IATF 16949 · Automotive Quality Management</span>
+          <h1 class="lp-h1" id="heroTitle">Automotive quality. <em>Supplier excellence.</em></h1>
+          <p class="lp-lede">Supporting automotive manufacturers and suppliers in meeting stringent quality requirements, strengthening process controls and improving supplier performance.</p>
+          <div class="lp-actions">
+            <a class="lp-btn" href="mailto:info@marssigma.com?subject=Enquiry%3A%20IATF%2016949&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20IATF%2016949%20%28Automotive%20Quality%20Management%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you."><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg><span>Talk to Our Experts</span></a>
+            <a class="lp-btn lp-btn--ghost" href="tel:+919444084652"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>+91 94440 84652</span></a>
+          </div>
+          <ul class="lp-hero__std"><li>IATF 16949</li><li>VDA 6.3</li><li>APQP</li><li>PPAP</li><li>FMEA</li><li>MSA</li><li>SPC</li></ul>
         </div>
-        <ul class="lp-hero__std">
-          <li>IATF 16949</li>
-          <li>VDA 6.3</li>
-          <li>APQP</li>
-          <li>PPAP</li>
-          <li>FMEA</li>
-          <li>MSA</li>
-          <li>SPC</li>
-        </ul>
+        <div class="lp-hero__visual">
+          <div class="lp-hero__photo"><img class="" src="assets/images/landing/automotive-line.webp" srcset="assets/images/landing/automotive-line-sm.webp 640w, assets/images/landing/automotive-line.webp 1200w" sizes="(max-width: 980px) 100vw, 46vw" alt="Engineer checking an engine assembly on an automotive production line" fetchpriority="high" decoding="async" /></div>
+          <div class="lp-hero__seal"><svg class="lp-seal" viewBox="0 0 220 220" aria-hidden="true">
+            <defs><path id="sealRing" d="M110,110 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+            <circle cx="110" cy="110" r="106" fill="#0B1F3A"/>
+            <circle cx="110" cy="110" r="99" fill="none" stroke="rgba(233,166,178,.55)" stroke-width="1"/>
+            <circle cx="110" cy="110" r="64" fill="url(#sealRingg)" stroke="rgba(247,218,221,.35)"/>
+            <linearGradient id="sealRingg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7D1B2C"/><stop offset="1" stop-color="#1E3A8A"/></linearGradient>
+            <text class="lp-seal__ring"><textPath textLength="508" lengthAdjust="spacing" href="#sealRing" startOffset="0">AUTOMOTIVE QUALITY MANAGEMENT · AUTOMOTIVE QUALITY · </textPath></text>
+            <text x="110" y="106" text-anchor="middle" class="lp-seal__core">IATF</text>
+            <text x="110" y="128" text-anchor="middle" class="lp-seal__sub">16949</text>
+          </svg></div>
+          <div class="lp-hero__chip"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5V12l2-5h12l2 5v4.5z"/><path d="M4 12h16"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg></span><div><b>Automotive &amp; Auto Components</b><small>OEMs and tier suppliers</small></div></div>
+        </div>
       </div>
     </section>
-    <section class="lp-section" aria-label="Automotive &amp; Auto Components">
-      <div class="lp-wrap lp-split">
-        <div class="lp-reveal">
+    <section class="lp-section">
+      <div class="lp-wrap lp-media">
+        <figure class="lp-media__fig lp-reveal">
+          <img class="" src="assets/images/landing/shopfloor-team.webp" srcset="assets/images/landing/shopfloor-team-sm.webp 640w, assets/images/landing/shopfloor-team.webp 1200w" sizes="(max-width: 980px) 100vw, 50vw" alt="Consultant with a shop-floor team on an automotive line" loading="lazy" decoding="async" />
+          <figcaption class="lp-media__cap"><b>Strengthening Systems</b>Improving process discipline with your teams, on the floor.</figcaption>
+        </figure>
+        <div class="lp-media__text lp-reveal" style="--d:.1s">
           <span class="lp-eyebrow">Automotive & Auto Components</span>
           <h2 class="lp-h2">Stronger systems. <em>Better process discipline.</em></h2>
-          <p>International standards provide the foundation for effective management systems, consistent processes and improved organizational performance.</p>
+          <p>Supporting automotive organizations in strengthening quality management practices, improving process controls and preparing for applicable IATF 16949 requirements.</p>
           <p>At Mars Sigma Solutions, we help organizations understand, implement, strengthen and sustain management systems aligned with applicable international standards and industry-specific requirements.</p>
           <p>Our approach goes beyond documentation and certification readiness to focus on practical implementation, operational effectiveness and continual improvement.</p>
-        </div>
-        <div class="lp-panel lp-reveal">
-          <h3>Founder-led automotive expertise</h3>
-          <p>With approximately three decades of professional experience in quality management, management-system auditing, industrial consulting and operational improvement, Mr. Subramanian Srinivasan brings a practical, business-focused perspective to organizational excellence.</p>
-          <p>His professional expertise spans management-system implementation, quality auditing, automotive quality requirements, Lean Manufacturing, Six Sigma and continuous improvement.</p>
-          <p class="lp-note">Founder &amp; Principal Consultant, Mars Sigma Solutions Pvt Ltd</p>
+
         </div>
       </div>
     </section>
-    <section class="lp-section lp-section--alt" aria-label="Standards &amp; Frameworks">
+    <section class="lp-section lp-section--alt" aria-labelledby="fwTitle">
       <div class="lp-wrap">
         <div class="lp-head lp-reveal">
           <span class="lp-eyebrow">Standards & Frameworks</span>
-          <h2 class="lp-h2">IATF 16949, VDA 6.3 <em>and Core Tools.</em></h2>
+          <h2 class="lp-h2" id="fwTitle">IATF 16949, VDA 6.3 <em>and Core Tools.</em></h2>
           <p class="lp-lede">Our consulting engagements are structured around the requirements of internationally recognised management system standards, adapted to the organisation's operations, industry and certification objectives.</p>
         </div>
         <div class="lp-grid lp-grid--3">
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">01</span>
+          <article class="lp-card lp-reveal" style="--d:0.00s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5V12l2-5h12l2 5v4.5z"/><path d="M4 12h16"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg></span><span class="lp-card__n">01</span></div>
             <span class="lp-card__tag">Automotive Quality Management</span>
             <h3>IATF 16949</h3>
             <p>Support automotive manufacturers and suppliers in strengthening quality management practices, process controls, customer-specific requirements and automotive Core Tools.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">02</span>
+          <article class="lp-card lp-reveal" style="--d:0.08s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span><span class="lp-card__n">02</span></div>
             <span class="lp-card__tag">Process Auditing</span>
             <h3>VDA 6.3</h3>
             <p>Support process audit preparation, supplier process evaluations and improvement activities based on automotive industry requirements.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">03</span>
+          <article class="lp-card lp-reveal" style="--d:0.16s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M4.2 7.5l2.1 1.2M17.7 15.3l2.1 1.2M4.2 16.5l2.1-1.2M17.7 8.7l2.1-1.2"/><circle cx="12" cy="12" r="7"/></svg></span><span class="lp-card__n">03</span></div>
             <span class="lp-card__tag">Specialized Automotive Framework</span>
             <h3>Automotive Core Tools</h3>
             <p>APQP | PPAP | FMEA | MSA | SPC</p>
           </article>
         </div>
+        <div class="lp-tools lp-reveal">
+          <span class="lp-tools__k">Automotive Core Tools</span>
+          <ol><li class="lp-tool lp-reveal" style="--d:0.00s"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6.5 6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span><b>APQP</b></li><li class="lp-tool lp-reveal" style="--d:0.06s"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span><b>PPAP</b></li><li class="lp-tool lp-reveal" style="--d:0.12s"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4.5M12 17.2v.3"/></svg></span><b>FMEA</b></li><li class="lp-tool lp-reveal" style="--d:0.18s"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><b>MSA</b></li><li class="lp-tool lp-reveal" style="--d:0.24s"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="m7.5 15 3.5-4 3 3 5-6.5"/></svg></span><b>SPC</b></li></ol>
+        </div>
       </div>
     </section>
-    <section class="lp-section" aria-label="How We Support Automotive Organizations">
+    <section class="lp-section">
+      <div class="lp-wrap lp-media lp-media--rev">
+        <figure class="lp-media__fig lp-reveal">
+          <img class="" src="assets/images/landing/precision-inspection.webp" srcset="assets/images/landing/precision-inspection-sm.webp 640w, assets/images/landing/precision-inspection.webp 1200w" sizes="(max-width: 980px) 100vw, 50vw" alt="Precision inspection of an automotive component" loading="lazy" decoding="async" />
+          <figcaption class="lp-media__cap"><b>Automotive Quality Management &amp; VDA 6.3</b>Founder &amp; Principal Consultant, Mars Sigma Solutions Pvt Ltd</figcaption>
+        </figure>
+        <div class="lp-media__text lp-reveal" style="--d:.1s">
+          <span class="lp-eyebrow">Founder-Led Expertise</span>
+          <h2 class="lp-h2">Three decades of experience. <em>One commitment to excellence.</em></h2>
+          <p>With approximately three decades of professional experience in quality management, management-system auditing, industrial consulting and operational improvement, Mr. Subramanian Srinivasan brings a practical, business-focused perspective to organizational excellence.</p>
+          <p>His professional expertise spans management-system implementation, quality auditing, automotive quality requirements, Lean Manufacturing, Six Sigma and continuous improvement.</p>
+
+        </div>
+      </div>
+    </section>
+    <section class="lp-section lp-section--alt" aria-labelledby="supTitle">
       <div class="lp-wrap">
         <div class="lp-head lp-reveal">
           <span class="lp-eyebrow">How We Support Automotive Organizations</span>
-          <h2 class="lp-h2">Automotive quality, <em>end to end.</em></h2>
+          <h2 class="lp-h2" id="supTitle">Automotive quality, <em>end to end.</em></h2>
         </div>
         <div class="lp-grid lp-grid--3">
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">01</span>
-            <span class="lp-card__tag">Strengthening Systems. Improving Process Discipline.</span>
-            <h3>Automotive Quality Management</h3>
-            <p>Supporting automotive organizations in strengthening quality management practices, improving process controls and preparing for applicable IATF 16949 requirements.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">02</span>
+          <article class="lp-card lp-reveal" style="--d:0.00s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 4-4 5 2 5-2 4 4-7 7z"/><path d="m8.5 13.5 2 2M11 11l3 3"/></svg></span><span class="lp-card__n">01</span></div>
             <span class="lp-card__tag">Supplier Audits · Evaluation · Root Cause Analysis</span>
             <h3>Supplier Development &amp; Quality Improvement</h3>
             <p>Strengthen your supply chain by developing supplier capabilities, improving process controls and addressing recurring quality issues.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">03</span>
+          <article class="lp-card lp-reveal" style="--d:0.08s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c2.9.3 5 2.6 5 5.8"/></svg></span><span class="lp-card__n">02</span></div>
             <span class="lp-card__tag">Lead Auditor · Internal Auditor · Core Tools · VDA 6.3</span>
             <h3>Industrial Training &amp; Competency Development</h3>
             <p>Develop competent professionals and high-performing teams through practical, industry-focused technical and management-system training.</p>
           </article>
+          <article class="lp-card lp-reveal" style="--d:0.16s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12A8 8 0 0 1 18.3 7.1"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/></svg></span><span class="lp-card__n">03</span></div>
+            <span class="lp-card__tag">Internal Audits · Corrective Actions · Surveillance Readiness</span>
+            <h3>Management System Sustenance</h3>
+            <p>Keep your management systems effective, updated and audit-ready through structured, ongoing professional support.</p>
+          </article>
         </div>
       </div>
     </section>
-    <section class="lp-section lp-dark" aria-labelledby="howTitle">
+    <section class="lp-section lp-dark lp-how" aria-labelledby="howTitle">
       <div class="lp-wrap">
         <div class="lp-head lp-reveal">
           <span class="lp-eyebrow">How We Work</span>
           <h2 class="lp-h2" id="howTitle">A structured approach. <em>Sustainable results.</em></h2>
           <p class="lp-lede">Our approach combines systematic assessment, technical expertise, collaborative implementation and continuous improvement to deliver solutions that work in practice, not just on paper.</p>
         </div>
-        <div class="lp-grid lp-grid--3">
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">01</span>
-            <span class="lp-card__tag">We begin by understanding your business</span>
+        <ol class="lp-tl">
+          <li class="lp-tl__step lp-reveal" style="--d:0.00s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span>
+            <span class="lp-tl__n">01</span>
             <h3>Understand</h3>
             <p>We engage with your leadership and operational teams to understand your objectives, existing processes, customer requirements and key challenges.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">02</span>
-            <span class="lp-card__tag">Identify gaps. Discover opportunities</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.06s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 4.5h6v3H9zM8.5 12h7M8.5 16h5"/></svg></span>
+            <span class="lp-tl__n">02</span>
             <h3>Assess</h3>
             <p>Through structured assessments, process reviews and relevant audits, we identify compliance gaps, operational risks and opportunities for improvement.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">03</span>
-            <span class="lp-card__tag">Develop solutions that fit your organization</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.12s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span>
+            <span class="lp-tl__n">03</span>
             <h3>Design</h3>
             <p>We create practical action plans, management-system frameworks and improvement strategies aligned with your business needs, resources and priorities.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">04</span>
-            <span class="lp-card__tag">Turn recommendations into meaningful action</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.18s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M4.2 7.5l2.1 1.2M17.7 15.3l2.1 1.2M4.2 16.5l2.1-1.2M17.7 8.7l2.1-1.2"/><circle cx="12" cy="12" r="7"/></svg></span>
+            <span class="lp-tl__n">04</span>
             <h3>Implement</h3>
             <p>We work alongside your teams to implement agreed improvements, strengthen processes, develop competencies and embed effective management practices.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">05</span>
-            <span class="lp-card__tag">Measure effectiveness. Build confidence</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.24s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></svg></span>
+            <span class="lp-tl__n">05</span>
             <h3>Verify</h3>
             <p>We evaluate the implementation through relevant audits, performance reviews, process verification and corrective-action follow-up.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">06</span>
-            <span class="lp-card__tag">Make improvement part of everyday operations</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.30s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12A8 8 0 0 1 18.3 7.1"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/></svg></span>
+            <span class="lp-tl__n">06</span>
             <h3>Sustain</h3>
             <p>We support organizations in maintaining effective systems through periodic reviews, internal audits, performance monitoring and continual improvement initiatives.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="lp-section" aria-labelledby="susTitle">
-      <div class="lp-wrap lp-split">
-        <div class="lp-reveal">
-          <span class="lp-eyebrow">Management System Sustenance</span>
-          <h2 class="lp-h2" id="susTitle">Certification is a milestone. <em>Sustaining excellence is a commitment.</em></h2>
-          <p class="lp-lede">Keep your management systems effective, updated and audit-ready through structured, ongoing professional support.</p>
-        </div>
-        <div class="lp-panel lp-reveal">
-          <h3>What sustenance support covers</h3>
-        <ul class="lp-chips">
-          <li>Internal Audits</li>
-          <li>Management Reviews</li>
-          <li>Documentation</li>
-          <li>Corrective Actions</li>
-          <li>Surveillance Readiness</li>
-          <li>Continual Improvement</li>
-        </ul>
-          <p class="lp-note">Offered as a separate, structured engagement.</p>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
     <section class="lp-section lp-dark lp-cta" aria-labelledby="ctaTitle">
+      <img class="lp-cta__bg" src="assets/images/landing/shopfloor-team.webp" srcset="assets/images/landing/shopfloor-team-sm.webp 640w, assets/images/landing/shopfloor-team.webp 1200w" sizes="100vw" alt="" loading="lazy" decoding="async" />
       <div class="lp-wrap">
-        <div class="lp-head lp-reveal">
+        <div class="lp-head lp-head--center lp-reveal">
           <span class="lp-eyebrow">Let's Work Together</span>
           <h2 class="lp-h2" id="ctaTitle">Your challenges. Our expertise. <em>Better business outcomes.</em></h2>
           <p class="lp-lede">Our experienced professionals work closely with your organization to understand your requirements and develop practical solutions that improve performance and create sustainable value.</p>
         </div>
         <div class="lp-actions lp-reveal">
-          <a class="lp-btn" href="mailto:info@marssigma.com?subject=Enquiry%3A%20IATF%2016949&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20IATF%2016949%20%28Automotive%20Quality%20Management%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you."><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m4 7.5 8 6 8-6" /></svg><span>Request a Consultation</span></a>
+          <a class="lp-btn" href="mailto:info@marssigma.com?subject=Enquiry%3A%20IATF%2016949&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20IATF%2016949%20%28Automotive%20Quality%20Management%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you."><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg><span>Request a Consultation</span></a>
         </div>
         <p class="lp-cta__mail">Or write to <a href="mailto:info@marssigma.com?subject=Enquiry%3A%20IATF%2016949&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20IATF%2016949%20%28Automotive%20Quality%20Management%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you.">info@marssigma.com</a></p>
       </div>
@@ -229,8 +236,8 @@
     <div class="lp-wrap">
       <div class="lp-footer__grid">
         <div>
-          <h4>Mars Sigma Solutions Pvt Ltd</h4>
-          <p style="margin:0">ISO Management Systems | Business Transformation | Third-Party Inspection | Supplier Development | Industrial Training | Management System Sustenance</p>
+          <div class="lp-footer__brand">Mars Sigma <em>Solutions</em></div>
+          <p style="margin:10px 0 0">ISO Management Systems | Business Transformation | Third-Party Inspection | Supplier Development | Industrial Training | Management System Sustenance</p>
         </div>
         <div>
           <h4>India</h4>
