@@ -3,6 +3,16 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/iso-9001.html",
+      "destination": "/iso.html",
+      "permanent": true
+    },
+    {
+      "source": "/iatf-16949.html",
+      "destination": "/iatf.html",
+      "permanent": true
+    },
+    {
       "source": "/system-sustenance-amc.html",
       "destination": "/amc.html",
       "permanent": true
@@ -10,6 +20,16 @@
     {
       "source": "/ims-iso-9001-14001-45001.html",
       "destination": "/ims.html",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-iso-9001.html",
+      "destination": "/thank-you-iso.html",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-iatf-16949.html",
+      "destination": "/thank-you-iatf.html",
       "permanent": true
     },
     {
