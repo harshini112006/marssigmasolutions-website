@@ -602,3 +602,15 @@ html { scroll-padding-top: 20px; }
 @media (max-width: 860px) { .lp-ty__steps { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .lp-ty__badge, .lp-ty__badge svg { width: 84px; height: 84px; } .lp-ty__badge svg { padding: 18px; } .lp-ty .lp-actions .lp-btn { width: 100%; justify-content: center; } }
 @media (prefers-reduced-motion: reduce) { .lp-ty__badge > span, .lp-ty__badge svg { animation: none; } .lp-ty__badge svg path { animation: none; stroke-dashoffset: 0; } }
+
+/* ---------- enquiry form placed directly under the hero (light band) ---------- */
+.lp-cta--light { background: linear-gradient(180deg, #fff 0%, var(--cream) 100%); color: var(--ink-text); border-bottom: 1px solid var(--ink-line); }
+.lp-cta--light::before { display: none; }
+.lp-cta--light .lp-cta__rings { filter: none; opacity: .5; }
+.lp-cta--light .lp-cta__rings circle:nth-child(odd) { stroke: rgba(125, 27, 44, 0.16); }
+.lp-cta--light .lp-cta__rings circle:nth-child(even) { stroke: rgba(30, 58, 100, 0.14); }
+.lp-cta--light .lp-cta__points li { color: var(--ink-body); }
+.lp-cta--light .lp-cta__points li span { background: var(--blush); color: var(--mr-700); }
+.lp-cta--light .lp-cta__points a { color: var(--ink-text); border-bottom-color: rgba(125, 27, 44, 0.3); }
+.lp-cta--light .lp-form { box-shadow: 0 18px 50px rgba(11, 31, 58, 0.1); border: 1px solid var(--ink-line); }
+@media (max-width: 520px) { .lp-form__btn { white-space: normal; text-align: center; line-height: 1.35; padding-top: 14px; padding-bottom: 14px; height: auto; } }
