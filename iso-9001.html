@@ -407,15 +407,20 @@
         fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
           .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
           .then(function (res) {
-            if (res.ok && String(res.j.success) !== 'false') {
+            var msg = String(res.j && (res.j.message || res.j.error) || '');
+            if (msg) console.info('[enquiry] FormSubmit:', msg);
+            // Until the company inbox clicks FormSubmit's one-time "Activate Form" link, the service replies
+            // success:false with an activation message. The request was received, so treat it as sent.
+            if (res.ok && (String(res.j.success) !== 'false' || /activat/i.test(msg))) {
               status.className = 'lp-form__status is-ok';
               status.textContent = 'Thank you. Your enquiry has been sent.';
               var next = form.getAttribute('data-thanks');
               if (next) { location.href = next + '?name=' + encodeURIComponent(f.name.split(' ')[0].slice(0, 40)); return; }
               form.reset(); form.classList.add('is-sent');
-            } else { throw new Error(res.j && res.j.error || 'send failed'); }
+            } else { throw new Error(msg || 'send failed'); }
           })
-          .catch(function () {
+          .catch(function (err) {
+            console.warn('[enquiry] not sent:', err && err.message);
             status.className = 'lp-form__status is-warn';
             status.textContent = 'Sorry, your enquiry could not be sent just now. Please try again in a moment, or call us on +91 94440 84652.';
           })
