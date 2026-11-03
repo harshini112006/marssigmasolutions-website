@@ -234,7 +234,7 @@
             <li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6.5 6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span>Chennai, India · Manama, Bahrain</li>
           </ul>
         </div>
-        <form class="lp-form lp-reveal" id="enquiry" action="/api/enquiry" method="post" novalidate data-service="System Sustenance (AMC)" data-mailto="mailto:info@marssigma.com?subject=Enquiry%3A%20System%20Sustenance%20%28AMC%29&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20Management%20System%20Sustenance%20%28AMC%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you." data-thanks="thank-you-system-sustenance-amc.html" style="--d:.1s">
+        <form class="lp-form lp-reveal" id="enquiry" action="https://api.web3forms.com/submit" method="post" novalidate data-service="System Sustenance (AMC)" data-mailto="mailto:info@marssigma.com?subject=Enquiry%3A%20System%20Sustenance%20%28AMC%29&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20Management%20System%20Sustenance%20%28AMC%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you." data-thanks="thank-you-system-sustenance-amc.html" style="--d:.1s">
           <h3>Send us your enquiry</h3>
           <p class="lp-form__sub">Service: <b>System Sustenance (AMC)</b></p>
           <input type="hidden" name="service" value="System Sustenance (AMC)" />
@@ -289,56 +289,7 @@
       els.forEach(function (e) { io.observe(e); });
     })();
   </script>
-  <script>
-    (function () {
-      var form = document.getElementById('enquiry');
-      if (!form) return;
-      var status = form.querySelector('.lp-form__status');
-      var btn = form.querySelector('button[type=submit]');
-      var msgs = { name: 'Please enter your name.', phone: 'Please enter a valid phone number.', email: 'Please enter a valid company email.', company: 'Please enter your company name.', city: 'Please enter your city.' };
-      function check(input) {
-        var err = input.parentNode.querySelector('.lp-field__err');
-        var v = input.value.trim();
-        var ok = v !== '' && input.checkValidity() && (input.name !== 'phone' || /^[0-9+()\-\s]{7,20}$/.test(v));
-        input.setAttribute('aria-invalid', ok ? 'false' : 'true');
-        if (err) err.textContent = ok ? '' : msgs[input.name] || 'Please fill in this field.';
-        return ok;
-      }
-      var inputs = form.querySelectorAll('.lp-field input');
-      inputs.forEach(function (i) { i.addEventListener('blur', function () { if (i.value) check(i); }); });
-      form.addEventListener('submit', function (ev) {
-        ev.preventDefault();
-        var valid = true, first = null;
-        inputs.forEach(function (i) { if (!check(i)) { valid = false; first = first || i; } });
-        if (!valid) { first.focus(); status.textContent = ''; return; }
-        var f = {};
-        new FormData(form).forEach(function (v, k) { f[k] = String(v).trim(); });
-        var data = {
-          service: f.service, name: f.name, phone: f.phone, email: f.email,
-          company: f.company, city: f.city, website: f.website || '', page: location.pathname
-        };
-        btn.disabled = true; form.classList.add('is-sending'); status.className = 'lp-form__status'; status.textContent = 'Sending your enquiry...';
-        fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
-          .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
-          .then(function (res) {
-            var msg = String(res.j && res.j.error || '');
-            if (res.ok && res.j.ok) {
-              status.className = 'lp-form__status is-ok';
-              status.textContent = 'Thank you. Your enquiry has been sent.';
-              var next = form.getAttribute('data-thanks');
-              if (next) { location.href = next + '?name=' + encodeURIComponent(f.name.split(' ')[0].slice(0, 40)); return; }
-              form.reset(); form.classList.add('is-sent');
-            } else { throw new Error(msg || ('HTTP ' + res.status)); }
-          })
-          .catch(function (err) {
-            console.warn('[enquiry] not sent:', err && err.message);
-            status.className = 'lp-form__status is-warn';
-            status.textContent = 'Sorry, your enquiry could not be sent just now. Please try again in a moment, or call us on +91 94440 84652.';
-          })
-          .then(function () { btn.disabled = false; form.classList.remove('is-sending'); });
-      });
-    })();
-  </script>
+  <script src="assets/js/landing-form.js"></script>
 </body>
 
 </html>
