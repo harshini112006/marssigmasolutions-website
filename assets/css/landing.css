@@ -614,3 +614,12 @@ html { scroll-padding-top: 20px; }
 .lp-cta--light .lp-cta__points a { color: var(--ink-text); border-bottom-color: rgba(125, 27, 44, 0.3); }
 .lp-cta--light .lp-form { box-shadow: 0 18px 50px rgba(11, 31, 58, 0.1); border: 1px solid var(--ink-line); }
 @media (max-width: 520px) { .lp-form__btn { white-space: normal; text-align: center; line-height: 1.35; padding-top: 14px; padding-bottom: 14px; height: auto; } }
+
+/* ---------- breathing circles: red and blue lines ---------- */
+.lp-hero__rings, .lp-cta__rings { filter: drop-shadow(0 0 8px rgba(229, 57, 70, 0.55)) drop-shadow(0 0 18px rgba(59, 110, 246, 0.45)); }
+.lp-hero__rings circle, .lp-cta__rings circle { stroke-width: 2.4; }
+.lp-hero__rings circle:nth-child(odd), .lp-cta__rings circle:nth-child(odd) { stroke: rgba(229, 57, 70, 0.85); }
+.lp-hero__rings circle:nth-child(even), .lp-cta__rings circle:nth-child(even) { stroke: rgba(72, 125, 255, 0.85); }
+.lp-cta--light .lp-cta__rings { opacity: .55; filter: drop-shadow(0 0 6px rgba(200, 30, 50, 0.25)); }
+.lp-cta--light .lp-cta__rings circle:nth-child(odd) { stroke: rgba(200, 30, 50, 0.5); }
+.lp-cta--light .lp-cta__rings circle:nth-child(even) { stroke: rgba(37, 90, 220, 0.45); }
