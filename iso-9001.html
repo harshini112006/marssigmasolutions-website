@@ -30,6 +30,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/images/landing/iso-hero.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/landing.css" />
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -38,207 +39,302 @@
   <header class="lp-header">
     <div class="lp-wrap">
       <span class="lp-brand" aria-label="Mars Sigma Solutions Pvt Ltd"><b>Mars Sigma Solutions</b><small>Pvt Ltd</small></span>
-      <a class="lp-btn lp-btn--sm" href="mailto:info@marssigma.com?subject=Enquiry%3A%20ISO%209001&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20ISO%209001%20%28Quality%20Management%20Systems%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you." aria-label="Email us about ISO 9001 (Quality Management Systems)"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m4 7.5 8 6 8-6" /></svg><span>Email Us</span></a>
+      <nav class="lp-header__nav" aria-label="Page links">
+        <a class="lp-btn lp-btn--sm lp-btn--ghost" href="#about"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c2.9.3 5 2.6 5 5.8"/></svg><span>About Us</span></a>
+        <a class="lp-btn lp-btn--sm" href="#enquiry"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg><span>Contact Us</span></a>
+      </nav>
     </div>
   </header>
 
   <main>
     <section class="lp-hero lp-dark" aria-labelledby="heroTitle">
       <svg class="lp-hero__rings" viewBox="0 0 900 900" aria-hidden="true">
-        <g fill="none" stroke="rgba(247,218,221,.14)">
+        <g fill="none" stroke="rgba(247,218,221,.12)">
           <circle cx="450" cy="450" r="180" /><circle cx="450" cy="450" r="270" /><circle cx="450" cy="450" r="360" stroke-dasharray="2 10" /><circle cx="450" cy="450" r="440" stroke="rgba(207,224,255,.1)" />
         </g>
       </svg>
-      <div class="lp-wrap">
-        <span class="lp-eyebrow">ISO 9001 · Quality Management Systems</span>
-        <h1 class="lp-h1" id="heroTitle">Quality management that works, <em>performs and continually improves.</em></h1>
-        <p class="lp-lede">Strengthen process effectiveness, customer satisfaction, risk-based thinking and continual improvement through a robust Quality Management System.</p>
-        <div class="lp-actions">
-          <a class="lp-btn" href="mailto:info@marssigma.com?subject=Enquiry%3A%20ISO%209001&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20ISO%209001%20%28Quality%20Management%20Systems%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you."><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m4 7.5 8 6 8-6" /></svg><span>Book Your ISO 9001:2026 Gap Assessment</span></a>
-          <a class="lp-btn lp-btn--ghost" href="tel:+919444084652"><span>Call +91 94440 84652</span></a>
+      <div class="lp-wrap lp-hero__grid">
+        <div class="lp-hero__text">
+          <span class="lp-eyebrow">ISO 9001 · Quality Management Systems</span>
+          <h1 class="lp-h1" id="heroTitle">Quality management that works, <em>performs and continually improves.</em></h1>
+          <p class="lp-lede">Strengthen process effectiveness, customer satisfaction, risk-based thinking and continual improvement through a robust Quality Management System.</p>
+          <div class="lp-actions">
+            <a class="lp-btn" href="#enquiry"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg><span>Book Your ISO 9001:2026 Gap Assessment</span></a>
+            <a class="lp-btn lp-btn--ghost" href="tel:+919444084652"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>+91 94440 84652</span></a>
+          </div>
+          <ul class="lp-hero__std"><li>ISO 9001</li><li>ISO 9001:2026 Transition</li><li>Sustenance</li></ul>
         </div>
-        <ul class="lp-hero__std">
-          <li>ISO 9001</li>
-          <li>ISO 9001:2026 Transition</li>
-          <li>Management System Sustenance</li>
-        </ul>
+        <div class="lp-hero__visual">
+          <div class="lp-hero__photo"><img class="" src="assets/images/landing/iso-hero.svg" alt="Illustration of a quality auditor reviewing a QMS checklist and documents" fetchpriority="high" decoding="async" /></div>
+          <div class="lp-hero__seal"><svg class="lp-seal" viewBox="0 0 220 220" aria-hidden="true">
+            <defs><path id="sealRing" d="M110,110 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+            <circle cx="110" cy="110" r="106" fill="#0B1F3A"/>
+            <circle cx="110" cy="110" r="99" fill="none" stroke="rgba(233,166,178,.55)" stroke-width="1"/>
+            <circle cx="110" cy="110" r="64" fill="url(#sealRingg)" stroke="rgba(247,218,221,.35)"/>
+            <linearGradient id="sealRingg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7D1B2C"/><stop offset="1" stop-color="#1E3A8A"/></linearGradient>
+            <text class="lp-seal__ring"><textPath textLength="508" lengthAdjust="spacing" href="#sealRing" startOffset="0">QUALITY MANAGEMENT SYSTEMS · QUALITY MANAGEMENT SYSTEMS · </textPath></text>
+            <text x="110" y="106" text-anchor="middle" class="lp-seal__core">ISO 9001</text>
+            <text x="110" y="128" text-anchor="middle" class="lp-seal__sub">QMS</text>
+          </svg></div>
+          <div class="lp-hero__chip"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 4.5h6v3H9zM8.5 12h7M8.5 16h5"/></svg></span><div><b>Gap assessment</b><small>Against ISO 9001:2026 requirements</small></div></div>
+        </div>
       </div>
     </section>
-    <section class="lp-section" aria-label="Our Approach">
-      <div class="lp-wrap lp-split">
-        <div class="lp-reveal">
+    <section class="lp-section">
+      <div class="lp-wrap lp-media">
+        <figure class="lp-media__fig lp-reveal">
+          <img class="" src="assets/images/landing/iso-approach.svg" alt="Illustration of an ISO 9001 standard with a magnifier and readiness checklist" loading="lazy" decoding="async" />
+          <figcaption class="lp-media__cap"><b>From gap analysis to certification</b>Engagements adapted to your operations, industry and certification objectives.</figcaption>
+        </figure>
+        <div class="lp-media__text lp-reveal" style="--d:.1s">
           <span class="lp-eyebrow">Our Approach</span>
           <h2 class="lp-h2">Not just a certificate. <em>A system that works.</em></h2>
           <p>International standards provide the foundation for effective management systems, consistent processes and improved organizational performance.</p>
           <p>At Mars Sigma Solutions, we help organizations understand, implement, strengthen and sustain management systems aligned with applicable international standards and industry-specific requirements.</p>
           <p>Our approach goes beyond documentation and certification readiness to focus on practical implementation, operational effectiveness and continual improvement.</p>
+          <blockquote class="lp-quote">At Mars Sigma Solutions, we believe that effective consulting begins with understanding your business, not simply interpreting the requirements of a standard.</blockquote>
+
         </div>
-        <blockquote class="lp-quote lp-reveal">At Mars Sigma Solutions, we believe that effective consulting begins with understanding your business, not simply interpreting the requirements of a standard.</blockquote>
       </div>
     </section>
-    <section class="lp-section lp-section--alt" aria-label="ISO 9001:2026 Transition">
+    <section class="lp-section lp-section--alt" aria-labelledby="trTitle">
       <div class="lp-wrap">
+        <div class="lp-split lp-split--center">
         <div class="lp-head lp-reveal">
           <span class="lp-eyebrow">ISO 9001:2026 Transition</span>
-          <h2 class="lp-h2">The standard has evolved. <em>Is your Quality Management System ready?</em></h2>
-          <p class="lp-lede">The transition to ISO 9001:2026 presents an opportunity for organizations to review their existing Quality Management Systems, strengthen risk-based thinking, enhance operational effectiveness and reinforce a culture of quality and continual improvement. We help organizations transition from ISO 9001:2015 to ISO 9001:2026 through a structured, practical and business-focused approach.</p>
+          <h2 class="lp-h2" id="trTitle">The standard has evolved. <em>Is your Quality Management System ready?</em></h2>
+          <p class="lp-lede">The transition to ISO 9001:2026 presents an opportunity for organizations to review their existing Quality Management Systems, strengthen risk-based thinking, enhance operational effectiveness and reinforce a culture of quality and continual improvement.</p>
+        </div>
+          <div class="lp-versions lp-reveal" aria-label="From ISO 9001:2015 to ISO 9001:2026">
+            <div class="lp-versions__v lp-versions__v--old"><small>From</small><b>ISO 9001</b><span>2015</span></div>
+            <svg class="lp-versions__arrow" viewBox="0 0 120 24" aria-hidden="true"><path d="M2 12h110" stroke="#94233A" stroke-width="1.5" stroke-dasharray="4 5"/><path d="m106 5 9 7-9 7" fill="none" stroke="#94233A" stroke-width="1.5"/></svg>
+            <div class="lp-versions__v lp-versions__v--new"><small>To</small><b>ISO 9001</b><span>2026</span></div>
+            <ul class="lp-versions__tags"><li>Risk-based thinking</li><li>Operational effectiveness</li><li>Quality culture</li></ul>
+          </div>
         </div>
         <div class="lp-grid lp-grid--3">
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">01</span>
+          <article class="lp-card lp-reveal" style="--d:0.00s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span><span class="lp-card__n">01</span></div>
             <h3>Understand the Changes</h3>
             <p>Identify the revised requirements and understand their implications for your organization's existing Quality Management System.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">02</span>
+          <article class="lp-card lp-reveal" style="--d:0.08s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 4.5h6v3H9zM8.5 12h7M8.5 16h5"/></svg></span><span class="lp-card__n">02</span></div>
             <h3>Conduct a Gap Assessment</h3>
             <p>Evaluate your current processes, documentation and practices against ISO 9001:2026 requirements.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">03</span>
+          <article class="lp-card lp-reveal" style="--d:0.16s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6.5 6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span><span class="lp-card__n">03</span></div>
             <h3>Develop a Transition Roadmap</h3>
             <p>Prepare a practical action plan with defined responsibilities, priorities and timelines.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">04</span>
+          <article class="lp-card lp-reveal" style="--d:0.00s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M4.2 7.5l2.1 1.2M17.7 15.3l2.1 1.2M4.2 16.5l2.1-1.2M17.7 8.7l2.1-1.2"/><circle cx="12" cy="12" r="7"/></svg></span><span class="lp-card__n">04</span></div>
             <h3>Implement Required Improvements</h3>
             <p>Update relevant processes, documentation and controls while building awareness and competence across the organization.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">05</span>
+          <article class="lp-card lp-reveal" style="--d:0.08s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></svg></span><span class="lp-card__n">05</span></div>
             <h3>Verify System Effectiveness</h3>
             <p>Conduct internal audits, review corrective actions and evaluate readiness for the transition audit.</p>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">06</span>
+          <article class="lp-card lp-reveal" style="--d:0.16s">
+            <div class="lp-card__top"><span class="lp-card__icon"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12A8 8 0 0 1 18.3 7.1"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/></svg></span><span class="lp-card__n">06</span></div>
             <h3>Sustain &amp; Continually Improve</h3>
             <p>Maintain an effective Quality Management System through periodic reviews, performance monitoring and ongoing improvement.</p>
           </article>
         </div>
-        <div style="margin-top:28px; max-width:620px">
-        <div class="lp-panel lp-reveal">
-          <h3>Already ISO 9001:2015 Certified?</h3>
-          <p>Prepare your Quality Management System for ISO 9001:2026 with a structured gap assessment and transition action plan.</p>
-          <a class="lp-btn" href="mailto:info@marssigma.com?subject=Enquiry%3A%20ISO%209001&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20ISO%209001%20%28Quality%20Management%20Systems%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you."><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m4 7.5 8 6 8-6" /></svg><span>Speak to Our ISO Transition Experts</span></a>
-        </div>
+        <div class="lp-offer lp-reveal">
+          <span class="lp-offer__ic"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1.5 7.5 5-2.5 5 2.5-1.5-7.5"/></svg></span>
+          <div>
+            <h3>Already ISO 9001:2015 Certified?</h3>
+            <p>Prepare your Quality Management System for ISO 9001:2026 with a structured gap assessment and transition action plan.</p>
+          </div>
+          <a class="lp-btn" href="#enquiry"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg><span>Speak to Our ISO Transition Experts</span></a>
         </div>
       </div>
     </section>
-    <section class="lp-section lp-dark" aria-labelledby="howTitle">
+    <section class="lp-section lp-about" id="about" aria-labelledby="aboutTitle">
+      <div class="lp-wrap lp-about__grid">
+        <div class="lp-reveal">
+          <span class="lp-eyebrow">About Us · Who We Are</span>
+          <h2 class="lp-h2" id="aboutTitle">Your trusted partner in quality, compliance <em>&amp; operational excellence.</em></h2>
+          <p class="lp-lede">Mars Sigma Solutions Pvt Ltd is a professional consulting and industrial services organization committed to helping businesses achieve excellence through effective management systems, process improvements and technical expertise.</p>
+          <p>We work closely with manufacturing and service organizations to strengthen operational performance, enhance compliance, develop people and build a culture of continual improvement.</p>
+          <p>What sets us apart is our practical, industry-driven approach. We don't just recommend solutions. We work alongside your teams to implement improvements, overcome operational challenges and develop management systems that deliver lasting value.</p>
+          <blockquote class="lp-quote">At Mars Sigma, our commitment goes beyond compliance. We help businesses perform better, every day.</blockquote>
+        </div>
+        <div class="lp-about__panel lp-reveal" style="--d:.1s">
+          <span class="lp-about__k">Our expertise spans</span>
+          <ul class="lp-about__list"><li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1.5 7.5 5-2.5 5 2.5-1.5-7.5"/></svg></span>ISO Management System Consulting</li><li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12A8 8 0 0 1 18.3 7.1"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/></svg></span>Management System Sustenance</li><li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span>Third-Party Inspection</li><li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="m7.5 15 3.5-4 3 3 5-6.5"/></svg></span>Business Transformation</li><li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 11 4-4 5 2 5-2 4 4-7 7z"/><path d="m8.5 13.5 2 2M11 11l3 3"/></svg></span>Supplier Development</li><li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c2.9.3 5 2.6 5 5.8"/></svg></span>Industrial Training</li></ul>
+          <div class="lp-about__meta">
+            <div><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6.5 6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span><p><b>India | Bahrain</b>Chennai, Tamil Nadu and Manama, Kingdom of Bahrain</p></div>
+            <div><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1.5 7.5 5-2.5 5 2.5-1.5-7.5"/></svg></span><p><b>Founder-led</b>Mr. Subramanian Srinivasan, Founder &amp; Principal Consultant</p></div>
+          </div>
+          <p class="lp-about__tag">From Certification Readiness to System Sustenance: Your Partner at Every Stage of Excellence.</p>
+        </div>
+      </div>
+    </section>
+    <section class="lp-section lp-dark lp-how" aria-labelledby="howTitle">
       <div class="lp-wrap">
         <div class="lp-head lp-reveal">
           <span class="lp-eyebrow">How We Work</span>
           <h2 class="lp-h2" id="howTitle">A structured approach. <em>Sustainable results.</em></h2>
           <p class="lp-lede">Our approach combines systematic assessment, technical expertise, collaborative implementation and continuous improvement to deliver solutions that work in practice, not just on paper.</p>
         </div>
-        <div class="lp-grid lp-grid--3">
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">01</span>
-            <span class="lp-card__tag">We begin by understanding your business</span>
+        <ol class="lp-tl">
+          <li class="lp-tl__step lp-reveal" style="--d:0.00s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span>
+            <span class="lp-tl__n">01</span>
             <h3>Understand</h3>
             <p>We engage with your leadership and operational teams to understand your objectives, existing processes, customer requirements and key challenges.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">02</span>
-            <span class="lp-card__tag">Identify gaps. Discover opportunities</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.06s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 4.5h6v3H9zM8.5 12h7M8.5 16h5"/></svg></span>
+            <span class="lp-tl__n">02</span>
             <h3>Assess</h3>
             <p>Through structured assessments, process reviews and relevant audits, we identify compliance gaps, operational risks and opportunities for improvement.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">03</span>
-            <span class="lp-card__tag">Develop solutions that fit your organization</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.12s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span>
+            <span class="lp-tl__n">03</span>
             <h3>Design</h3>
             <p>We create practical action plans, management-system frameworks and improvement strategies aligned with your business needs, resources and priorities.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">04</span>
-            <span class="lp-card__tag">Turn recommendations into meaningful action</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.18s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2.8v2.4M12 18.8v2.4M4.2 7.5l2.1 1.2M17.7 15.3l2.1 1.2M4.2 16.5l2.1-1.2M17.7 8.7l2.1-1.2"/><circle cx="12" cy="12" r="7"/></svg></span>
+            <span class="lp-tl__n">04</span>
             <h3>Implement</h3>
             <p>We work alongside your teams to implement agreed improvements, strengthen processes, develop competencies and embed effective management practices.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">05</span>
-            <span class="lp-card__tag">Measure effectiveness. Build confidence</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.24s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></svg></span>
+            <span class="lp-tl__n">05</span>
             <h3>Verify</h3>
             <p>We evaluate the implementation through relevant audits, performance reviews, process verification and corrective-action follow-up.</p>
-          </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">06</span>
-            <span class="lp-card__tag">Make improvement part of everyday operations</span>
+          </li>
+          <li class="lp-tl__step lp-reveal" style="--d:0.30s">
+            <span class="lp-tl__node"><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9M4 12A8 8 0 0 1 18.3 7.1"/><path d="M18.5 3v4.3h-4.3M5.5 21v-4.3h4.3"/></svg></span>
+            <span class="lp-tl__n">06</span>
             <h3>Sustain</h3>
             <p>We support organizations in maintaining effective systems through periodic reviews, internal audits, performance monitoring and continual improvement initiatives.</p>
-          </article>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
-    <section class="lp-section lp-section--alt" aria-label="Industries We Serve">
+    <section class="lp-section" aria-labelledby="indTitle">
       <div class="lp-wrap">
         <div class="lp-head lp-reveal">
           <span class="lp-eyebrow">Industries We Serve</span>
-          <h2 class="lp-h2">Industry-specific expertise. <em>Business-focused solutions.</em></h2>
+          <h2 class="lp-h2" id="indTitle">Industry-specific expertise. <em>Business-focused solutions.</em></h2>
           <p class="lp-lede">Every industry faces unique challenges in quality, compliance, operational efficiency and customer expectations.</p>
         </div>
         <div class="lp-grid lp-grid--3">
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">01</span>
-            <h3>Engineering &amp; Manufacturing</h3>
-            <p>Improving product quality, manufacturing efficiency and process reliability through management-system consulting, inspection services, supplier development and continuous improvement.</p>
+          <article class="lp-pcard lp-reveal" style="--d:0.00s">
+            <div class="lp-pcard__img"><img class="" src="assets/images/landing/card-manufacturing.svg" alt="Engineering &amp; Manufacturing" loading="lazy" decoding="async" /><span>Stronger processes. Better product quality.</span></div>
+            <div class="lp-pcard__body">
+              <h3>Engineering &amp; Manufacturing</h3>
+              <p>Improving product quality, manufacturing efficiency and process reliability through management-system consulting, inspection services, supplier development and continuous improvement.</p>
+            </div>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">02</span>
-            <h3>Aerospace &amp; Precision Engineering</h3>
-            <p>Supporting aerospace and precision engineering organizations in strengthening quality management, process discipline, traceability and compliance with applicable customer and industry requirements.</p>
+          <article class="lp-pcard lp-reveal" style="--d:0.08s">
+            <div class="lp-pcard__img"><img class="" src="assets/images/landing/card-aerospace.svg" alt="Aerospace &amp; Precision Engineering" loading="lazy" decoding="async" /><span>Precision, traceability and process control.</span></div>
+            <div class="lp-pcard__body">
+              <h3>Aerospace &amp; Precision Engineering</h3>
+              <p>Supporting aerospace and precision engineering organizations in strengthening quality management, process discipline, traceability and compliance with applicable customer and industry requirements.</p>
+            </div>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">03</span>
-            <h3>FMCG &amp; Food Processing</h3>
-            <p>Helping consumer goods and food-processing organizations improve operational consistency, process controls, quality management and food safety systems.</p>
+          <article class="lp-pcard lp-reveal" style="--d:0.16s">
+            <div class="lp-pcard__img"><img class="" src="assets/images/landing/card-fmcg.svg" alt="FMCG &amp; Food Processing" loading="lazy" decoding="async" /><span>Consistent quality. Reliable operations.</span></div>
+            <div class="lp-pcard__body">
+              <h3>FMCG &amp; Food Processing</h3>
+              <p>Helping consumer goods and food-processing organizations improve operational consistency, process controls, quality management and food safety systems.</p>
+            </div>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">04</span>
-            <h3>Information Technology &amp; Service Organizations</h3>
-            <p>Helping technology and service-based organizations establish effective management systems, strengthen information security practices and improve service delivery.</p>
+          <article class="lp-pcard lp-reveal" style="--d:0.00s">
+            <div class="lp-pcard__img"><img class="" src="assets/images/landing/card-it.svg" alt="IT &amp; Service Organizations" loading="lazy" decoding="async" /><span>Information security. Process excellence.</span></div>
+            <div class="lp-pcard__body">
+              <h3>IT &amp; Service Organizations</h3>
+              <p>Helping technology and service-based organizations establish effective management systems, strengthen information security practices and improve service delivery.</p>
+            </div>
           </article>
-          <article class="lp-card lp-reveal">
-            <span class="lp-card__num" aria-hidden="true">05</span>
-            <h3>Process &amp; Industrial Sectors</h3>
-            <p>Supporting chemical, pharmaceutical, energy and other process industries in strengthening operational controls, environmental management, workplace safety and continual improvement.</p>
+          <article class="lp-pcard lp-reveal" style="--d:0.08s">
+            <div class="lp-pcard__img"><img class="" src="assets/images/landing/card-process.svg" alt="Process &amp; Industrial Sectors" loading="lazy" decoding="async" /><span>Safer operations. Stronger compliance.</span></div>
+            <div class="lp-pcard__body">
+              <h3>Process &amp; Industrial Sectors</h3>
+              <p>Supporting chemical, pharmaceutical, energy and other process industries in strengthening operational controls, environmental management, workplace safety and continual improvement.</p>
+            </div>
+          </article>
+          <article class="lp-pcard lp-reveal" style="--d:0.16s">
+            <div class="lp-pcard__img"><img class="" src="assets/images/landing/card-automotive.svg" alt="Automotive &amp; Auto Components" loading="lazy" decoding="async" /><span>Automotive quality. Supplier excellence.</span></div>
+            <div class="lp-pcard__body">
+              <h3>Automotive &amp; Auto Components</h3>
+              <p>Supporting automotive manufacturers and suppliers in meeting stringent quality requirements, strengthening process controls and improving supplier performance.</p>
+            </div>
           </article>
         </div>
       </div>
     </section>
-    <section class="lp-section" aria-labelledby="susTitle">
-      <div class="lp-wrap lp-split">
+    <section class="lp-banner" aria-label="Partner with Mars Sigma for a structured ISO 9001:2026 transition.">
+      <img class="lp-banner__img" src="assets/images/landing/iso-banner.svg" alt="Illustration of a transition path from 2015 to 2026" loading="lazy" decoding="async" />
+      <div class="lp-wrap lp-banner__inner lp-reveal">
+        <p class="lp-banner__quote">Don't just transition. <em>Transform the way quality works.</em></p>
+        <span class="lp-banner__sub">Partner with Mars Sigma for a structured ISO 9001:2026 transition.</span>
+      </div>
+    </section>
+    <section class="lp-section lp-section--alt" aria-labelledby="susTitle">
+      <div class="lp-wrap lp-split lp-split--center">
         <div class="lp-reveal">
           <span class="lp-eyebrow">Management System Sustenance</span>
           <h2 class="lp-h2" id="susTitle">Certification is a milestone. <em>Sustaining excellence is a commitment.</em></h2>
           <p class="lp-lede">Keep your management systems effective, updated and audit-ready through structured, ongoing professional support.</p>
-        </div>
-        <div class="lp-panel lp-reveal">
-          <h3>What sustenance support covers</h3>
-        <ul class="lp-chips">
-          <li>Internal Audits</li>
-          <li>Management Reviews</li>
-          <li>Documentation</li>
-          <li>Corrective Actions</li>
-          <li>Surveillance Readiness</li>
-          <li>Continual Improvement</li>
-        </ul>
           <p class="lp-note">Offered as a separate, structured engagement.</p>
         </div>
+        <div class="lp-cycle lp-reveal" role="img" aria-label="Sustenance cycle: Internal Audits, Management Reviews, Documentation, Corrective Actions, Surveillance Readiness, Continual Improvement">
+            <svg class="lp-cycle__ring" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="39" fill="none" stroke="#CBD3DF" stroke-width=".5" stroke-dasharray="1.2 1.6"/>
+              <circle cx="50" cy="50" r="39" fill="none" stroke="url(#cyG)" stroke-width="1" stroke-dasharray="60 185" class="lp-cycle__arc"/>
+              <defs><linearGradient id="cyG"><stop offset="0" stop-color="#7D1B2C"/><stop offset="1" stop-color="#1E3A8A"/></linearGradient></defs>
+            </svg>
+            <div class="lp-cycle__core"><small>Sustenance</small><b>Audit-ready</b></div>
+            <ul><li class="lp-cycle__node" style="left:50.00%;top:11.00%"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></span><b>Internal Audits</b></li><li class="lp-cycle__node" style="left:83.77%;top:30.50%"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c2.9.3 5 2.6 5 5.8"/></svg></span><b>Management Reviews</b></li><li class="lp-cycle__node" style="left:83.77%;top:69.50%"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg></span><b>Documentation</b></li><li class="lp-cycle__node" style="left:50.00%;top:89.00%"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4.5M12 17.2v.3"/></svg></span><b>Corrective Actions</b></li><li class="lp-cycle__node" style="left:16.23%;top:69.50%"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z"/><path d="m8.8 12 2.2 2.2 4.4-4.4"/></svg></span><b>Surveillance Readiness</b></li><li class="lp-cycle__node" style="left:16.23%;top:30.50%"><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="m7.5 15 3.5-4 3 3 5-6.5"/></svg></span><b>Continual Improvement</b></li></ul>
+          </div>
       </div>
     </section>
     <section class="lp-section lp-dark lp-cta" aria-labelledby="ctaTitle">
-      <div class="lp-wrap">
-        <div class="lp-head lp-reveal">
+      <svg class="lp-cta__rings" viewBox="0 0 900 900" aria-hidden="true">
+        <g fill="none">
+          <circle cx="450" cy="450" r="180" /><circle cx="450" cy="450" r="270" /><circle cx="450" cy="450" r="360" stroke-dasharray="2 10" /><circle cx="450" cy="450" r="440" />
+        </g>
+      </svg>
+      <div class="lp-wrap lp-cta__grid">
+        <div class="lp-cta__intro lp-reveal">
           <span class="lp-eyebrow">Let's Work Together</span>
-          <h2 class="lp-h2" id="ctaTitle">Don't just transition. <em>Transform the way quality works.</em></h2>
-          <p class="lp-lede">Partner with Mars Sigma for a structured ISO 9001:2026 transition. Let's discuss how we can help your business move forward.</p>
+          <h2 class="lp-h2" id="ctaTitle">Your challenges. Our expertise. <em>Better business outcomes.</em></h2>
+          <p class="lp-lede">Let's discuss how we can help your business move forward.</p>
+          <ul class="lp-cta__points">
+            <li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><a href="tel:+919444084652">+91 94440 84652</a></li>
+            <li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg></span><a href="mailto:info@marssigma.com?subject=Enquiry%3A%20ISO%209001&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20ISO%209001%20%28Quality%20Management%20Systems%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you.">info@marssigma.com</a></li>
+            <li><span><svg class="lp-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 6.5 6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span>Chennai, India · Manama, Bahrain</li>
+          </ul>
         </div>
-        <div class="lp-actions lp-reveal">
-          <a class="lp-btn" href="mailto:info@marssigma.com?subject=Enquiry%3A%20ISO%209001&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20ISO%209001%20%28Quality%20Management%20Systems%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you."><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" /><path d="m4 7.5 8 6 8-6" /></svg><span>Book Your ISO 9001:2026 Gap Assessment</span></a>
-        </div>
-        <p class="lp-cta__mail">Or write to <a href="mailto:info@marssigma.com?subject=Enquiry%3A%20ISO%209001&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20ISO%209001%20%28Quality%20Management%20Systems%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you.">info@marssigma.com</a></p>
+        <form class="lp-form lp-reveal" id="enquiry" action="https://api.web3forms.com/submit" method="post" novalidate data-service="ISO 9001" data-mailto="mailto:info@marssigma.com?subject=Enquiry%3A%20ISO%209001&amp;body=Hello%20Mars%20Sigma%20team%2C%0A%0AI%20would%20like%20to%20discuss%20ISO%209001%20%28Quality%20Management%20Systems%29%20for%20our%20organisation.%0A%0AName%3A%0ACompany%3A%0APhone%3A%0ALocation%3A%0A%0AThank%20you." data-thanks="thank-you-iso-9001.html" style="--d:.1s">
+          <h3>Send us your enquiry</h3>
+          <p class="lp-form__sub">Service: <b>ISO 9001</b></p>
+          <input type="hidden" name="service" value="ISO 9001" />
+          <div class="lp-form__hp" aria-hidden="true"><label for="fWebsite">Website</label><input id="fWebsite" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+          <div class="lp-form__row">
+            <div class="lp-field"><label for="f_Name">Name</label><input id="f_Name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" /><small class="lp-field__err" aria-live="polite"></small></div>
+            <div class="lp-field"><label for="f_Phone">Phone number</label><input id="f_Phone" name="phone" type="tel" autocomplete="tel" required inputmode="tel" maxlength="20" /><small class="lp-field__err" aria-live="polite"></small></div>
+          </div>
+          <div class="lp-form__row">
+            <div class="lp-field"><label for="f_Email">Company email</label><input id="f_Email" name="email" type="email" autocomplete="email" required maxlength="120" /><small class="lp-field__err" aria-live="polite"></small></div>
+            <div class="lp-field"><label for="f_Company">Company name</label><input id="f_Company" name="company" type="text" autocomplete="organization" required maxlength="120" /><small class="lp-field__err" aria-live="polite"></small></div>
+          </div>
+          <div class="lp-field"><label for="f_City">City</label><input id="f_City" name="city" type="text" autocomplete="address-level2" required maxlength="80" /><small class="lp-field__err" aria-live="polite"></small></div>
+          <button type="submit" class="lp-btn lp-form__btn"><svg class="lp-btn__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="m4 7.5 8 6 8-6"/></svg><span>Book Your ISO 9001:2026 Gap Assessment</span></button>
+          <p class="lp-form__status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
@@ -247,8 +343,8 @@
     <div class="lp-wrap">
       <div class="lp-footer__grid">
         <div>
-          <h4>Mars Sigma Solutions Pvt Ltd</h4>
-          <p style="margin:0">ISO Management Systems | Business Transformation | Third-Party Inspection | Supplier Development | Industrial Training | Management System Sustenance</p>
+          <div class="lp-footer__brand">Mars Sigma <em>Solutions</em></div>
+          <p style="margin:10px 0 0">ISO Management Systems | Business Transformation | Third-Party Inspection | Supplier Development | Industrial Training | Management System Sustenance</p>
         </div>
         <div>
           <h4>India</h4>
@@ -277,6 +373,7 @@
       els.forEach(function (e) { io.observe(e); });
     })();
   </script>
+  <script src="assets/js/landing-form.js"></script>
 </body>
 
 </html>
