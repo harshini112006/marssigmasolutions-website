@@ -3,43 +3,63 @@
   "outputDirectory": "dist",
   "redirects": [
     {
-      "source": "/iso-9001.html",
-      "destination": "/iso.html",
+      "source": "/iso.html",
+      "destination": "/iso-9001.html",
       "permanent": true
     },
     {
-      "source": "/iatf-16949.html",
-      "destination": "/iatf.html",
+      "source": "/iatf.html",
+      "destination": "/iatf-16949.html",
+      "permanent": true
+    },
+    {
+      "source": "/amc.html",
+      "destination": "/system-sustenance.html",
       "permanent": true
     },
     {
       "source": "/system-sustenance-amc.html",
-      "destination": "/amc.html",
+      "destination": "/system-sustenance.html",
+      "permanent": true
+    },
+    {
+      "source": "/ims.html",
+      "destination": "/ims-integrated.html",
       "permanent": true
     },
     {
       "source": "/ims-iso-9001-14001-45001.html",
-      "destination": "/ims.html",
+      "destination": "/ims-integrated.html",
       "permanent": true
     },
     {
-      "source": "/thank-you-iso-9001.html",
-      "destination": "/thank-you-iso.html",
+      "source": "/thank-you-iso.html",
+      "destination": "/thank-you-iso-9001.html",
       "permanent": true
     },
     {
-      "source": "/thank-you-iatf-16949.html",
-      "destination": "/thank-you-iatf.html",
+      "source": "/thank-you-iatf.html",
+      "destination": "/thank-you-iatf-16949.html",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-amc.html",
+      "destination": "/thank-you-system-sustenance.html",
       "permanent": true
     },
     {
       "source": "/thank-you-system-sustenance-amc.html",
-      "destination": "/thank-you-amc.html",
+      "destination": "/thank-you-system-sustenance.html",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-ims.html",
+      "destination": "/thank-you-ims-integrated.html",
       "permanent": true
     },
     {
       "source": "/thank-you-ims-iso-9001-14001-45001.html",
-      "destination": "/thank-you-ims.html",
+      "destination": "/thank-you-ims-integrated.html",
       "permanent": true
     }
   ]
