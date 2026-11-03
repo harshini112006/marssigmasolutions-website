@@ -2,8 +2,8 @@
    Submissions go through Web3Forms (https://web3forms.com), which emails them to the
    address the access key was created for (marssigmasolutions@gmail.com).
 
-   >>> Paste the Web3Forms access key below. It is safe to keep in the page. <<< */
-var WEB3FORMS_ACCESS_KEY = 'PASTE-YOUR-WEB3FORMS-ACCESS-KEY-HERE';
+   The access key below is public by design and safe to keep in the page. */
+var WEB3FORMS_ACCESS_KEY = '15f6afff-0bce-47e8-b941-2d11d57c1b72';
 
 (function () {
   var form = document.getElementById('enquiry');
