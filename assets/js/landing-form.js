@@ -59,7 +59,7 @@ var WEB3FORMS_ACCESS_KEY = '15f6afff-0bce-47e8-b941-2d11d57c1b72';
           status.className = 'lp-form__status is-ok';
           status.textContent = 'Thank you. Your enquiry has been sent.';
           var next = form.getAttribute('data-thanks');
-          if (next) { location.href = next + '?name=' + encodeURIComponent(f.name.split(' ')[0].slice(0, 40)); return; }
+          if (next) { location.href = next + (next.indexOf('?') < 0 ? '?' : '&') + 'name=' + encodeURIComponent(f.name.split(' ')[0].slice(0, 40)); return; }
           form.reset(); form.classList.add('is-sent');
         } else { throw new Error((res.j && res.j.message) || ('HTTP ' + res.status)); }
       })

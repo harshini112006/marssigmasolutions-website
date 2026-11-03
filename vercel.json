@@ -33,33 +33,53 @@
       "permanent": true
     },
     {
+      "source": "/thank-you-iso-9001.html",
+      "destination": "/thank-you.html?s=iso-9001",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-iatf-16949.html",
+      "destination": "/thank-you.html?s=iatf-16949",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-system-sustenance.html",
+      "destination": "/thank-you.html?s=system-sustenance",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-ims-integrated.html",
+      "destination": "/thank-you.html?s=ims-integrated",
+      "permanent": true
+    },
+    {
       "source": "/thank-you-iso.html",
-      "destination": "/thank-you-iso-9001.html",
+      "destination": "/thank-you.html?s=iso-9001",
       "permanent": true
     },
     {
       "source": "/thank-you-iatf.html",
-      "destination": "/thank-you-iatf-16949.html",
+      "destination": "/thank-you.html?s=iatf-16949",
       "permanent": true
     },
     {
       "source": "/thank-you-amc.html",
-      "destination": "/thank-you-system-sustenance.html",
-      "permanent": true
-    },
-    {
-      "source": "/thank-you-system-sustenance-amc.html",
-      "destination": "/thank-you-system-sustenance.html",
+      "destination": "/thank-you.html?s=system-sustenance",
       "permanent": true
     },
     {
       "source": "/thank-you-ims.html",
-      "destination": "/thank-you-ims-integrated.html",
+      "destination": "/thank-you.html?s=ims-integrated",
+      "permanent": true
+    },
+    {
+      "source": "/thank-you-system-sustenance-amc.html",
+      "destination": "/thank-you.html?s=system-sustenance",
       "permanent": true
     },
     {
       "source": "/thank-you-ims-iso-9001-14001-45001.html",
-      "destination": "/thank-you-ims-integrated.html",
+      "destination": "/thank-you.html?s=ims-integrated",
       "permanent": true
     }
   ]
