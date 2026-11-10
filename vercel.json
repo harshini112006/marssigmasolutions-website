@@ -3,17 +3,6 @@
   "outputDirectory": "dist",
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "marssigmasolutions-website.vercel.app"
-        }
-      ],
-      "destination": "https://www.marssigma.com/:path*",
-      "permanent": true
-    },
-    {
       "source": "/iso.html",
       "destination": "/iso-9001.html",
       "permanent": true
