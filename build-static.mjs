@@ -7,5 +7,6 @@ fs.mkdirSync('dist');
 for (const f of fs.readdirSync('.')) {
   if (f.endsWith('.html')) fs.copyFileSync(f, `dist/${f}`);
 }
+for (const f of ['robots.txt', 'sitemap.xml']) fs.copyFileSync(f, `dist/${f}`);
 fs.cpSync('assets', 'dist/assets', { recursive: true });
 console.log('Copied site to dist/');
